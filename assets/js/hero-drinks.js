@@ -2,12 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const hero = document.querySelector(".hero-drinks");
   const drinkItems = hero.querySelectorAll(".drink-item");
 
-  // Extract data from HTML (SEO-friendly)
+  // Extract data from HTML
   const drinksData = Array.from(drinkItems).map((item) => ({
-    id: item.querySelector(".js-add-to-cart")?.getAttribute("data-meal-id") || "",
     title: item.querySelector(".title")?.textContent.trim() || "",
     description: item.querySelector(".description")?.textContent.trim() || "",
-    price: item.querySelector(".price")?.textContent.trim() || "",
     image: item.querySelector(".image")?.getAttribute("src") || "",
     bgImage: item.dataset.bg || "",
   }));
@@ -16,14 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("No drink data found");
     return;
   }
-
-  // AHORA SÍ BORRA LOS data-meal-id
-  drinkItems.forEach(item => {
-    const buttons = item.querySelectorAll(".js-add-to-cart, [data-meal-id]");
-    buttons.forEach(btn => {
-      btn.removeAttribute("data-meal-id");
-    });
-  });
 
   // Hide original items (keep for SEO)
   hero.querySelector(".show-drink").classList.add("js-enhanced");
@@ -50,14 +40,6 @@ function generateDrinksHTML(drinksData) {
         <h2 class="title">${drinksData[0].title}</h2>
         <p class="description">${drinksData[0].description}</p>
         <div class="price-action">
-          <span class="price">${drinksData[0].price}</span>
-          <button class="btn sm js-add-to-cart" 
-                  data-meal-id="${drinksData[0].id}"
-                  data-product-name="${drinksData[0].title}"
-                  data-product-price="${drinksData[0].price}"
-                  data-product-image="${drinksData[0].image}">
-            Add to cart
-          </button>
           <div class="controls">
             <button class="btn-nav prevDrink">←</button>
             <button class="btn-nav nextDrink">→</button>
@@ -117,7 +99,7 @@ function initializeCarousel(drinksData) {
     }, delay);
   }
 
-  // ✅ Crossfade de fondo suave sin parpadeo
+  // Crossfade background
   function crossfadeBackground(newSrc) {
     const newBg = document.createElement("img");
     newBg.className = "image fade-layer";
@@ -134,15 +116,12 @@ function initializeCarousel(drinksData) {
       zIndex: "2",
     });
 
-    // Añadimos nueva imagen arriba de la actual
     bgContainer.appendChild(newBg);
 
-    // Activamos la transición suave
     requestAnimationFrame(() => {
       newBg.style.opacity = "1";
     });
 
-    // Después del desvanecido, reemplazamos el src y limpiamos
     setTimeout(() => {
       bgImage.src = newSrc;
       bgImage.style.opacity = "1";
@@ -165,12 +144,8 @@ function initializeCarousel(drinksData) {
     animateElementOut(title, 0);
     animateElementOut(description, 80);
     if (oldControls) animateElementOut(oldControls, 100);
-    const priceSpan = priceAction.querySelector(".price");
-    const addBtn = priceAction.querySelector(".btn");
-    if (priceSpan) animateElementOut(priceSpan, 100);
-    if (addBtn) animateElementOut(addBtn, 100);
 
-    // 🌙 Fondo suave
+    // Background transition
     crossfadeBackground(drink.bgImage);
 
     setTimeout(() => {
@@ -178,14 +153,6 @@ function initializeCarousel(drinksData) {
       title.textContent = drink.title;
       description.textContent = drink.description;
       priceAction.innerHTML = `
-        <span class="price">${drink.price}</span>
-        <button class="btn sm js-add-to-cart" 
-                data-meal-id="${drink.id}"
-                data-product-name="${drink.title}"
-                data-product-price="${drink.price}"
-                data-product-image="${drink.image}">
-          Add to cart
-        </button>
         <div class="controls">
           <button class="btn-nav prevDrink">←</button>
           <button class="btn-nav nextDrink">→</button>
@@ -204,10 +171,6 @@ function initializeCarousel(drinksData) {
 
       animateElementIn(title, 150);
       animateElementIn(description, 250);
-      const newPriceSpan = priceAction.querySelector(".price");
-      const newAddBtn = priceAction.querySelector(".btn");
-      if (newPriceSpan) animateElementIn(newPriceSpan, 250);
-      if (newAddBtn) animateElementIn(newAddBtn, 250);
       const newControls = priceAction.querySelector(".controls");
       if (newControls) animateElementIn(newControls, 350);
 

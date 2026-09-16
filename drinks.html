@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-HK">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gastronoir | Refreshing Drinks & Signature Beverages</title>
-    <meta name="description" content="Discover the art of refreshment with Gastronoir. From smoothies and natural juices to creative cocktails, enjoy beverages crafted to awaken your senses and elevate every meal.">
-    <meta name="keywords" content="drinks, beverages, Gastronoir, cocktails, smoothies, natural juices, refreshing drinks, mocktails, cold drinks, fresh beverages, artisan drinks">
-
+    <title>泰谷 ThaiGu | 飲料甜品</title>
+    <meta name="description" content="泰谷精選泰式特色飲品與清爽甜品，享受沁涼解膩的南洋地道風味。">
+    <meta name="keywords" content="泰谷, 飲料甜品, 泰式檸檬水, 泰式奶茶, 泰式冰茶, 泰式飲品">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/ico-01.png">
@@ -16,11 +15,11 @@
     <link rel="stylesheet" href="assets/css/aos.css">
 </head>
 <body class="body-bg-image">
-    <!-- Meats Page Loader -->
+    <!-- Page Loader -->
     <div id="page-loader" class="page-loader">
         <div class="cooking-scene">
             <svg viewBox="0 0 120 120" class="loader-svg soda">
-                <rect x="45" y="40" width="30" height="50" rx="5" fill="#0288d1" />
+                <rect x="45" y="40" width="30" height="50" rx="5" fill="#C25920" />
                 <rect x="55" y="20" width="5" height="20" fill="#aaa" />
                 <circle class="bubble" cx="60" cy="85" r="3" fill="#bbdefb" />
                 <circle class="bubble" cx="60" cy="75" r="2" fill="#bbdefb" />
@@ -28,19 +27,6 @@
             </svg>
         </div>
     </div>
-
-    <!-- Cart Sidebar -->
-    <div class="cart-sidebar">
-        <div class="cart-sidebar-header">
-            <h2>Your Order</h2>
-            <button class="close-cart">&times;</button>
-        </div>
-        <div class="cart-sidebar-content"></div>
-        <div class="cart-sidebar-footer">
-            <button class="checkout-btn">Finalize Order</button>
-        </div>
-    </div>
-    <div class="cart-overlay"></div>
 
     <!-- Header -->
     <header class="header bg-header">
@@ -56,17 +42,10 @@
                 <ul class="nav-menu">
                     <li><a href="main-dishes.html" class="nav-link">主食餐單</a></li>
                     <li><a href="about.html" class="nav-link">關於泰谷</a></li>
-                    <li><a href="drinks.html" class="nav-link active">Drinks</a></li>
-                    <li><a href="coffee.html" class="nav-link">Coffee</a></li>
+                    <li><a href="drinks.html" class="nav-link active">飲料甜品</a></li>
                     <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
-
-            <!-- Shopping Cart -->
-            <div class="shopping-cart">
-                <img class="image" src="assets/images/icons/shopping-cart-black-noline.png" alt="Shopping Cart Icon">
-                <span class="counting">3</span>
-            </div>
 
             <!-- Mobile Menu Toggle -->
             <button class="mobile-menu-toggle" id="mobile-menu-toggle">
@@ -79,90 +58,25 @@
 
     <div class="hero-drinks" id="drink-carousel">
         <div class="show-drink">
+            <!-- 1. 泰式青檸水 -->
             <div class="drink-item" data-bg="assets/images/backgrounds/lemons-bg.png">
                 <div class="image-drink">
-                    <img class="image" src="assets/images/backgrounds/lemonade.png" alt="Fresh homemade lemonade with ice">
+                    <img class="image" src="assets/images/backgrounds/lemonade.png" alt="泰式香茅青檸水">
                 </div>
                 <div class="info-drink">
-                    <h2 class="title">Lemonade</h2>
-                    <p class="description">Fresh homemade lemonade with ice</p>
-                    <div class="price-action">
-                        <span class="price">$3.80</span>
-                        <button class="btn drink sm js-add-to-cart" data-meal-id='26'>Add to cart</button>
-                    </div>
+                    <h2 class="title"><strong>泰式香茅青檸水</strong></h2>
+                    <p class="description">選用新鮮泰國青檸現壓特調，融入淡淡香茅清香與冰涼薄荷葉。酸甜冰爽、沁人心脾，是品嚐香濃泰菜時的最佳解膩飲品。</p>
                 </div>
             </div>
 
-            <div class="drink-item" data-bg="assets/images/backgrounds/milkshake-bg.png">
-                <!-- Visual only for SEO search engines -->
-                <h1 class="main-title">Refreshing Drinks Bursting with Natural Flavor</h1>
-
-                <div class="image-drink">
-                    <img class="image" src="assets/images/backgrounds/milkshake.png" alt="Creamy vanilla milkshake with whipped cream">
-                </div>
-                <div class="info-drink">
-                    <h2 class="title">Milkshake</h2>
-                    <p class="description">A creamy vanilla milkshake topped with whipped cream and a cherry.</p>
-                    <div class="price-action">
-                        <span class="price">$5.20</span>
-                        <button class="btn drink sm js-add-to-cart" data-meal-id='27'>Add to cart</button>
-                    </div>
-                </div>
-            </div>
-
+            <!-- 2. 泰式特調冰茶 -->
             <div class="drink-item" data-bg="assets/images/backgrounds/tea-bg.png">
                 <div class="image-drink">
-                    <img class="image" src="assets/images/backgrounds/iced-tea.png" alt="Refreshing iced tea with lemon slice">
+                    <img class="image" src="assets/images/backgrounds/iced-tea.png" alt="泰式特調冰茶">
                 </div>
                 <div class="info-drink">
-                    <h2 class="title">Iced Tea</h2>
-                    <p class="description">Cool and refreshing iced tea served with lemon slices.</p>
-                    <div class="price-action">
-                        <span class="price">$3.50</span>
-                        <button class="btn drink sm js-add-to-cart" data-meal-id='28'>Add to cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="drink-item" data-bg="assets/images/backgrounds/rootbeer-bg.png">
-                <div class="image-drink">
-                    <img class="image" src="assets/images/backgrounds/root-beer.png" alt="Root beer with vanilla ice cream">
-                </div>
-                <div class="info-drink">
-                    <h2 class="title">Root Beer Float</h2>
-                    <p class="description">Classic root beer float with a scoop of vanilla ice cream.</p>
-                    <div class="price-action">
-                        <span class="price">$5.00</span>
-                        <button class="btn drink sm js-add-to-cart" data-meal-id='29'>Add to cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="drink-item" data-bg="assets/images/backgrounds/strawberry-bg.png">
-                <div class="image-drink">
-                    <img class="image" src="assets/images/backgrounds/strawberry-smoothie.png" alt="Fresh strawberry smoothie">
-                </div>
-                <div class="info-drink">
-                    <h2 class="title">Strawberry Smoothie</h2>
-                    <p class="description">A blend of fresh strawberries and creamy yogurt for a smooth delight.</p>
-                    <div class="price-action">
-                        <span class="price">$4.90</span>
-                        <button class="btn drink sm js-add-to-cart" data-meal-id='30'>Add to cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="drink-item" data-bg="assets/images/backgrounds/oranges-bg.png">
-                <div class="image-drink">
-                    <img class="image" src="assets/images/backgrounds/orange-juice.png" alt="Fresh squeezed orange juice">
-                </div>
-                <div class="info-drink">
-                    <h2 class="title">Orange Juice</h2>
-                    <p class="description">Freshly squeezed oranges for a vitamin-rich and energizing juice.</p>
-                    <div class="price-action">
-                        <span class="price">$3.60</span>
-                        <button class="btn drink sm js-add-to-cart" data-meal-id='31'>Add to cart</button>
-                    </div>
+                    <h2 class="title"><strong>泰式特調冰茶</strong></h2>
+                    <p class="description">嚴選泰國正宗茶葉慢火熬煮，茶香馥郁深沉，搭配新鮮檸檬片與冰塊，入口回甘清甜，滿溢濃厚的南洋街頭風情。</p>
                 </div>
             </div>
         </div>
@@ -181,8 +95,6 @@
 
     <!-- JavaScript -->
     <script src="assets/js/hero-drinks.js"></script>
-    <script src="assets/js/shopping-cart.js"></script>
-
     <script src="assets/js/main-01.js"></script>
 </body>
 </html>
