@@ -11849,8 +11849,9 @@ body {
   padding: 0 15px;
 }
 .hero-meals .line .main-meal .info .title {
-  font-weight: 600;
-  font-size: 1.5rem;
+  font-weight: 700;
+  font-size: 1.55rem;
+  color: #1a1a1a;
   max-width: 100%;
   height: auto;
   margin-bottom: 8px;
