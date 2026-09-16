@@ -9503,12 +9503,12 @@ a:hover {
   position: fixed;
   top: 0px;
   width: 100%;
-  padding: 1rem 4rem;
+  padding: 1rem 2rem 1rem 1.25rem;
   z-index: 1000;
 }
 @media (max-width: 1024px) {
   .header {
-    padding: 1rem;
+    padding: 0.75rem 1rem 0.75rem 0.75rem;
   }
 }
 .header .container {
@@ -9538,6 +9538,7 @@ a:hover {
   -moz-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  max-width: 100%;
 }
 .header .logo {
   position: relative;
@@ -9548,6 +9549,7 @@ a:hover {
   -webkit-align-items: center;
   align-items: center;
   height: 55px;
+  margin-left: 0;
   text-decoration: none;
 }
 .header .logo .image {
