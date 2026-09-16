@@ -9547,27 +9547,24 @@ a:hover {
   -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
-  height: 40px;
+  height: 55px;
   text-decoration: none;
 }
-.header .logo .logo-text {
-  font-family: "Lexend", sans-serif;
-  font-size: 1.75rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  color: #C25920;
-  display: inline-block;
-  line-height: 1;
+.header .logo .image {
+  height: 100%;
+  width: auto;
+  max-height: 55px;
+  object-fit: contain;
+  border-radius: 8px;
+  mix-blend-mode: multiply;
 }
 @media (max-width: 576px) {
-  .header .logo .logo-text {
-    font-size: 1.45rem;
+  .header .logo {
+    height: 45px;
   }
-}
-.header .logo .image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  .header .logo .image {
+    max-height: 45px;
+  }
 }
 .header .logo .overlay-link {
   position: absolute;
