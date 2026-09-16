@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronoir | Contact Us & Reservations</title>
+    <meta name="description" content="Get in touch with Gastronoir. Make a reservation, ask about our menu, or share your feedback — our team is ready to assist you with personalized attention.">
+    <meta name="keywords" content="Gastronoir contact, restaurant reservations, customer service, contact us, book a table, Gastronoir location, inquiries, feedback, dining reservations">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/ico-01.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+</head>
+<body>
+    <!-- Contact Page Loader -->
+    <div id="page-loader" class="page-loader" data-type="contact">
+        <div class="cooking-scene">
+            <svg viewBox="0 0 120 120" class="loader-svg contact-load">
+                <rect x="30" y="45" width="60" height="40" rx="3" fill="#fff" stroke="#A26A20" stroke-width="2"/>
+                <path d="M 30 45 L 60 65 L 90 45" fill="#F5E9D7" stroke="#A26A20" stroke-width="2"/>
+                <path class="flap" d="M 30 45 L 60 65 L 90 45 Z" fill="#A26A20"/>
+                <rect class="letter" x="40" y="55" width="40" height="25" rx="2" fill="#fff" stroke="#C2A76E" stroke-width="1"/>
+                <line class="letter-line" x1="45" y1="62" x2="75" y2="62" stroke="#A67C52" stroke-width="1.5"/>
+                <line class="letter-line" x1="45" y1="68" x2="75" y2="68" stroke="#A67C52" stroke-width="1.5"/>
+                <line class="letter-line" x1="45" y1="74" x2="65" y2="74" stroke="#A67C52" stroke-width="1.5"/>
+                <circle class="send-particle p1" cx="95" cy="50" r="2" fill="#A26A20"/>
+                <circle class="send-particle p2" cx="95" cy="60" r="1.5" fill="#C2A76E"/>
+                <circle class="send-particle p3" cx="95" cy="70" r="2" fill="#C98A8A"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h2>Your Order</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-sidebar-content"></div>
+        <div class="cart-sidebar-footer">
+            <button class="checkout-btn">Finalize Order</button>
+        </div>
+    </div>
+    <div class="cart-overlay"></div>
+
+    <!-- Header -->
+    <header class="header bg-header">
+        <div class="container d-flex-between">
+            <!-- Logo -->
+            <div class="logo position-relative">
+                <img class="image" src="assets/images/logo-transparent-01.png" alt="Logo">
+                <a class="overlay-link" href="index.html"></a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="navbar" id="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Breakfasts</a></li>
+                    <li><a href="coffee.html" class="nav-link">Coffee</a></li>
+                    <li><a href="lunches.html" class="nav-link">Lunches</a></li>
+                    <li><a href="dinners.html" class="nav-link">Dinners</a></li>
+                    <li><a href="drinks.html" class="nav-link">Drinks</a></li>
+                    <li><a href="contact-us.html" class="nav-link active">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Shopping Cart -->
+            <div class="shopping-cart">
+                <img class="image" src="assets/images/icons/shopping-cart-black-noline.png" alt="Shopping Cart Icon">
+                <span class="counting">3</span>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section pt-8">
+        <div class="contact-container">
+            <!-- Header -->
+            <div class="contact-header">
+                <h1 class="contact-title">Contact Us</h1>
+                <p class="contact-subtitle">
+                    We're here to help you. Send us a message and we'll get back to you as soon as possible.
+                </p>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="contact-content">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2 class="info-title">Contact Information</h2>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg><use xlink:href="#telephone-1"></use></svg>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">Phone</span>
+                            <p class="info-text">
+                                <a href="tel:+573001234567">+1 (555) 123-4567</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg><use xlink:href="#envelope-1"></use></svg>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">Email</span>
+                                <p class="info-text">
+                                <a href="mailto:info@gastronoir.com">info@gastronoir.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg><use xlink:href="#map-marker-1"></use></svg>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">Address</span>
+                            <p class="info-text">
+                                742 Evergreen Terrace, Suite 205<br>
+                                Springfield, IL 62704, USA
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg><use xlink:href="#alarm-1"></use></svg>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">Hours</span>
+                            <p class="info-text">
+                                Monday to Friday: 11:00 AM - 10:00 PM<br>
+                                Saturday and Sunday: 12:00 PM - 11:00 PM
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <h3 class="social-title">Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="javascript:void(0)"><svg><use xlink:href="#facebook"></use></svg></a>
+                            <a href="javascript:void(0)"><svg><use xlink:href="#instagram"></use></svg></a>
+                            <a href="javascript:void(0)"><svg><use xlink:href="#youtube"></use></svg></a>
+                            <a href="javascript:void(0)"><svg><use xlink:href="#whatsapp"></use></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2 class="form-title">Send Us a Message</h2>
+                    
+                    <!-- Success Message (hidden by default) -->
+                    <div class="success-message" style="display: none;" id="successMessage">
+                        <div class="success-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <div class="success-content">
+                            <h3 class="success-title">Message sent!</h3>
+                            <p class="success-text">Thank you for contacting us. We'll get back to you soon.</p>
+                        </div>
+                    </div>
+
+                    <form id="contactForm" action="contact.php" method="POST">
+                        <!-- Message sending notification -->
+                        <div class="form-status">
+                            <div class="form-success" id="form-success" style="display: none;">
+                                <svg><use xlink:href="#lni-checkmark-circle"></use></svg>
+                                <span>Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.</span>
+                            </div>
+                            <div class="form-error-general" id="form-error" style="display: none;">
+                                <svg><use xlink:href="#lni-warning"></use></svg>
+                                <span>Something went wrong. Please try again or contact us directly.</span>
+                            </div>
+                        </div>
+
+                        <!-- Name and Email Row -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">
+                                    Full Name<span class="required">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    placeholder="Your name"
+                                    required
+                                >
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">
+                                    Email Address
+                                    <span class="required">*</span>
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="your@email.com"
+                                    required
+                                >
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                        </div>
+
+                        <!-- Phone and Subject Row -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">
+                                    Phone
+                                </label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    placeholder="+57 300 123 4567"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">
+                                    Subject<span class="required">*</span>
+                                </label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="reserva">Reservation</option>
+                                    <option value="evento">Special Event</option>
+                                    <option value="menu">Menu Inquiry</option>
+                                    <option value="queja">Complaint or Suggestion</option>
+                                    <option value="otro">Other</option>
+                                </select>
+                                <span class="error-message" id="subjectError"></span>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group">
+                            <label for="message">
+                                Message<span class="required">*</span>
+                            </label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                placeholder="Write your message here..."
+                                required
+                            ></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="form-actions">
+                            <button type="reset" class="btn btn-secondary">Clear</button>
+                            <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="copyright text-center p-4">
+        <p>© 2025 Gastronoir. All rights reserved.</p>
+        <div class="legal-links">
+            <a href="javascript:void(0)">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="javascript:void(0)">Terms & Conditions</a>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24">
+            <path d="M7 14l5-5 5 5z"/>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="assets/js/contact-form-demo.js"></script>
+    <script src="assets/js/shopping-cart.js"></script>
+
+    <script src="assets/js/main-01.js"></script>
+</body>
+</html>

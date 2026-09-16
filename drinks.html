@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronoir | Refreshing Drinks & Signature Beverages</title>
+    <meta name="description" content="Discover the art of refreshment with Gastronoir. From smoothies and natural juices to creative cocktails, enjoy beverages crafted to awaken your senses and elevate every meal.">
+    <meta name="keywords" content="drinks, beverages, Gastronoir, cocktails, smoothies, natural juices, refreshing drinks, mocktails, cold drinks, fresh beverages, artisan drinks">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/ico-01.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+</head>
+<body class="body-bg-image">
+    <!-- Meats Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="cooking-scene">
+            <svg viewBox="0 0 120 120" class="loader-svg soda">
+                <rect x="45" y="40" width="30" height="50" rx="5" fill="#0288d1" />
+                <rect x="55" y="20" width="5" height="20" fill="#aaa" />
+                <circle class="bubble" cx="60" cy="85" r="3" fill="#bbdefb" />
+                <circle class="bubble" cx="60" cy="75" r="2" fill="#bbdefb" />
+                <circle class="bubble" cx="60" cy="65" r="1.5" fill="#bbdefb" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h2>Your Order</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-sidebar-content"></div>
+        <div class="cart-sidebar-footer">
+            <button class="checkout-btn">Finalize Order</button>
+        </div>
+    </div>
+    <div class="cart-overlay"></div>
+
+    <!-- Header -->
+    <header class="header bg-header">
+        <div class="container d-flex-between">
+            <!-- Logo -->
+            <div class="logo position-relative">
+                <img class="image" src="assets/images/logo-transparent-01.png" alt="Logo">
+                <a class="overlay-link" href="index.html"></a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="navbar" id="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Breakfasts</a></li>
+                    <li><a href="coffee.html" class="nav-link">Coffee</a></li>
+                    <li><a href="lunches.html" class="nav-link">Lunches</a></li>
+                    <li><a href="dinners.html" class="nav-link">Dinners</a></li>
+                    <li><a href="drinks.html" class="nav-link active">Drinks</a></li>
+                    <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Shopping Cart -->
+            <div class="shopping-cart">
+                <img class="image" src="assets/images/icons/shopping-cart-black-noline.png" alt="Shopping Cart Icon">
+                <span class="counting">3</span>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="hero-drinks" id="drink-carousel">
+        <div class="show-drink">
+            <div class="drink-item" data-bg="assets/images/backgrounds/lemons-bg.png">
+                <div class="image-drink">
+                    <img class="image" src="assets/images/backgrounds/lemonade.png" alt="Fresh homemade lemonade with ice">
+                </div>
+                <div class="info-drink">
+                    <h2 class="title">Lemonade</h2>
+                    <p class="description">Fresh homemade lemonade with ice</p>
+                    <div class="price-action">
+                        <span class="price">$3.80</span>
+                        <button class="btn drink sm js-add-to-cart" data-meal-id='26'>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="drink-item" data-bg="assets/images/backgrounds/milkshake-bg.png">
+                <!-- Visual only for SEO search engines -->
+                <h1 class="main-title">Refreshing Drinks Bursting with Natural Flavor</h1>
+
+                <div class="image-drink">
+                    <img class="image" src="assets/images/backgrounds/milkshake.png" alt="Creamy vanilla milkshake with whipped cream">
+                </div>
+                <div class="info-drink">
+                    <h2 class="title">Milkshake</h2>
+                    <p class="description">A creamy vanilla milkshake topped with whipped cream and a cherry.</p>
+                    <div class="price-action">
+                        <span class="price">$5.20</span>
+                        <button class="btn drink sm js-add-to-cart" data-meal-id='27'>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="drink-item" data-bg="assets/images/backgrounds/tea-bg.png">
+                <div class="image-drink">
+                    <img class="image" src="assets/images/backgrounds/iced-tea.png" alt="Refreshing iced tea with lemon slice">
+                </div>
+                <div class="info-drink">
+                    <h2 class="title">Iced Tea</h2>
+                    <p class="description">Cool and refreshing iced tea served with lemon slices.</p>
+                    <div class="price-action">
+                        <span class="price">$3.50</span>
+                        <button class="btn drink sm js-add-to-cart" data-meal-id='28'>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="drink-item" data-bg="assets/images/backgrounds/rootbeer-bg.png">
+                <div class="image-drink">
+                    <img class="image" src="assets/images/backgrounds/root-beer.png" alt="Root beer with vanilla ice cream">
+                </div>
+                <div class="info-drink">
+                    <h2 class="title">Root Beer Float</h2>
+                    <p class="description">Classic root beer float with a scoop of vanilla ice cream.</p>
+                    <div class="price-action">
+                        <span class="price">$5.00</span>
+                        <button class="btn drink sm js-add-to-cart" data-meal-id='29'>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="drink-item" data-bg="assets/images/backgrounds/strawberry-bg.png">
+                <div class="image-drink">
+                    <img class="image" src="assets/images/backgrounds/strawberry-smoothie.png" alt="Fresh strawberry smoothie">
+                </div>
+                <div class="info-drink">
+                    <h2 class="title">Strawberry Smoothie</h2>
+                    <p class="description">A blend of fresh strawberries and creamy yogurt for a smooth delight.</p>
+                    <div class="price-action">
+                        <span class="price">$4.90</span>
+                        <button class="btn drink sm js-add-to-cart" data-meal-id='30'>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="drink-item" data-bg="assets/images/backgrounds/oranges-bg.png">
+                <div class="image-drink">
+                    <img class="image" src="assets/images/backgrounds/orange-juice.png" alt="Fresh squeezed orange juice">
+                </div>
+                <div class="info-drink">
+                    <h2 class="title">Orange Juice</h2>
+                    <p class="description">Freshly squeezed oranges for a vitamin-rich and energizing juice.</p>
+                    <div class="price-action">
+                        <span class="price">$3.60</span>
+                        <button class="btn drink sm js-add-to-cart" data-meal-id='31'>Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-image-drink">
+            <img class="image" src="assets/images/backgrounds/lemons-bg.png" alt="Lemon background">
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24">
+            <path d="M7 14l5-5 5 5z"/>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="assets/js/hero-drinks.js"></script>
+    <script src="assets/js/shopping-cart.js"></script>
+
+    <script src="assets/js/main-01.js"></script>
+</body>
+</html>

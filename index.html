@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronoir | Gourmet Breakfasts and Morning Delights</title>
+    <meta name="description" content="Start your day with the exquisite breakfasts of Gastronoir. Enjoy artisanal recipes, fresh ingredients, and unique flavors that make every morning unforgettable.">
+    <meta name="keywords" content="breakfast, gourmet breakfasts, morning meals, healthy breakfast, brunch, eggs, pancakes, coffee, Gastronoir, fresh ingredients, artisan food, morning delights">
+
+    <!-- Base path for all relative links (ensures correct loading of assets and pages) -->
+    <base href="./">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/ico-01.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+</head>
+<body class="body-bg-image">
+    <!-- Meats Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="cooking-scene">
+            <svg viewBox="0 0 120 120" class="loader-svg breakfast-load">
+                <!-- La animación de la sartén y el huevo sigue igual -->
+                <g class="cooking-animation">
+                    <g class="pan-container">
+                        <circle cx="60" cy="60" r="45" fill="#555" />
+                        <circle cx="60" cy="60" r="40" fill="#222" />
+                    </g>
+                    <g class="egg-in-pan">
+                        <circle class="white" cx="60" cy="60" r="16" fill="#FFF"/>
+                        <circle class="yolk" cx="60" cy="60" r="8" fill="#ffd54f" />
+                    </g>
+                    <g class="handle-and-hand">
+                        <rect x="100" y="55" width="25" height="10" rx="3" fill="#444" />
+                        <path class="hand" fill="#C68642" d="M100,70 C95,65 95,55 100,50 L120,50 C130,55 130,65 120,70 Z"/>
+                    </g>
+                </g>
+
+                <!-- Contenedor de humo separado para que no se incline con la sartén -->
+                <g class="smoke-container">
+                    <path class="smoke-particle p1" d="M-5,15 Q0,0 5,15 T15,15" fill="rgba(255,255,255,0.5)"/>
+                    <path class="smoke-particle p2" d="M-5,15 Q0,0 5,15 T15,15" fill="rgba(255,255,255,0.5)"/>
+                    <path class="smoke-particle p3" d="M-5,15 Q0,0 5,15 T15,15" fill="rgba(255,255,255,0.5)"/>
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h2>Your Order</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-sidebar-content"></div>
+        <div class="cart-sidebar-footer">
+            <button class="checkout-btn">Finalize Order</button>
+        </div>
+    </div>
+    <div class="cart-overlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo position-relative">
+                <img class="image" src="assets/images/logo-transparent-01.png" alt="Logo">
+                <a class="overlay-link" href="index.html"></a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="navbar" id="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Breakfasts</a></li>
+                    <li><a href="coffee.html" class="nav-link">Coffee</a></li>
+                    <li><a href="lunches.html" class="nav-link">Lunches</a></li>
+                    <li><a href="dinners.html" class="nav-link">Dinners</a></li>
+                    <li><a href="drinks.html" class="nav-link">Drinks</a></li>
+                    <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Shopping Cart -->
+            <div class="shopping-cart">
+                <img class="image" src="assets/images/icons/shopping-cart-black-noline.png" alt="Shopping Cart Icon">
+                <span class="counting">3</span>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="hero-meals breakfasts">
+        <h1 class="main-title">Exquisite Breakfasts and Gourmet Experiences</h1>
+
+        <div class="hero-meals-box">
+            <div class="meal-item">
+                <img class="image" src="assets/images/backgrounds/waffles.png" alt="Waffles with fruit and whipped cream">
+                <h2 class="title">Waffles with fruit and whipped cream</h2>
+                <div class="price-add">
+                    <span class="price">$8.50</span>
+                    <button class="btn breakfast sm js-add-to-cart" data-meal-id="1">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <img class="image" src="assets/images/backgrounds/scrambled.png" alt="Scrambled eggs with bacon">
+                <h2 class="title">Scrambled eggs with bacon</h2>
+                <div class="price-add">
+                    <span class="price">$7.99</span>
+                    <button class="btn breakfast sm js-add-to-cart" data-meal-id="2">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <img class="image" src="assets/images/backgrounds/cereal.png" alt="Cereal with milk and banana slices">
+                <h2 class="title">Cereal with milk and banana slices</h2>
+                <div class="price-add">
+                    <span class="price">$5.50</span>
+                    <button class="btn breakfast sm js-add-to-cart" data-meal-id="3">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <img class="image" src="assets/images/backgrounds/bagel.png" alt="Bagel with cream cheese">
+                <h2 class="title">Bagel with cream cheese</h2>
+                <div class="price-add">
+                    <span class="price">$6.25</span>
+                    <button class="btn breakfast sm js-add-to-cart" data-meal-id="4">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <img class="image" src="assets/images/backgrounds/burrito.png" alt="Breakfast burrito">
+                <h2 class="title">Breakfast burrito</h2>
+                <div class="price-add">
+                    <span class="price" data-meal-price>$9.99</span>
+                    <button class="btn breakfast sm js-add-to-cart" data-meal-id="5">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <img class="image" src="assets/images/backgrounds/french-toast.png" alt="French toast with cinnamon and honey">
+                <h2 class="title">French toast with cinnamon and honey</h2>
+                <div class="price-add">
+                    <span class="price">$8.75</span>
+                    <button class="btn breakfast sm js-add-to-cart" data-meal-id="6">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <img class="image" src="assets/images/backgrounds/omelette.png" alt="Ham and cheese omelette">
+                <h2 class="title">Ham and cheese omelette</h2>
+                <div class="price-add">
+                    <span class="price">$10.50</span>
+                    <button class="btn breakfast sm js-add-to-cart" data-meal-id="7">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <img class="image" src="assets/images/backgrounds/pancakes.png" alt="Pancakes with butter and maple syrup">
+                <h2 class="title">Pancakes with butter and maple syrup</h2>
+                <div class="price-add">
+                    <span class="price">$7.50</span>
+                    <button class="btn breakfast sm js-add-to-cart" data-meal-id="8">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24">
+            <path d="M7 14l5-5 5 5z"/>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="assets/js/hero-meals.js"></script>
+    <script src="assets/js/shopping-cart.js"></script>
+
+    <script src="assets/js/main-01.js"></script>
+</body>
+</html>

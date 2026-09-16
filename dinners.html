@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronoir | Elegant Dinners & Fine Night Dining</title>
+    <meta name="description" content="Experience the art of fine dining at night with Gastronoir. Discover elegant dinners, signature dishes, and refined flavors designed to make every evening unforgettable.">
+    <meta name="keywords" content="dinner, fine dining, elegant meals, Gastronoir, gourmet dinner, night restaurant, signature dishes, evening dining, culinary art, romantic dinner, gourmet cuisine">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/ico-01.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+</head>
+<body class="body-bg-image">
+    <!-- Meats Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="cooking-scene">
+            <svg viewBox="0 0 120 120" class="loader-svg dinner-load">
+                <circle cx="60" cy="60" r="35" fill="#eee" stroke="#bbb" stroke-width="3"/>
+                <circle cx="60" cy="60" r="25" fill="#fff" />
+                <rect x="20" y="55" width="10" height="30" rx="2" fill="#999" />
+                <rect x="90" y="55" width="10" height="30" rx="2" fill="#999" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h2>Your Order</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-sidebar-content"></div>
+        <div class="cart-sidebar-footer">
+            <button class="checkout-btn">Finalize Order</button>
+        </div>
+    </div>
+    <div class="cart-overlay"></div>
+
+    <!-- Header -->
+    <header class="header bg-header">
+        <div class="container d-flex-between">
+            <!-- Logo -->
+            <div class="logo position-relative">
+                <img class="image" src="assets/images/logo-transparent-01.png" alt="Logo">
+                <a class="overlay-link" href="index.html"></a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="navbar" id="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Breakfasts</a></li>
+                    <li><a href="coffee.html" class="nav-link">Coffee</a></li>
+                    <li><a href="lunches.html" class="nav-link">Lunches</a></li>
+                    <li><a href="dinners.html" class="nav-link active">Dinners</a></li>
+                    <li><a href="drinks.html" class="nav-link">Drinks</a></li>
+                    <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Shopping Cart -->
+            <div class="shopping-cart">
+                <img class="image" src="assets/images/icons/shopping-cart-black-noline.png" alt="Shopping Cart Icon">
+                <span class="counting">3</span>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="hero-meals dinners">
+        <h1 class="main-title">A Night of Flavors: Stunning Dinners to Remember</h1>
+        
+        <div class="hero-meals-box">
+            <div class="meal-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/steak.png" alt="Juicy ribeye steak">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Ribeye Steak</h2>
+                    <div class="price-add">
+                        <span class="price">$24.99</span>
+                        <button class="btn dinner sm js-add-to-cart" data-meal-id="20">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/pasta.png" alt="Creamy fettuccine alfredo">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Pasta Alfredo</h2>
+                    <div class="price-add">
+                        <span class="price">$16.50</span>
+                        <button class="btn dinner sm js-add-to-cart" data-meal-id="21">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/salmon.png" alt="Grilled salmon with vegetables">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Grilled Salmon</h2>
+                    <div class="price-add">
+                        <span class="price">$18.99</span>
+                        <button class="btn dinner sm js-add-to-cart" data-meal-id="22">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/lobster.png" alt="Butter lobster tail">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Lobster Tail</h2>
+                    <div class="price-add">
+                        <span class="price">$32.50</span>
+                        <button class="btn dinner sm js-add-to-cart" data-meal-id="23">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/lamb.png" alt="Herb crusted lamb chops">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Lamb Chops</h2>
+                    <div class="price-add">
+                        <span class="price">$28.99</span>
+                        <button class="btn dinner sm js-add-to-cart" data-meal-id="24">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/chicken-parm.png" alt="Breaded chicken parmesan">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Chicken Parmesan</h2>
+                    <div class="price-add">
+                        <span class="price">$19.99</span>
+                        <button class="btn dinner sm js-add-to-cart" data-meal-id="25">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24">
+            <path d="M7 14l5-5 5 5z"/>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="assets/js/hero-meals.js"></script>
+    <script src="assets/js/shopping-cart.js"></script>
+
+    <script src="assets/js/main-01.js"></script>
+</body>
+</html>

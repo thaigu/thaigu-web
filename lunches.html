@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronoir | Gourmet Lunches and Exquisite Dinners</title>
+    <meta name="description" content="Indulge in Gastronoir’s gourmet lunches and exquisite dinners. From chef-crafted dishes to rich flavors and fresh ingredients — experience culinary perfection in every bite.">
+    <meta name="keywords" content="lunch, dinner, gourmet food, fine dining, Gastronoir, chef specials, culinary experience, elegant meals, gourmet restaurant, lunch menu, dinner recipes, gastronomy">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/ico-01.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+</head>
+<body class="body-bg-image">
+    <!-- Meats Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="cooking-scene">
+            <svg viewBox="0 0 120 120" class="loader-svg lunch-load">
+                <rect x="10" y="60" width="100" height="10" fill="#444" rx="2" />
+                <ellipse cx="60" cy="55" rx="25" ry="12" fill="#b71c1c" />
+                <path d="M45 50 q15 -8 30 0 q-15 8 -30 0z" fill="#e53935" />
+                <g class="smoke">
+                    <path d="M50 35 q5 -10 10 0" stroke="#ccc" stroke-width="2" fill="none" />
+                    <path d="M60 30 q5 -10 10 0" stroke="#ccc" stroke-width="2" fill="none" />
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h2>Your Order</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-sidebar-content"></div>
+        <div class="cart-sidebar-footer">
+            <button class="checkout-btn">Finalize Order</button>
+        </div>
+    </div>
+    <div class="cart-overlay"></div>
+
+    <!-- Header -->
+    <header class="header bg-header">
+        <div class="container d-flex-between">
+            <!-- Logo -->
+            <div class="logo position-relative">
+                <img class="image" src="assets/images/logo-transparent-01.png" alt="Logo">
+                <a class="overlay-link" href="index.html"></a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="navbar" id="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Breakfasts</a></li>
+                    <li><a href="coffee.html" class="nav-link">Coffee</a></li>
+                    <li><a href="lunches.html" class="nav-link active">Lunches</a></li>
+                    <li><a href="dinners.html" class="nav-link">Dinners</a></li>
+                    <li><a href="drinks.html" class="nav-link">Drinks</a></li>
+                    <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Shopping Cart -->
+            <div class="shopping-cart">
+                <img class="image" src="assets/images/icons/shopping-cart-black-noline.png" alt="Shopping Cart Icon">
+                <span class="counting">3</span>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="hero-meals lunches">
+        <h1 class="main-title">Delicious lunches and culinary flavors</h1>
+        
+        <div class="hero-meals-box">
+            <div class="meal-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/chicken-salad.png" alt="Fresh grilled chicken salad">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Grilled Chicken Salad</h2>
+                    <div class="price-add">
+                        <span class="price">$11.50</span>
+                        <button class="btn lunche sm js-add-to-cart" data-meal-id="14">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/burger.png" alt="Classic beef burger with fries">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Beef Burger</h2>
+                    <div class="price-add">
+                        <span class="price">$10.80</span>
+                        <button class="btn lunche sm js-add-to-cart" data-meal-id="15">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/club-sandwich.png" alt="Triple decker club sandwich">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Club Sandwich</h2>
+                    <div class="price-add">
+                        <span class="price">$9.00</span>
+                        <button class="btn lunche sm js-add-to-cart" data-meal-id="16">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/caesar-wrap.png" alt="Caesar chicken wrap">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Caesar Wrap</h2>
+                    <div class="price-add">
+                        <span class="price">$9.80</span>
+                        <button class="btn lunche sm js-add-to-cart" data-meal-id="17">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/fish-tacos.png" alt="Grilled fish tacos">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Fish Tacos</h2>
+                    <div class="price-add">
+                        <span class="price">$10.20</span>
+                        <button class="btn lunche sm js-add-to-cart" data-meal-id="18">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/pizza.png" alt="Fresh margherita pizza">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Margherita Pizza</h2>
+                    <div class="price-add">
+                        <span class="price">$12.00</span>
+                        <button class="btn lunche sm js-add-to-cart" data-meal-id="19">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24">
+            <path d="M7 14l5-5 5 5z"/>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="assets/js/hero-meals.js"></script>
+    <script src="assets/js/shopping-cart.js"></script>
+
+    <script src="assets/js/main-01.js"></script>
+</body>
+</html>

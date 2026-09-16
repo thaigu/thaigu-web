@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronoir | Artisan Coffees and Signature Roasts</title>
+    <meta name="description" content="Explore the world of artisan coffee at Gastronoir. From bold espresso shots to smooth latte blends — experience the perfect balance of aroma, flavor, and craftsmanship.">
+    <meta name="keywords" content="coffee, artisan coffee, espresso, cappuccino, latte, gourmet coffee, specialty coffee, coffee shop, barista, roasted beans, coffee culture, Gastronoir">
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/ico-01.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+</head>
+<body>
+    <!-- Meats Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div class="cooking-scene">
+            <svg viewBox="0 0 120 120" class="loader-svg coffee">
+                <rect x="30" y="50" width="60" height="30" rx="10" fill="#6d4c41" />
+                <rect x="80" y="55" width="15" height="20" rx="5" fill="#8d6e63" />
+                <g class="steam">
+                    <path d="M45 45 q5 -10 10 0" stroke="#ccc" stroke-width="2" fill="none" />
+                    <path d="M60 40 q5 -10 10 0" stroke="#ccc" stroke-width="2" fill="none" />
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h2>Your Order</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-sidebar-content"></div>
+        <div class="cart-sidebar-footer">
+            <button class="checkout-btn">Finalize Order</button>
+        </div>
+    </div>
+    <div class="cart-overlay"></div>
+
+    <!-- Header -->
+    <header class="header bg-header">
+        <div class="container d-flex-between">
+            <!-- Logo -->
+            <div class="logo position-relative">
+                <img class="image" src="assets/images/logo-transparent-01.png" alt="Logo">
+                <a class="overlay-link" href="index.html"></a>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="navbar" id="navbar">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Breakfasts</a></li>
+                    <li><a href="coffee.html" class="nav-link active">Coffee</a></li>
+                    <li><a href="lunches.html" class="nav-link">Lunches</a></li>
+                    <li><a href="dinners.html" class="nav-link">Dinners</a></li>
+                    <li><a href="drinks.html" class="nav-link">Drinks</a></li>
+                    <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Shopping Cart -->
+            <div class="shopping-cart">
+                <img class="image" src="assets/images/icons/shopping-cart-black-noline.png" alt="Shopping Cart Icon">
+                <span class="counting">3</span>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <div id="coffee-carousel" class="hero-coffee-section">
+        <!-- Visual only for SEO search engines -->
+        <h1 class="main-title">Start Your Day with the Perfect Cup of Coffee</h1>
+
+        <div class="hero-coffee-box">
+            <div class="coffee-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/drip-coffee.png" alt="Classic hot brewed drip coffee">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Drip Coffee</h2>
+                    <p class="description">
+                        A timeless classic made by slowly brewing freshly ground beans with hot water, creating a smooth and aromatic cup. Perfect for coffee purists who enjoy rich flavor without milk or sugar.
+                    </p>
+                    <div class="options">
+                        <span class="price">$3.00</span>
+                        <button class="btn sm js-add-to-cart" data-meal-id="9">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/caramel-latte.png" alt="Creamy caramel latte with milk foam">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Caramel Latte</h2>
+                    <p class="description">
+                        A silky blend of espresso, steamed milk, and creamy caramel syrup, topped with a light milk foam. Sweet and comforting.
+                    </p>
+                    <div class="options">
+                        <span class="price">$5.50</span>
+                        <button class="btn sm js-add-to-cart" data-meal-id="10">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/americano.png" alt="Hot americano coffee without milk" data-product-image>
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Americano</h2>
+                    <p class="description">
+                        Bold espresso diluted with hot water, offering the intensity of espresso with a smoother taste.
+                    </p>
+                    <div class="options">
+                        <span class="price">$3.50</span>
+                        <button class="btn sm js-add-to-cart" data-meal-id="11">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/iced-mocha.png" alt="Cold mocha coffee with chocolate and whipped cream">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Iced Mocha</h2>
+                    <p class="description">
+                        Refreshing espresso blended with chocolate and cold milk, topped with whipped cream.
+                    </p>
+                    <div class="options">
+                        <span class="price">$5.00</span>
+                        <button class="btn sm js-add-to-cart" data-meal-id="12">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-item">
+                <div class="box-image">
+                    <img class="image" src="assets/images/backgrounds/flat-white.png" alt="Smooth flat white coffee with microfoam milk">
+                </div>
+                <div class="info pt-4">
+                    <h2 class="title">Flat White</h2>
+                    <p class="description">
+                        An espresso-based drink with microfoam milk — smooth, elegant, and balanced.
+                    </p>
+                    <div class="options">
+                        <span class="price">$4.75</span>
+                        <button class="btn sm js-add-to-cart" data-meal-id="13">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24">
+            <path d="M7 14l5-5 5 5z"/>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="assets/js/hero-coffee.js"></script>
+    <script src="assets/js/shopping-cart.js"></script>
+
+    <script src="assets/js/main-01.js"></script>
+</body>
+</html>
