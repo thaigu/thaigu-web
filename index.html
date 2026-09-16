@@ -7,51 +7,101 @@
     <meta name="description" content="泰谷精選主食餐單，品味正宗泰式風味，包括泰式粉絲蝦煲、冬陰功海鮮湯粉、紅咖喱牛肉、青咖喱雞肉等經典泰國美食。">
     <meta name="keywords" content="泰谷, 泰國菜, 泰式主食, 泰式美食, 泰式粉絲蝦煲, 冬陰功, 海南雞飯, 烤豬頸肉, 青咖喱, 紅咖喱">
 
+    <!-- Robots Directive (Index & Full Rich Snippets) -->
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="theme-color" content="#F5E9D7" />
+
     <!-- SEO & Social Meta -->
     <link rel="canonical" href="https://thaigu.pages.dev/main-dishes.html">
+    <link rel="alternate" hreflang="zh-HK" href="https://thaigu.pages.dev/main-dishes.html" />
+    <link rel="alternate" hreflang="zh-Hant" href="https://thaigu.pages.dev/main-dishes.html" />
+    <link rel="alternate" hreflang="x-default" href="https://thaigu.pages.dev/" />
+
     <meta property="og:type" content="website">
-    <meta property="og:title" content="泰谷 ThaiGu | 精選主食餐單 - 專精正宗泰式風味">
-    <meta property="og:description" content="泰谷精選主食餐單，品味正宗泰式風味，包括泰式粉絲蝦煲、冬陰功海鮮湯粉、紅咖喱牛肉、青咖喱雞肉等經典泰國美食。">
+    <meta property="og:title" content="泰谷 ThaiGu (House of Thai) | 精選主食餐單 — 專精正宗泰式風味">
+    <meta property="og:description" content="泰谷 ThaiGu 專精正宗泰式風味。精選主食餐單包括泰式粉絲蝦煲、招牌冬陰功海鮮湯粉、秘製海南雞飯、紅咖喱牛肉、青咖喱雞肉等經典南洋美食。">
     <meta property="og:url" content="https://thaigu.pages.dev/main-dishes.html">
     <meta property="og:image" content="https://thaigu.pages.dev/assets/images/thaigu-logo.png">
-    <meta property="og:site_name" content="泰谷 ThaiGu">
+    <meta property="og:site_name" content="泰谷 ThaiGu (House of Thai)">
+    <meta property="og:locale" content="zh_HK">
+
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="泰谷 ThaiGu | 精選主食餐單">
+    <meta name="twitter:title" content="泰谷 ThaiGu | 精選主食餐單 — 專精正宗泰式風味">
     <meta name="twitter:description" content="品嚐正宗道地泰式風味，嚴選新鮮食材精心烹調。">
     <meta name="twitter:image" content="https://thaigu.pages.dev/assets/images/thaigu-logo.png">
 
-    <!-- JSON-LD Structured Data for Restaurant -->
+    <!-- Schema.org JSON-LD @graph (WebSite, Restaurant, FAQPage) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "泰谷 ThaiGu (House of Thai)",
-      "image": "https://thaigu.pages.dev/assets/images/thaigu-logo.png",
-      "url": "https://thaigu.pages.dev",
-      "servesCuisine": ["Thai", "Southeast Asian"],
-      "description": "泰谷 ThaiGu 專精正宗泰式風味，呈獻包括泰式粉絲蝦煲、冬陰功、海南雞飯、青紅咖喱及泰式奶茶等多款南洋經典美饌。",
-      "menu": "https://thaigu.pages.dev/main-dishes.html",
-      "hasMenu": {
-        "@type": "Menu",
-        "name": "泰谷精選 主食餐單",
-        "hasMenuItem": [
-          {
-            "@type": "MenuItem",
-            "name": "泰式粉絲蝦煲",
-            "description": "鮮甜大蝦搭配吸飽秘製濃郁醬汁的彈牙粉絲，黑胡椒與香菜根香氣撲鼻。"
-          },
-          {
-            "@type": "MenuItem",
-            "name": "招牌冬陰功海鮮湯粉",
-            "description": "南薑、香茅與青檸熬製的酸辣濃湯，搭配大蝦與爽滑河粉。"
-          },
-          {
-            "@type": "MenuItem",
-            "name": "秘製泰式海南雞飯",
-            "description": "皮脆肉嫩的三黃雞，佐以香蘭葉與雞油烹煮的香米飯。"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://thaigu.pages.dev/#website",
+          "url": "https://thaigu.pages.dev/",
+          "name": "泰谷 ThaiGu",
+          "alternateName": "House of Thai",
+          "description": "泰谷 ThaiGu 專精正宗泰式風味，呈獻南洋經典美饌與高雅渡假用餐體驗。"
+        },
+        {
+          "@type": "Restaurant",
+          "@id": "https://thaigu.pages.dev/#restaurant",
+          "name": "泰谷 ThaiGu (House of Thai)",
+          "image": "https://thaigu.pages.dev/assets/images/thaigu-logo.png",
+          "url": "https://thaigu.pages.dev/",
+          "servesCuisine": ["Thai", "Southeast Asian"],
+          "description": "泰谷 ThaiGu 專精正宗泰式風味，嚴選天然香料與新鮮食材，呈獻粉絲蝦煲、冬陰功、海南雞飯、青紅咖喱、經典泰式奶茶及芒果糯米飯等多款道地名菜。",
+          "menu": "https://thaigu.pages.dev/main-dishes.html",
+          "hasMenu": {
+            "@type": "Menu",
+            "name": "泰谷精選 主食餐單",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "泰式粉絲蝦煲",
+                "description": "鮮甜大蝦搭配吸飽秘製濃郁醬汁的彈牙粉絲，黑胡椒與香菜根香氣撲鼻。"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "招牌冬陰功海鮮湯粉",
+                "description": "南薑、香茅與青檸熬製的酸辣濃湯，搭配大蝦與爽滑河粉。"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "秘製泰式海南雞飯",
+                "description": "皮脆肉嫩的三黃雞，佐以香蘭葉與雞油烹煮的香米飯。"
+              },
+              {
+                "@type": "MenuItem",
+                "name": "泰式炭烤豬頸肉",
+                "description": "炭火慢烤至金黃微焦，外脆內嫩，佐以特製羅望子酸辣沾醬。"
+              }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://thaigu.pages.dev/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "泰谷 ThaiGu 有哪些招牌必點推薦？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "泰谷招牌主打泰式粉絲蝦煲、招牌冬陰功海鮮湯粉、秘製泰式海南雞飯、泰式炭烤豬頸肉，以及人氣甜品經典泰式奶茶與泰式芒果糯米飯。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "泰谷的餐點風味特色是什麼？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "泰谷堅持專精正宗泰國風味，嚴選泰國空運香茅、南薑、青檸與正宗手標茶葉，完美還原酸、辣、鹹、甜、香的平衡層次。"
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
 
