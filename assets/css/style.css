@@ -9504,12 +9504,12 @@ a:hover {
   top: 0px;
   left: 0px;
   width: 100%;
-  padding: 0.75rem 1.5rem 0.75rem 10px;
+  padding: 0.75rem 2rem 0.75rem 28px;
   z-index: 1000;
 }
 @media (max-width: 1024px) {
   .header {
-    padding: 0.5rem 1rem 0.5rem 8px;
+    padding: 0.5rem 1.25rem 0.5rem 18px;
   }
 }
 .header .container {
