@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>關於泰谷 | ThaiGu House of Thai - 品牌故事與理念</title>
-    <meta name="description" content="泰谷 ThaiGu - 專精正宗泰式風味，融合南洋渡假風情與傳統泰式宮廷料理美學，帶您開啟舌尖上的曼谷探索之旅。">
-    <meta name="keywords" content="泰谷, 關於泰谷, 泰國菜, 泰式餐廳, 品牌故事, 泰式美食, 正宗泰國料理">
+    <title>關於泰谷 | ThaiGu House of Thai</title>
+    <meta name="description" content="泰谷 ThaiGu - 專精正宗泰式風味，嚴選天然香料與新鮮食材，打造高級舒適的南洋渡假用餐體驗。">
+    <meta name="keywords" content="泰谷, ThaiGu, 關於泰谷, 泰國菜, 泰式餐廳, 正宗泰國菜, 泰式美食, 南洋料理, 泰國菜推薦">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/ico-01.png">
@@ -13,72 +13,35 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/aos.css">
-    
+
     <style>
         :root {
             --tg-primary: #C25920;
-            --tg-primary-light: #E07A42;
-            --tg-dark: #2C2523;
-            --tg-bg-warm: #F5E9D7;
-            --tg-card-bg: rgba(255, 255, 255, 0.85);
+            --tg-primary-light: #E07D44;
+            --tg-primary-dark: #9A4011;
+            --tg-dark: #2C2420;
+            --tg-bg: #F5E9D7;
+            --tg-card: #FFFFFF;
+            --tg-text-muted: #6B615B;
         }
 
-        body.about-page-body {
-            background-color: var(--tg-bg-warm);
+        body {
+            background-color: var(--tg-bg);
             color: var(--tg-dark);
-            font-family: "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             overflow-x: hidden;
         }
 
-        /* Hero Banner */
-        .about-hero {
-            position: relative;
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 120px 20px 60px;
-            background: radial-gradient(circle at center, rgba(245, 233, 215, 0.6) 0%, rgba(235, 218, 195, 0.9) 100%);
-            overflow: hidden;
-        }
-
-        .about-hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(194, 89, 32, 0.05) 0%, transparent 60%);
-            animation: rotateBg 40s linear infinite;
-            pointer-events: none;
-        }
-
-        @keyframes rotateBg {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .about-hero-inner {
-            max-width: 1200px;
-            width: 100%;
+        .about-wrapper {
+            max-width: 1280px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 50px;
-            align-items: center;
-            position: relative;
-            z-index: 2;
+            padding: 100px 24px 80px;
         }
 
-        @media (max-width: 992px) {
-            .about-hero-inner {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-            }
+        /* Hero Intro */
+        .about-hero {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
         }
 
         .hero-badge {
@@ -87,372 +50,396 @@
             gap: 8px;
             background: rgba(194, 89, 32, 0.12);
             color: var(--tg-primary);
-            padding: 6px 16px;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            margin-bottom: 18px;
+            border: 1px solid rgba(194, 89, 32, 0.25);
+            backdrop-filter: blur(10px);
         }
 
-        .about-hero-title {
-            font-size: 3rem;
+        .about-hero h1 {
+            font-size: 2.8rem;
             font-weight: 800;
-            line-height: 1.2;
             color: var(--tg-dark);
-            margin: 0 0 20px 0;
-            letter-spacing: -0.5px;
+            letter-spacing: 1px;
+            line-height: 1.3;
+            margin-bottom: 18px;
         }
 
-        .about-hero-title span {
+        .about-hero h1 span {
             color: var(--tg-primary);
             position: relative;
             display: inline-block;
         }
 
-        .about-hero-desc {
-            font-size: 1.1rem;
+        .about-hero p {
+            color: var(--tg-text-muted);
+            font-size: 1.12rem;
+            max-width: 720px;
+            margin: 0 auto;
             line-height: 1.8;
-            color: #5a4e4a;
-            margin-bottom: 35px;
-            font-weight: 400;
         }
 
-        .hero-stats-row {
+        /* Bento Grid Architecture */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .bento-card {
+            background: var(--tg-card);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(44, 36, 32, 0.05);
+            border: 1px solid rgba(194, 89, 32, 0.1);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
             display: flex;
-            gap: 30px;
-            padding-top: 10px;
+            flex-direction: column;
         }
 
-        @media (max-width: 992px) {
-            .hero-stats-row {
-                justify-content: center;
-            }
+        .bento-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 45px rgba(194, 89, 32, 0.14);
+            border-color: rgba(194, 89, 32, 0.3);
         }
 
-        .stat-card {
-            background: var(--tg-card-bg);
-            backdrop-filter: blur(10px);
-            padding: 15px 25px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            border: 1px solid rgba(255,255,255,0.8);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Card Image Wrapper with Smooth Zoom */
+        .card-img-wrap {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            background: #EFE3D3;
         }
 
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(194, 89, 32, 0.15);
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+            display: block;
         }
 
-        .stat-num {
-            font-size: 1.8rem;
+        .bento-card:hover .card-img-wrap img {
+            transform: scale(1.06);
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: rgba(44, 36, 32, 0.75);
+            color: #FFFFFF;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            backdrop-filter: blur(8px);
+            z-index: 2;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .card-tag.gold {
+            background: rgba(194, 89, 32, 0.88);
+        }
+
+        .card-content {
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .card-content h3 {
+            font-size: 1.55rem;
             font-weight: 800;
+            color: var(--tg-dark);
+            margin-bottom: 12px;
+            line-height: 1.35;
+        }
+
+        .card-content p {
+            color: var(--tg-text-muted);
+            font-size: 0.98rem;
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        /* Specific Bento Card Sizes */
+        .card-main-food {
+            grid-column: span 7;
+        }
+
+        .card-main-food .card-img-wrap {
+            height: 340px;
+        }
+
+        .card-hours-collage {
+            grid-column: span 5;
+        }
+
+        .card-hours-collage .card-img-wrap {
+            height: 340px;
+        }
+
+        .card-hall {
+            grid-column: span 6;
+        }
+
+        .card-hall .card-img-wrap {
+            height: 320px;
+        }
+
+        .card-seats {
+            grid-column: span 6;
+        }
+
+        .card-seats .card-img-wrap {
+            height: 320px;
+        }
+
+        /* Floating Info Badges */
+        .floating-hours-badge {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            padding: 12px 18px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            border: 1px solid rgba(194, 89, 32, 0.2);
+            text-align: right;
+            z-index: 2;
+        }
+
+        .floating-hours-badge .time-title {
+            font-size: 0.78rem;
+            font-weight: 700;
             color: var(--tg-primary);
+            letter-spacing: 1px;
             margin-bottom: 2px;
         }
 
-        .stat-label {
-            font-size: 0.8rem;
-            color: #776a66;
-            font-weight: 500;
+        .floating-hours-badge .time-val {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--tg-dark);
+        }
+
+        /* Stats Counter Bar */
+        .stats-strip {
+            background: linear-gradient(135deg, #2C2420 0%, #3D332D 100%);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 40px;
+            color: #FFFFFF;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(44, 36, 32, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-strip::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(194, 89, 32, 0.35) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .stat-item h4 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--tg-primary-light);
+            margin-bottom: 6px;
+            font-family: "Lexend", sans-serif;
+        }
+
+        .stat-item p {
+            font-size: 0.92rem;
+            color: rgba(255, 255, 255, 0.75);
+            margin: 0;
             letter-spacing: 1px;
         }
 
-        /* Hero Image Composition with 3D Float Effect */
-        .hero-visual-wrap {
-            position: relative;
-            display: flex;
-            justify-content: center;
+        /* Reserved Chinese Intro Section (Customizable) */
+        .intro-story-section {
+            background: var(--tg-card);
+            border-radius: 24px;
+            padding: 50px 40px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(194, 89, 32, 0.15);
+            box-shadow: 0 10px 30px rgba(44, 36, 32, 0.05);
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
             align-items: center;
         }
 
-        .main-hero-img-box {
-            position: relative;
-            width: 100%;
-            max-width: 480px;
-            border-radius: 28px;
-            overflow: hidden;
-            box-shadow: 0 25px 50px rgba(44, 37, 35, 0.18);
-            border: 6px solid #fff;
-            transform: rotate(-2deg);
-            transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-
-        .main-hero-img-box:hover {
-            transform: rotate(0deg) scale(1.02);
-        }
-
-        .main-hero-img-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.6s ease;
-        }
-
-        .main-hero-img-box:hover img {
-            transform: scale(1.05);
-        }
-
-        .floating-badge-card {
-            position: absolute;
-            bottom: -20px;
-            left: -20px;
-            background: #fff;
-            padding: 16px 22px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            z-index: 3;
-            animation: floatSlow 4s ease-in-out infinite;
-        }
-
-        @keyframes floatSlow {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .floating-badge-card .badge-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: rgba(194, 89, 32, 0.12);
-            color: var(--tg-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-        }
-
-        /* Section Container */
-        .about-section {
-            padding: 100px 20px;
-            position: relative;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 60px;
-        }
-
-        .section-tag {
-            color: var(--tg-primary);
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-            display: block;
-        }
-
-        .section-title {
-            font-size: 2.3rem;
+        .story-left h2 {
+            font-size: 2.2rem;
             font-weight: 800;
             color: var(--tg-dark);
-            margin: 0 0 15px;
+            line-height: 1.35;
+            margin-bottom: 16px;
         }
 
-        .section-subtitle {
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: #6a5d59;
-            margin: 0;
-        }
-
-        /* Story & Philosophy Grid */
-        .story-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        @media (max-width: 992px) {
-            .story-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .story-card {
-            background: #ffffff;
-            border-radius: 24px;
-            padding: 40px 30px;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.04);
-            border: 1px solid rgba(235, 218, 195, 0.6);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .story-card::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--tg-primary), #F5E9D7);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .story-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 45px rgba(194, 89, 32, 0.12);
-        }
-
-        .story-card:hover::after {
-            opacity: 1;
-        }
-
-        .story-card-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 18px;
-            background: rgba(194, 89, 32, 0.1);
+        .story-left .tag {
             color: var(--tg-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            margin-bottom: 25px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 10px;
         }
 
-        .story-card-title {
-            font-size: 1.35rem;
+        .story-right {
+            border-left: 3px solid rgba(194, 89, 32, 0.25);
+            padding-left: 30px;
+        }
+
+        .story-right p {
+            color: var(--tg-text-muted);
+            font-size: 1.05rem;
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        .story-right p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Call To Action Box */
+        .about-cta {
+            background: linear-gradient(135deg, var(--tg-primary) 0%, var(--tg-primary-dark) 100%);
+            border-radius: 24px;
+            padding: 50px 30px;
+            text-align: center;
+            color: #FFFFFF;
+            box-shadow: 0 20px 45px rgba(194, 89, 32, 0.3);
+        }
+
+        .about-cta h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #FFFFFF;
+        }
+
+        .about-cta p {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto 28px;
+            line-height: 1.7;
+        }
+
+        .cta-btn-row {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 34px;
+            border-radius: 50px;
             font-weight: 700;
-            margin: 0 0 15px;
+            font-size: 0.98rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta-white {
+            background: #FFFFFF;
+            color: var(--tg-primary);
+        }
+
+        .btn-cta-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
             color: var(--tg-dark);
         }
 
-        .story-card-text {
-            font-size: 0.95rem;
-            line-height: 1.75;
-            color: #665955;
-            margin: 0;
+        .btn-cta-ghost {
+            background: transparent;
+            color: #FFFFFF;
+            border: 2px solid rgba(255, 255, 255, 0.6);
         }
 
-        /* Atmosphere & Space Gallery Section */
-        .space-section {
-            background: #EDE1CD;
-            padding: 100px 20px;
-            position: relative;
+        .btn-cta-ghost:hover {
+            border-color: #FFFFFF;
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
         }
 
-        .space-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
+        /* Responsive */
         @media (max-width: 992px) {
-            .space-container {
+            .card-main-food, .card-hours-collage, .card-hall, .card-seats {
+                grid-column: span 12;
+            }
+            .stats-strip {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .intro-story-section {
                 grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .story-right {
+                border-left: none;
+                border-top: 2px solid rgba(194, 89, 32, 0.2);
+                padding-left: 0;
+                padding-top: 20px;
+            }
+            .about-hero h1 {
+                font-size: 2.2rem;
             }
         }
 
-        .gallery-mosaic {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .mosaic-item {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            border: 4px solid #fff;
-            position: relative;
-        }
-
-        .mosaic-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.6s ease;
-        }
-
-        .mosaic-item:hover img {
-            transform: scale(1.08);
-        }
-
-        .mosaic-item.tall {
-            grid-row: span 2;
-            height: 440px;
-        }
-
-        .mosaic-item.normal {
-            height: 210px;
-        }
-
-        .space-details-box {
-            background: #fff;
-            padding: 45px;
-            border-radius: 28px;
-            box-shadow: 0 20px 45px rgba(0,0,0,0.06);
-        }
-
-        .hours-badge-row {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin: 25px 0;
-            padding: 18px 22px;
-            background: #FAF4EB;
-            border-radius: 16px;
-            border-left: 4px solid var(--tg-primary);
-        }
-
-        .hours-time {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--tg-primary);
-        }
-
-        .cta-btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: var(--tg-primary);
-            color: #fff;
-            padding: 14px 32px;
-            border-radius: 30px;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 10px 25px rgba(194, 89, 32, 0.3);
-            transition: all 0.3s ease;
-            margin-top: 15px;
-        }
-
-        .cta-btn-primary:hover {
-            background: var(--tg-primary-light);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(194, 89, 32, 0.4);
-            color: #fff;
-        }
-
-        /* Footer Simple */
-        .about-footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: #8c7e79;
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(0,0,0,0.06);
+        @media (max-width: 576px) {
+            .about-wrapper {
+                padding: 85px 16px 50px;
+            }
+            .about-hero h1 {
+                font-size: 1.85rem;
+            }
+            .card-content {
+                padding: 22px;
+            }
+            .intro-story-section {
+                padding: 30px 20px;
+            }
+            .about-cta {
+                padding: 35px 20px;
+            }
+            .cta-btn-row {
+                flex-direction: column;
+            }
+            .btn-cta {
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
 </head>
-<body class="about-page-body">
+<body>
 
     <!-- Header -->
     <header class="header bg-header">
@@ -467,9 +454,9 @@
             <nav class="navbar" id="navbar">
                 <ul class="nav-menu">
                     <li><a href="main-dishes.html" class="nav-link">主食餐單</a></li>
+                    <li><a href="about.html" class="nav-link active">關於泰谷</a></li>
                     <li><a href="drinks.html" class="nav-link">Drinks</a></li>
                     <li><a href="coffee.html" class="nav-link">Coffee</a></li>
-                    <li><a href="about.html" class="nav-link active">關於泰谷</a></li>
                     <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
                 </ul>
             </nav>
@@ -483,148 +470,156 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="about-hero">
-        <div class="about-hero-inner">
-            <div class="hero-text-content" data-aos="fade-right" data-aos-duration="1000">
-                <div class="hero-badge">
-                    <span>✦</span> HOUSE OF THAI <span>✦</span>
-                </div>
-                <h1 class="about-hero-title">
-                    專精正宗風味<br>
-                    <span>用心演繹泰式美學</span>
-                </h1>
-                <p class="about-hero-desc">
-                    泰谷（ThaiGu）秉持對泰國傳統烹飪技藝的極致追求，嚴選南洋天然香料與新鮮食材，將曼谷街頭的熱情香氣與宮廷料理的細膩層次完美交織，為您呈現無與倫比的泰味饗宴。
-                </p>
-
-                <div class="hero-stats-row">
-                    <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="stat-num">100%</div>
-                        <div class="stat-label">正宗泰式香料</div>
-                    </div>
-                    <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="stat-num">匠心</div>
-                        <div class="stat-label">泰廚傳承主理</div>
-                    </div>
-                    <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="stat-num">舒享</div>
-                        <div class="stat-label">南洋渡假氛圍</div>
-                    </div>
-                </div>
+    <!-- Main Content Container -->
+    <div class="about-wrapper">
+        
+        <!-- Hero Header -->
+        <div class="about-hero" data-aos="fade-up" data-aos-duration="900">
+            <div class="hero-badge">
+                <span>✦</span> HOUSE OF THAI <span>✦</span>
             </div>
+            <h1>尋味泰谷 · <span>專精正宗泰式風味</span></h1>
+            <p>
+                嚴選地道南洋天然香料與鮮活食材，融合現代美學空間與傳統匠心烹飪，讓每一道泰味都成為難以忘懷的味蕾記憶。
+            </p>
+        </div>
 
-            <div class="hero-visual-wrap" data-aos="fade-left" data-aos-duration="1000">
-                <div class="main-hero-img-box">
-                    <img src="assets/images/about-dish.jpg" alt="泰谷特色精緻擺盤">
+        <!-- Bento Grid Collage (4 High Quality Images) -->
+        <div class="bento-grid">
+            
+            <!-- 1. Food Art & Fresh Seafood (photo 1) -->
+            <div class="bento-card card-main-food" data-aos="fade-right" data-aos-duration="1000">
+                <div class="card-img-wrap">
+                    <span class="card-tag gold">招牌美饌 · 鮮蝦盛宴</span>
+                    <img src="assets/images/about/about-food-art.jpg" alt="泰谷精緻泰式海鮮美饌">
                 </div>
-                <div class="floating-badge-card">
-                    <div class="badge-icon">🍲</div>
+                <div class="card-content">
                     <div>
-                        <div style="font-weight: 700; font-size: 0.95rem; color: #2C2523;">主廚招牌推薦</div>
-                        <div style="font-size: 0.8rem; color: #887a75;">泰式鮮蝦砂鍋煲</div>
+                        <h3>地道鮮香 · 舌尖上的曼谷風情</h3>
+                        <p>堅持使用新鮮大蝦、南薑、香茅與泰國青檸葉現點現做。每一滴醬汁皆由大廚親自調配，酸、辣、鹹、甜完美平衡，呈現視覺與味覺的雙重藝術。</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Brand Philosophy / Story Grid -->
-    <section class="about-section">
-        <div class="section-header" data-aos="fade-up">
-            <span class="section-tag">OUR PHILOSOPHY</span>
-            <h2 class="section-title">泰谷的三大堅持</h2>
-            <p class="section-subtitle">每一道菜品、每一處細節，皆是對泰國美食文化的深情致敬。</p>
-        </div>
-
-        <div class="story-grid">
-            <!-- Card 1 -->
-            <div class="story-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="story-card-icon">🌿</div>
-                <h3 class="story-card-title">天然香料 · 靈魂本味</h3>
-                <p class="story-card-text">
-                    堅持空運泰國檸檬葉、南薑、香茅與新鮮鳥眼椒，拒絕人工香精。透過石臼慢舂釋放草本精油，熬煮出層次分明、酸辣回甘的經典泰味。
-                </p>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="story-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="story-card-icon">🔥</div>
-                <h3 class="story-card-title">現點現做 · 鑊氣爆棚</h3>
-                <p class="story-card-text">
-                    每一份餐點皆由資深泰菜師傅現點現烹，猛火快炒保留鮮脆口感，砂鍋慢煨凝聚濃郁精華，將熱騰騰的極致美味第一時間呈上餐桌。
-                </p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="story-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="story-card-icon">✨</div>
-                <h3 class="story-card-title">溫暖空間 · 愜意時光</h3>
-                <p class="story-card-text">
-                    暖色調藤編吊燈、質樸木質餐桌與綠意植栽環繞，打造令人放鬆的南洋渡假美學空間。無論摯友聚餐或獨享美味，皆能在此找到舒適歸屬。
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Space & Atmosphere Section -->
-    <section class="space-section">
-        <div class="space-container">
-            <!-- Gallery Mosaic -->
-            <div class="gallery-mosaic" data-aos="fade-right" data-aos-duration="1000">
-                <div class="mosaic-item tall">
-                    <img src="assets/images/about-interior.jpg" alt="泰谷店內優雅用餐環境">
+            <!-- 2. Opening Hours & Collage (photo 2) -->
+            <div class="bento-card card-hours-collage" data-aos="fade-left" data-aos-duration="1000">
+                <div class="card-img-wrap">
+                    <span class="card-tag">營業時間 · 歡迎品鑒</span>
+                    <img src="assets/images/about/about-hours-collage.jpg" alt="泰谷營業時間與氛圍">
+                    <div class="floating-hours-badge">
+                        <div class="time-title">OPENING HOURS</div>
+                        <div class="time-val">12:00 - 15:00</div>
+                        <div class="time-val">18:00 - 23:00</div>
+                    </div>
                 </div>
-                <div class="mosaic-item normal">
-                    <img src="assets/images/about-hours.jpg" alt="泰谷營業時間與氛圍">
-                </div>
-                <div class="mosaic-item normal">
-                    <img src="assets/images/about-dish.jpg" alt="泰谷精緻泰國料理">
-                </div>
-            </div>
-
-            <!-- Space Details -->
-            <div class="space-details-box" data-aos="fade-left" data-aos-duration="1000">
-                <span class="section-tag">ATMOSPHERE & HOURS</span>
-                <h2 class="section-title">沉浸於泰式雅致空間</h2>
-                <p style="color: #665955; line-height: 1.8; font-size: 1rem; margin-bottom: 20px;">
-                    走進泰谷，柔和的暖光傾瀉在藤編與原木之間，空氣中瀰漫著檸檬葉與香茅的悠揚氣息。我們致力於營造一處逃離城市喧囂的靜謐秘境，讓您在細品佳餚之餘，也能享受視覺與心靈的雙重放鬆。
-                </p>
-
-                <div class="hours-badge-row">
-                    <div style="font-size: 1.5rem;">🕒</div>
+                <div class="card-content">
                     <div>
-                        <div style="font-size: 0.85rem; color: #776a66; font-weight: 500;">營業時間 OPENING HOURS</div>
-                        <div class="hours-time">午市 12:00 - 15:00 ｜ 晚市 18:00 - 23:00</div>
+                        <h3>光影交錯 · 愜意時光</h3>
+                        <p>無論是午後明媚的午餐小憩，還是夜幕降臨後的微醺晚宴，泰谷都為您準備了最溫暖的南洋氛圍與地道美饌。</p>
                     </div>
                 </div>
+            </div>
 
-                <a href="main-dishes.html" class="cta-btn-primary">
-                    探索主食餐單 <span>→</span>
-                </a>
+            <!-- 3. Dining Hall Overview (photo 3) -->
+            <div class="bento-card card-hall" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                <div class="card-img-wrap">
+                    <span class="card-tag gold">雅緻大廳 · 南洋渡假風</span>
+                    <img src="assets/images/about/about-dining-hall.jpg" alt="泰谷餐廳全景雅緻大廳">
+                </div>
+                <div class="card-content">
+                    <div>
+                        <h3>Let's Thai · 渡假風美學空間</h3>
+                        <p>暖色調藤編吊燈、質樸木質餐桌與滿室綠意植栽相互輝映。寬敞通透的挑高設計，營造如置身清邁度假酒店般的放鬆愉悅感。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Cozy Seating & Greenery (photo 4) -->
+            <div class="bento-card card-seats" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <div class="card-img-wrap">
+                    <span class="card-tag">舒適用餐 · 聚會首選</span>
+                    <img src="assets/images/about/about-interior-seats.jpg" alt="泰谷舒適沙發與藤椅雅座">
+                </div>
+                <div class="card-content">
+                    <div>
+                        <h3>溫馨雅座 · 共享美好相聚</h3>
+                        <p>精心定製的人體工學藤椅與柔軟沙發卡座，適合家庭聚餐、情侶約會與朋友小聚。細膩的暖光照明，烘托出溫暖親切的用餐體驗。</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Reserved Restaurant Story / Intro Section -->
+        <div class="intro-story-section" data-aos="fade-up" data-aos-duration="1000">
+            <div class="story-left">
+                <span class="tag">✦ 品牌故事與理念 ✦</span>
+                <h2>關於泰谷（ThaiGu）<br>House of Thai</h2>
+            </div>
+            <div class="story-right">
+                <p>
+                    <strong>【泰谷餐廳簡介位置 · 歡迎隨時填寫】：</strong><br>
+                    泰谷（ThaiGu）創立於對泰國傳統美食文化的熱愛與執著。我們深信，真正的泰國菜靈魂在於「新鮮香料」與「火候層次」。每一碗濃郁香辣的冬陰功、每一份脆嫩多汁的烤豬頸肉，都凝聚了我們對正宗泰味的堅持。
+                </p>
+                <p>
+                    我們致力於將傳統地道的曼谷街頭風味與現代雅緻的用餐環境融為一體，為每一位饕客打造既溫馨又高級的南洋美食渡假之旅。
+                </p>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="about-footer">
-        <p>© 2026 泰谷 ThaiGu (House of Thai). All Rights Reserved. 專精正宗泰式風味</p>
-    </footer>
+        <!-- Key Stats Counter -->
+        <div class="stats-strip" data-aos="zoom-in" data-aos-duration="900">
+            <div class="stat-item">
+                <h4>100%</h4>
+                <p>地道泰式香料</p>
+            </div>
+            <div class="stat-item">
+                <h4>匠心</h4>
+                <p>泰廚傳承主理</p>
+            </div>
+            <div class="stat-item">
+                <h4>新鮮</h4>
+                <p>每日嚴選食材</p>
+            </div>
+            <div class="stat-item">
+                <h4>舒適</h4>
+                <p>渡假美學空間</p>
+            </div>
+        </div>
 
-    <!-- JavaScript -->
+        <!-- Call to Action Banner -->
+        <div class="about-cta" data-aos="fade-up" data-aos-duration="1000">
+            <h2>探索泰谷主食餐單</h2>
+            <p>10 款主廚專精招牌菜品已為您備齊，即刻瀏覽品鑒地道泰味！</p>
+            <div class="cta-btn-row">
+                <a href="main-dishes.html" class="btn-cta btn-cta-white">瀏覽主食餐單 ➔</a>
+                <a href="contact-us.html" class="btn-cta btn-cta-ghost">聯絡我們 / 訂座</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24">
+            <path d="M7 14l5-5 5 5z"/>
+        </svg>
+    </button>
+
+    <!-- JavaScript & AOS Animation Init -->
     <script src="assets/js/aos.js"></script>
-    <script src="assets/js/main-01.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             if (typeof AOS !== 'undefined') {
                 AOS.init({
-                    duration: 900,
+                    duration: 800,
                     easing: 'ease-out-cubic',
                     once: true,
-                    offset: 80
+                    offset: 50
                 });
             }
         });
     </script>
+    <script src="assets/js/main-01.js"></script>
 </body>
 </html>
