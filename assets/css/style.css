@@ -11589,11 +11589,22 @@ body {
   background-color: #AAB7D3;
 }
 .hero-meals .main-title {
-  font-weight: 500;
-  max-width: 400px;
+  font-weight: 700;
+  max-width: 480px;
   text-align: center;
   padding: 10px;
   margin-bottom: 10px;
+  font-size: 1.6rem;
+  color: #222;
+}
+.hero-meals .main-title .subtitle-tag {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #C25920;
+  letter-spacing: 2.5px;
+  margin-top: 6px;
+  text-transform: uppercase;
 }
 @media (min-height: 300px) and (max-height: 800px) {
   .hero-meals .main-title {
