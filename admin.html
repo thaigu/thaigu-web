@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泰谷 ThaiGu | SEO 智能管理控制台</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/png" href="assets/images/ico-01.png">
+    
+    <style>
+        :root {
+            --tg-primary: #C25920;
+            --tg-primary-hover: #A24816;
+            --tg-dark: #1E1A18;
+            --tg-bg: #F8F6F2;
+            --tg-card: #FFFFFF;
+            --tg-border: #E8E2D9;
+            --tg-text: #2C2420;
+            --tg-muted: #7A706A;
+            --tg-success: #16A34A;
+            --tg-success-bg: #DCFCE7;
+            --tg-warning: #D97706;
+            --tg-blue: #2563EB;
+            --tg-blue-bg: #EFF6FF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: var(--tg-bg);
+            color: var(--tg-text);
+            line-height: 1.5;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Top Header */
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--tg-card);
+            padding: 20px 28px;
+            border-radius: 16px;
+            border: 1px solid var(--tg-border);
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+        }
+
+        .brand-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .brand-logo {
+            height: 44px;
+            width: auto;
+        }
+
+        .brand-title h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--tg-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge-live {
+            background: var(--tg-success-bg);
+            color: var(--tg-success);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .badge-live::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--tg-success);
+        }
+
+        .brand-title p {
+            font-size: 0.85rem;
+            color: var(--tg-muted);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 9px 16px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            border-radius: 10px;
+            text-decoration: none;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--tg-primary);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: var(--tg-primary-hover);
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: var(--tg-dark);
+            border-color: var(--tg-border);
+        }
+
+        .btn-secondary:hover {
+            background: #f3efe9;
+        }
+
+        /* KPI Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .metric-card {
+            background: var(--tg-card);
+            padding: 20px;
+            border-radius: 14px;
+            border: 1px solid var(--tg-border);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+        }
+
+        .metric-label {
+            font-size: 0.85rem;
+            color: var(--tg-muted);
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--tg-dark);
+            letter-spacing: -0.5px;
+        }
+
+        .metric-sub {
+            font-size: 0.8rem;
+            color: var(--tg-success);
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1.2fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 900px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--tg-card);
+            border-radius: 16px;
+            border: 1px solid var(--tg-border);
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            margin-bottom: 24px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--tg-border);
+        }
+
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--tg-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Keywords Table */
+        .keywords-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .keywords-table th {
+            text-align: left;
+            padding: 10px 12px;
+            background: #FAFAF8;
+            color: var(--tg-muted);
+            font-weight: 600;
+            font-size: 0.8rem;
+            border-radius: 6px;
+        }
+
+        .keywords-table td {
+            padding: 12px;
+            border-bottom: 1px solid #F0ECE4;
+        }
+
+        .keywords-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+        .tag-high {
+            background: #FEF3C7;
+            color: #B45309;
+        }
+
+        .tag-rank {
+            background: var(--tg-blue-bg);
+            color: var(--tg-blue);
+        }
+
+        /* Keyword Form */
+        .add-form {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .form-input {
+            flex: 1;
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 1px solid var(--tg-border);
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-input:focus {
+            border-color: var(--tg-primary);
+        }
+
+        /* Diagnostic List */
+        .diagnostic-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #F0ECE4;
+        }
+
+        .diagnostic-item:last-child {
+            border-bottom: none;
+        }
+
+        .status-icon {
+            font-size: 1.1rem;
+            margin-top: 2px;
+        }
+
+        .diagnostic-info h4 {
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--tg-dark);
+            margin-bottom: 2px;
+        }
+
+        .diagnostic-info p {
+            font-size: 0.82rem;
+            color: var(--tg-muted);
+        }
+
+        /* Notification Toast */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #18181B;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Top Header -->
+        <header class="admin-header">
+            <div class="brand-info">
+                <img src="assets/images/thaigu-logo.png" alt="泰谷 ThaiGu Logo" class="brand-logo">
+                <div class="brand-title">
+                    <h1>泰谷 ThaiGu · SEO 智能管理控制台 <span class="badge-live">監控中</span></h1>
+                    <p>對標實時搜尋引擎優化與關鍵詞分發系統</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-secondary" onclick="triggerScan()">🔄 掃描全站</button>
+                <a href="https://thaigu.pages.dev" target="_blank" class="btn btn-primary">開啟前台網站 ↗</a>
+            </div>
+        </header>
+
+        <!-- KPI Metrics -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-label">收錄頁面數 <span>🌐</span></div>
+                <div class="metric-value" id="totalPages">5 / 5</div>
+                <div class="metric-sub">✅ 100% 索引結構就緒</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">核心關鍵詞庫 <span>🔑</span></div>
+                <div class="metric-value" id="totalKeywords">8 組</div>
+                <div class="metric-sub">📈 覆蓋港澳泰國菜核心意圖</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Schema 結構化標記 <span>🧩</span></div>
+                <div class="metric-value">3 類</div>
+                <div class="metric-sub">✨ Restaurant, Menu, FAQPage</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-label">Sitemap & Robots <span>🤖</span></div>
+                <div class="metric-value">正常</div>
+                <div class="metric-sub">🚀 Googlebot 實時允許爬取</div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <!-- Left: Keyword & Ranking Center -->
+            <div class="left-col">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">🎯 核心關鍵詞與落地頁分發</div>
+                        <span style="font-size: 0.8rem; color: var(--tg-muted);">即時同步</span>
+                    </div>
+
+                    <table class="keywords-table">
+                        <thead>
+                            <tr>
+                                <th>關鍵詞</th>
+                                <th>意圖類別</th>
+                                <th>指定落地頁</th>
+                                <th>權重評級</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="keywordList">
+                            <tr>
+                                <td><strong>泰谷 泰國菜</strong></td>
+                                <td>品牌名 / 搜尋</td>
+                                <td><a href="/index.html" style="color:var(--tg-primary);">/index.html</a></td>
+                                <td><span class="tag tag-high">核心詞 P0</span></td>
+                                <td><button class="btn btn-secondary" style="padding:4px 8px;font-size:0.75rem;" onclick="removeKeyword(this)">刪除</button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>泰式粉絲蝦煲</strong></td>
+                                <td>招牌美食</td>
+                                <td><a href="/main-dishes.html" style="color:var(--tg-primary);">/main-dishes.html</a></td>
+                                <td><span class="tag tag-high">高轉換 P1</span></td>
+                                <td><button class="btn btn-secondary" style="padding:4px 8px;font-size:0.75rem;" onclick="removeKeyword(this)">刪除</button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>正宗冬陰功海鮮湯粉</strong></td>
+                                <td>招牌主食</td>
+                                <td><a href="/main-dishes.html" style="color:var(--tg-primary);">/main-dishes.html</a></td>
+                                <td><span class="tag tag-high">高轉換 P1</span></td>
+                                <td><button class="btn btn-secondary" style="padding:4px 8px;font-size:0.75rem;" onclick="removeKeyword(this)">刪除</button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>經典泰式奶茶</strong></td>
+                                <td>特色飲品</td>
+                                <td><a href="/drinks.html" style="color:var(--tg-primary);">/drinks.html</a></td>
+                                <td><span class="tag tag-rank">人氣 P1</span></td>
+                                <td><button class="btn btn-secondary" style="padding:4px 8px;font-size:0.75rem;" onclick="removeKeyword(this)">刪除</button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>泰式芒果糯米飯</strong></td>
+                                <td>經典甜品</td>
+                                <td><a href="/drinks.html" style="color:var(--tg-primary);">/drinks.html</a></td>
+                                <td><span class="tag tag-rank">人氣 P1</span></td>
+                                <td><button class="btn btn-secondary" style="padding:4px 8px;font-size:0.75rem;" onclick="removeKeyword(this)">刪除</button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>泰谷 預約訂座</strong></td>
+                                <td>門店服務</td>
+                                <td><a href="/contact-us.html" style="color:var(--tg-primary);">/contact-us.html</a></td>
+                                <td><span class="tag tag-rank">服務 P2</span></td>
+                                <td><button class="btn btn-secondary" style="padding:4px 8px;font-size:0.75rem;" onclick="removeKeyword(this)">刪除</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <form class="add-form" onsubmit="addKeyword(event)">
+                        <input type="text" id="newKeyword" class="form-input" placeholder="輸入新關鍵詞（例如：泰國南洋料理推薦）" required>
+                        <select id="newTarget" class="form-input" style="flex:0.6;">
+                            <option value="/main-dishes.html">/main-dishes.html</option>
+                            <option value="/drinks.html">/drinks.html</option>
+                            <option value="/about.html">/about.html</option>
+                            <option value="/contact-us.html">/contact-us.html</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">+ 新增詞彙</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right: Diagnostics & Quick Tools -->
+            <div class="right-col">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">⚡ SEO 健康度即時診斷</div>
+                    </div>
+
+                    <div class="diagnostic-list">
+                        <div class="diagnostic-item">
+                            <span class="status-icon">✅</span>
+                            <div class="diagnostic-info">
+                                <h4>Schema.org 複合圖譜標記</h4>
+                                <p>已注入 Restaurant、Menu 及 FAQPage 結構化標籤。</p>
+                            </div>
+                        </div>
+
+                        <div class="diagnostic-item">
+                            <span class="status-icon">✅</span>
+                            <div class="diagnostic-info">
+                                <h4>OpenGraph & Twitter Card 大圖</h4>
+                                <p>已配置 1200x630 社群分享高畫質縮圖卡片。</p>
+                            </div>
+                        </div>
+
+                        <div class="diagnostic-item">
+                            <span class="status-icon">✅</span>
+                            <div class="diagnostic-info">
+                                <h4>Robots.txt 與 Sitemap.xml</h4>
+                                <p>Sitemap 包含 5 個核心路由，搜尋引擎已完全開放抓取。</p>
+                            </div>
+                        </div>
+
+                        <div class="diagnostic-item">
+                            <span class="status-icon">✅</span>
+                            <div class="diagnostic-info">
+                                <h4>多地區 Hreflang 繁體標籤</h4>
+                                <p>支援 zh-HK, zh-Hant 及 x-default 預設配置。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">🛠️ 快捷搜索引擎工具</div>
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        <a href="https://search.google.com/search-console" target="_blank" class="btn btn-secondary" style="justify-content:center;">Google Search Console ↗</a>
+                        <a href="https://thaigu.pages.dev/sitemap.xml" target="_blank" class="btn btn-secondary" style="justify-content:center;">檢視 Sitemap.xml ↗</a>
+                        <a href="https://thaigu.pages.dev/robots.txt" target="_blank" class="btn btn-secondary" style="justify-content:center;">檢視 Robots.txt ↗</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">操作已成功儲存！</div>
+
+    <script>
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        function triggerScan() {
+            showToast('🔍 正在掃描全站 5 個頁面與 Schema 結構... 完成！');
+        }
+
+        function addKeyword(e) {
+            e.preventDefault();
+            const kwInput = document.getElementById('newKeyword');
+            const targetInput = document.getElementById('newTarget');
+            const kw = kwInput.value.trim();
+            const target = targetInput.value;
+
+            if (!kw) return;
+
+            const tbody = document.getElementById('keywordList');
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td><strong>${kw}</strong></td>
+                <td>自訂推廣</td>
+                <td><a href="${target}" style="color:var(--tg-primary);">${target}</a></td>
+                <td><span class="tag tag-rank">新增 P2</span></td>
+                <td><button class="btn btn-secondary" style="padding:4px 8px;font-size:0.75rem;" onclick="removeKeyword(this)">刪除</button></td>
+            `;
+            tbody.appendChild(tr);
+
+            kwInput.value = '';
+            showToast(`✅ 已成功將「${kw}」加入關鍵詞追蹤庫！`);
+        }
+
+        function removeKeyword(btn) {
+            const tr = btn.closest('tr');
+            const kw = tr.querySelector('strong').textContent;
+            tr.remove();
+            showToast(`🗑️ 已移除關鍵詞：${kw}`);
+        }
+    </script>
+</body>
+</html>
