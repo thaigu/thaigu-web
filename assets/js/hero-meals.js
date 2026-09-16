@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   mealsData = Array.from(mealItems).map((item) => ({
     id: item.querySelector(".js-add-to-cart")?.getAttribute("data-meal-id") || "",
     title: item.querySelector(".title")?.textContent.trim() || "",
+    description: item.querySelector(".description")?.textContent.trim() || "",
     image: item.querySelector(".image")?.getAttribute("src") || "",
     alt: item.querySelector(".image")?.getAttribute("alt") || "",
     price: item.querySelector(".price")?.textContent.trim() || "",
@@ -82,9 +83,17 @@ function generateMealsHTML() {
   });
 
   // Generate main meal content
+  const firstMeal = mealsData[0];
+  const bottomContentHtml = firstMeal.description
+    ? `<p class="description">${firstMeal.description}</p>`
+    : `<div class="price-add">
+        <span class="price">${firstMeal.price}</span>
+        ${firstMeal.buttonHtml}
+      </div>`;
+
   mainMeal.innerHTML = `
     <div class="box-image">
-      <img class="image" src="${mealsData[0].image}" alt="${mealsData[0].alt}">
+      <img class="image" src="${firstMeal.image}" alt="${firstMeal.alt}">
     </div>
 
     <div class="controls">
@@ -93,11 +102,8 @@ function generateMealsHTML() {
     </div>
 
     <div class="info pt-4">
-      <h2 class="title">${mealsData[0].title}</h2>
-      <div class="price-add">
-        <span class="price">${mealsData[0].price}</span>
-        ${mealsData[0].buttonHtml}
-      </div>
+      <h2 class="title">${firstMeal.title}</h2>
+      ${bottomContentHtml}
     </div>
   `;
 }
@@ -168,7 +174,8 @@ function initializeCarousel() {
 
     if (originalImageSources[topIndex] && mainImage && meal) {
       const title = document.querySelector(".hero-meals-anim .main-meal .info .title");
-      const priceAdd = document.querySelector(".hero-meals-anim .main-meal .info .price-add");
+      const infoContainer = document.querySelector(".hero-meals-anim .main-meal .info");
+      const bottomContent = infoContainer.querySelector(".description, .price-add");
 
       // --- Animate current image out (move down) ---
       mainImage.style.transition = "opacity 0.5s ease, transform 0.6s ease";
@@ -176,22 +183,37 @@ function initializeCarousel() {
       mainImage.style.transform = "translateY(80px)"; // move down out of view
 
       // Animate text out
-      animateElementOut(title, 0);
-      animateElementOut(priceAdd, 80);
+      if (title) animateElementOut(title, 0);
+      if (bottomContent) animateElementOut(bottomContent, 80);
 
       // Replace content after short delay
       setTimeout(() => {
         mainImage.src = originalImageSources[topIndex];
         if (title) title.textContent = meal.title;
 
-        if (priceAdd) {
-          // Keep existing button HTML but add data attributes dynamically
+        if (meal.description) {
+          let descEl = infoContainer.querySelector(".description");
+          if (!descEl) {
+            const priceAddEl = infoContainer.querySelector(".price-add");
+            if (priceAddEl) priceAddEl.remove();
+            descEl = document.createElement("p");
+            descEl.className = "description";
+            infoContainer.appendChild(descEl);
+          }
+          descEl.textContent = meal.description;
+        } else if (meal.price || meal.buttonHtml) {
+          let priceAdd = infoContainer.querySelector(".price-add");
+          if (!priceAdd) {
+            const descEl = infoContainer.querySelector(".description");
+            if (descEl) descEl.remove();
+            priceAdd = document.createElement("div");
+            priceAdd.className = "price-add";
+            infoContainer.appendChild(priceAdd);
+          }
           priceAdd.innerHTML = `
             <span class="price">${meal.price}</span>
             ${meal.buttonHtml}
           `;
-
-          // Add data attributes to the button
           const addBtn = priceAdd.querySelector(".js-add-to-cart");
           if (addBtn) {
             addBtn.setAttribute("data-meal-id", meal.id);
@@ -200,6 +222,8 @@ function initializeCarousel() {
             addBtn.setAttribute("data-product-image", meal.image);
           }
         }
+
+        const newBottomContent = infoContainer.querySelector(".description, .price-add");
 
         // --- Animate new image in (from top) ---
         mainImage.style.transition = "none";
@@ -212,8 +236,8 @@ function initializeCarousel() {
         }, 50);
 
         // Animate text back in sequentially
-        animateElementIn(title, 150);
-        animateElementIn(priceAdd, 250);
+        if (title) animateElementIn(title, 150);
+        if (newBottomContent) animateElementIn(newBottomContent, 250);
       }, 450);
     }
   }
