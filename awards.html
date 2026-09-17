@@ -565,6 +565,41 @@
             transform: rotate(90deg);
         }
 
+        .lightbox-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            color: var(--tg-dark);
+            font-size: 2.2rem;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+            transition: all 0.25s ease;
+            z-index: 10;
+        }
+
+        .lightbox-nav-btn:hover {
+            background: var(--tg-gold);
+            color: #FFFFFF;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .lightbox-prev {
+            left: 15px;
+        }
+
+        .lightbox-next {
+            right: 15px;
+        }
+
         /* Bottom Luxury CTA */
         .awards-cta {
             background: linear-gradient(135deg, #261D1A 0%, #1A1412 100%);
@@ -1274,6 +1309,9 @@
     <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
         <div class="lightbox-content" onclick="event.stopPropagation()">
             <button class="lightbox-close" onclick="closeLightbox()" aria-label="關閉">&times;</button>
+            <button class="lightbox-nav-btn lightbox-prev" onclick="prevLightbox(event)" aria-label="上一張">&lsaquo;</button>
+            <button class="lightbox-nav-btn lightbox-next" onclick="nextLightbox(event)" aria-label="下一張">&rsaquo;</button>
+
             <div class="lightbox-img-wrap">
                 <img id="lightboxImg" src="" alt="獲獎證書詳情">
             </div>
@@ -1284,9 +1322,9 @@
                     <div id="lightboxIssuer" style="font-size: 0.95rem; color: #8C5E09; font-weight: 700; margin-bottom: 16px;"></div>
                     <p id="lightboxDesc" style="font-size: 1rem; color: var(--tg-text-muted); line-height: 1.85; margin-bottom: 24px;"></p>
                 </div>
-                <div style="border-top: 1px solid rgba(0,0,0,0.08); padding-top: 18px; display: flex; justify-content: space-between; align-items: center;">
+                <div style="border-top: 1px solid rgba(0,0,0,0.08); padding-top: 18px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
                     <span id="lightboxPeriod" style="font-size: 0.88rem; color: var(--tg-primary); font-weight: 700;"></span>
-                    <button class="btn-gold" style="padding: 8px 20px; font-size: 0.88rem;" onclick="closeLightbox()">關閉預覽</button>
+                    <button class="btn-gold" style="padding: 8px 22px; font-size: 0.88rem;" onclick="closeLightbox()">關閉預覽</button>
                 </div>
             </div>
         </div>
@@ -1412,8 +1450,17 @@
         ];
 
         // Lightbox Functions
+        let currentLightboxIndex = 0;
+
         function openLightbox(index) {
-            const data = awardsData[index];
+            currentLightboxIndex = index;
+            renderLightboxContent();
+            document.getElementById('lightboxModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function renderLightboxContent() {
+            const data = awardsData[currentLightboxIndex];
             if (!data) return;
             document.getElementById('lightboxImg').src = data.img;
             document.getElementById('lightboxBadge').innerText = data.badge;
@@ -1421,8 +1468,18 @@
             document.getElementById('lightboxIssuer').innerText = '頒發單位：' + data.issuer;
             document.getElementById('lightboxDesc').innerText = data.desc;
             document.getElementById('lightboxPeriod').innerText = data.period;
-            document.getElementById('lightboxModal').classList.add('active');
-            document.body.style.overflow = 'hidden';
+        }
+
+        function prevLightbox(e) {
+            if (e) e.stopPropagation();
+            currentLightboxIndex = (currentLightboxIndex - 1 + awardsData.length) % awardsData.length;
+            renderLightboxContent();
+        }
+
+        function nextLightbox(e) {
+            if (e) e.stopPropagation();
+            currentLightboxIndex = (currentLightboxIndex + 1) % awardsData.length;
+            renderLightboxContent();
         }
 
         function closeLightbox(event) {
@@ -1433,10 +1490,13 @@
             document.body.style.overflow = '';
         }
 
-        // Keyboard ESC to close lightbox
+        // Keyboard Controls
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeLightbox();
+            const modal = document.getElementById('lightboxModal');
+            if (modal && modal.classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') prevLightbox();
+                if (e.key === 'ArrowRight') nextLightbox();
             }
         });
 
