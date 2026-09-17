@@ -1,5 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
+let isHeroDrinksInitialized = false;
+
+function initHeroDrinks() {
+  if (isHeroDrinksInitialized) return;
   const hero = document.querySelector(".hero-drinks");
+  if (!hero) return;
   const drinkItems = hero.querySelectorAll(".drink-item");
 
   // Extract data from HTML
@@ -15,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  isHeroDrinksInitialized = true;
+
   // Hide original items (keep for SEO)
   hero.querySelector(".show-drink").classList.add("js-enhanced");
 
@@ -23,7 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize after generation
   setTimeout(() => initializeCarousel(drinksData), 100);
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initHeroDrinks);
+} else {
+  initHeroDrinks();
+}
 
 // Generate animated HTML
 function generateDrinksHTML(drinksData) {

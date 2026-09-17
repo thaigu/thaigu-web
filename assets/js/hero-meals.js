@@ -4,9 +4,12 @@ let mealsData = [];
 let originalImageSources = [];
 let currentMealIndex = 0;
 
-// Wait for DOM to be fully loaded
-document.addEventListener("DOMContentLoaded", async () => {
+let isHeroMealsInitialized = false;
+
+function initHeroMeals() {
+  if (isHeroMealsInitialized) return;
   const hero = document.querySelector(".hero-meals-box");
+  if (!hero) return;
 
   // Build mealsData from existing HTML
   const mealItems = hero.querySelectorAll(".meal-item");
@@ -14,6 +17,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("No .meal-item elements found inside .hero-meals-box");
     return;
   }
+
+  isHeroMealsInitialized = true;
 
   mealsData = Array.from(mealItems).map((item) => ({
     id: item.querySelector(".js-add-to-cart")?.getAttribute("data-meal-id") || "",
@@ -48,7 +53,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   setTimeout(() => {
     initializeCarousel();
   }, 100);
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initHeroMeals);
+} else {
+  initHeroMeals();
+}
 
 // Generate the animated circular meals layout
 function generateMealsHTML() {
