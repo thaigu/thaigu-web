@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin.html
+Disallow: /seo.html
+Disallow: /openseo/
 
 Sitemap: https://thaikok.com/sitemap.xml

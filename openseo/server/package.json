@@ -1,0 +1,21 @@
+{
+  "name": "openseo-server",
+  "version": "1.0.0",
+  "description": "openSEO Backend API & Deterministic Growth Engine",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "seed": "node src/db/seed-data.js",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "dependencies": {
+    "fastify": "^4.26.2",
+    "@fastify/cors": "^9.0.1",
+    "dotenv": "^16.4.5",
+    "googleapis": "^134.0.0",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {}
+}

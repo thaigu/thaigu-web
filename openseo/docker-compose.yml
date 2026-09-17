@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: openseo-server
+    restart: unless-stopped
+    ports:
+      - "${PORT:-8790}:8790"
+    environment:
+      - PORT=8790
+      - NODE_ENV=production
+      - SITE_NAME=${SITE_NAME:-My Platform}
+      - SITE_URL=${SITE_URL:-https://example.com}
+      - DATABASE_URL=${DATABASE_URL:-}
+      - GSC_SITE_URL=${GSC_SITE_URL:-}
+      - GSC_CLIENT_EMAIL=${GSC_CLIENT_EMAIL:-}
+      - GSC_PRIVATE_KEY=${GSC_PRIVATE_KEY:-}
+      - DEMO_MODE=${DEMO_MODE:-false}
+    volumes:
+      - openseo-data:/app/data
+      - ./config:/app/config:ro
+
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: openseo-web
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - server
+
+volumes:
+  openseo-data:

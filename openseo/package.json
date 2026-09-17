@@ -1,0 +1,36 @@
+{
+  "name": "openseo",
+  "version": "1.0.0",
+  "description": "Open-source, Self-hosted, Deterministic SEO Growth Engine & Control Panel Template",
+  "keywords": [
+    "seo",
+    "seo-dashboard",
+    "google-search-console",
+    "growth-engine",
+    "striking-distance",
+    "keyword-clustering",
+    "internal-links",
+    "react",
+    "tailwind",
+    "fastify"
+  ],
+  "author": "openSEO Community",
+  "license": "MIT",
+  "type": "module",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=server & npm run dev --workspace=web",
+    "dev:server": "npm run dev --workspace=server",
+    "dev:web": "npm run dev --workspace=web",
+    "build": "npm run build --workspace=web",
+    "start": "npm run start --workspace=server",
+    "seed": "npm run seed --workspace=server",
+    "test": "npm run test --workspace=server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
