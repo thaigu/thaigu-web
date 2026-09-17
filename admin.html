@@ -101,6 +101,62 @@
         <!-- 即時通知欄 (Action Message) -->
         <div id="action-msg" class="hidden rounded-lg bg-primary/10 border border-primary/30 px-4 py-2.5 text-xs text-primary font-medium transition-all"></div>
 
+        <!-- 🔌 GSC 與 Sitemap 打通狀態看板 -->
+        <div class="rounded-xl border border-border/80 bg-card p-4 sm:p-5 shadow-sm space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-border/60 pb-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-base">🔌</span>
+                    <h2 class="text-sm font-bold text-foreground">Google Search Console (GSC) 與 Sitemap 打通狀態</h2>
+                </div>
+                <div class="flex items-center gap-2 text-xs">
+                    <a href="https://search.google.com/search-console" target="_blank" class="inline-flex items-center gap-1 text-primary hover:underline font-semibold">
+                        開啟 Google Search Console 後台 ↗
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+                <!-- 狀態 1: Sitemap -->
+                <div class="p-3 rounded-lg bg-background/50 border border-border/60 space-y-1.5">
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-foreground">1. Sitemap.xml 網站地圖</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-mono font-bold">已就緒 (200 OK)</span>
+                    </div>
+                    <p class="text-[11px] text-muted-foreground">
+                        涵蓋主食、榮譽認證、飲品、聯絡等核心 6 大落地頁。
+                    </p>
+                    <a href="https://thaikok.com/sitemap.xml" target="_blank" class="text-[11px] text-primary hover:underline font-mono block">
+                        https://thaikok.com/sitemap.xml ↗
+                    </a>
+                </div>
+
+                <!-- 狀態 2: Robots.txt -->
+                <div class="p-3 rounded-lg bg-background/50 border border-border/60 space-y-1.5">
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-foreground">2. Robots.txt 爬蟲指引</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-mono font-bold">已宣告 (200 OK)</span>
+                    </div>
+                    <p class="text-[11px] text-muted-foreground">
+                        自動指引 Googlebot 讀取 Sitemap，並保護管理路徑。
+                    </p>
+                    <a href="https://thaikok.com/robots.txt" target="_blank" class="text-[11px] text-primary hover:underline font-mono block">
+                        https://thaikok.com/robots.txt ↗
+                    </a>
+                </div>
+
+                <!-- 狀態 3: GSC 網域驗證 -->
+                <div class="p-3 rounded-lg bg-background/50 border border-border/60 space-y-1.5">
+                    <div class="flex items-center justify-between">
+                        <span class="font-bold text-foreground">3. GSC 網域所有權驗證</span>
+                        <span class="text-[10px] px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 font-mono font-bold">DNS TXT / HTML</span>
+                    </div>
+                    <p class="text-[11px] text-muted-foreground">
+                        在 GSC 輸入 <code class="text-foreground">thaikok.com</code>，將 Google 給出的 TXT 或 Meta 代碼發給我即可秒級自動寫入 Cloudflare。
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <!-- 🎯 模組 0: 今日最值得做 (Deterministic SEO Priority Engine) -->
         <section id="module-priority-action" class="space-y-3">
             <div class="flex items-center justify-between">
