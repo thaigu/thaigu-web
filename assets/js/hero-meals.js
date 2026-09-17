@@ -365,8 +365,34 @@ function initializeCarousel() {
   });
 
   // Controls
-  document.getElementById("rotateLeft").addEventListener("click", rotateLeft);
-  document.getElementById("rotateRight").addEventListener("click", rotateRight);
+  const btnLeft = document.getElementById("rotateLeft");
+  const btnRight = document.getElementById("rotateRight");
+  if (btnLeft) btnLeft.addEventListener("click", rotateLeft);
+  if (btnRight) btnRight.addEventListener("click", rotateRight);
+
+  // Touch swipe support for iPhone & mobile
+  let startX = 0;
+  let startY = 0;
+  const touchArea = document.querySelector(".hero-meals");
+  if (touchArea) {
+    touchArea.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    }, { passive: true });
+
+    touchArea.addEventListener("touchend", (e) => {
+      const diffX = e.changedTouches[0].clientX - startX;
+      const diffY = e.changedTouches[0].clientY - startY;
+      // Horizontal swipe detected
+      if (Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX < 0) {
+          rotateRight();
+        } else {
+          rotateLeft();
+        }
+      }
+    }, { passive: true });
+  }
 
   // Add resize listener with debounce to avoid too many calls
   let resizeTimeout;

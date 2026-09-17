@@ -210,4 +210,24 @@ function initializeCarousel(drinksData) {
   dots.forEach((dot) => {
     dot.addEventListener("click", () => updateDrinkContent(Number(dot.dataset.index)));
   });
+
+  // Touch swipe gesture for iPhone
+  let startX = 0;
+  let startY = 0;
+  hero.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+
+  hero.addEventListener("touchend", (e) => {
+    const diffX = e.changedTouches[0].clientX - startX;
+    const diffY = e.changedTouches[0].clientY - startY;
+    if (Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY)) {
+      if (diffX < 0) {
+        goNext();
+      } else {
+        goPrev();
+      }
+    }
+  }, { passive: true });
 }
