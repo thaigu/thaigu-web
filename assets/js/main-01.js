@@ -1,11 +1,3 @@
-// Load SVG icon sprites
-(function loadIconSprite() {
-    const script = document.createElement('script');
-    script.src = 'assets/data/icons-sprite.js';
-    script.async = false; 
-    document.head.appendChild(script);
-})();
-
 // Initialize all components when DOM loads
 document.addEventListener('DOMContentLoaded', async function() {
     try {
@@ -291,8 +283,8 @@ if (scrollToTop) {
 class TravelPageLoader {
     constructor() {
         this.loader = document.getElementById('page-loader');
-        this.minLoadTime = 1200; // Minimum display time in milliseconds
-        this.maxLoadTime = 6000; // Safety timeout to prevent indefinite loading
+        this.minLoadTime = 400; // Fast display time in milliseconds
+        this.maxLoadTime = 2000; // Safety timeout to prevent indefinite loading
         this.isLoaded = false;
         this.startTime = Date.now();
 

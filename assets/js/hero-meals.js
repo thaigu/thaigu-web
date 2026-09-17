@@ -303,41 +303,32 @@ function initializeCarousel() {
       minCircle.style.overflow = "hidden";
       minCircle.style.transform = `rotate(${-currentRotation}rad)`;
       minCircle.style.transition = "transform 0.5s ease";
+
+      const img = minCircle.querySelector(".image");
+      if (img) {
+        img.style.width = "100%";
+        img.style.height = "100%";
+        img.style.objectFit = "cover";
+        img.style.borderRadius = "50%";
+      }
     });
     updateMainContent();
   }
 
-  async function processImages() {
+  function processImages() {
     originalImageSources = [];
     for (let i = 0; i < minCircles.length; i++) {
       const minCircle = minCircles[i];
       const img = minCircle.querySelector(".image");
       if (img) {
         originalImageSources[i] = img.src;
-        await cropImageToCircle(img, minCircleSize);
       }
     }
     positionCircles();
   }
 
   // Function to reprocess images when resize happens
-  async function reprocessImagesOnResize() {
-    recalculateDimensions();
-    
-    // Replace canvases with images and re-crop with new size
-    for (let i = 0; i < minCircles.length; i++) {
-      const minCircle = minCircles[i];
-      const canvasOrImg = minCircle.querySelector("canvas, .image");
-      if (canvasOrImg && originalImageSources[i]) {
-        // Create new img element
-        const img = document.createElement("img");
-        img.className = "image";
-        img.src = originalImageSources[i];
-        canvasOrImg.replaceWith(img);
-        // Re-crop with new size
-        await cropImageToCircle(img, minCircleSize);
-      }
-    }
+  function reprocessImagesOnResize() {
     positionCircles();
   }
 
