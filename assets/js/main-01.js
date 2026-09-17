@@ -113,12 +113,14 @@ function initResponsiveHeader() {
         navbar.classList.add('mobile-menu-open');
         mobileMenuToggle.classList.add('active');
         body.style.overflow = 'hidden';
+        body.classList.add('mobile-menu-active');
     }
 
     function closeMobileMenu() {
         navbar.classList.remove('mobile-menu-open');
         mobileMenuToggle.classList.remove('active');
         body.style.overflow = '';
+        body.classList.remove('mobile-menu-active');
         closeAllDropdowns();
     }
 

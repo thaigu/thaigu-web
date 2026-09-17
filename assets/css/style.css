@@ -9592,10 +9592,18 @@ a:hover {
     position: fixed;
     left: 0;
     top: -100vh;
-    width: 100%;
+    top: -100dvh;
+    width: 100vw;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    height: 100dvh;
+    min-height: 100%;
+    background-color: #F7EEDB;
+    background-image: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -9621,17 +9629,22 @@ a:hover {
     -moz-flex-wrap: nowrap;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    z-index: 1000;
-    -webkit-transition: top 0.3s ease;
-    -moz-transition: top 0.3s ease;
-    -ms-transition: top 0.3s ease;
-    -o-transition: top 0.3s ease;
-    transition: top 0.3s ease;
-    padding-top: 80px;
+    z-index: 99999;
+    -webkit-transition: top 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    -moz-transition: top 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    -ms-transition: top 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    -o-transition: top 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    transition: top 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+    padding-top: calc(85px + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(30px + env(safe-area-inset-bottom, 20px));
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .header .navbar.mobile-menu-open {
     top: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 }
 .header .navbar .nav-menu {
@@ -10131,13 +10144,18 @@ a:hover {
   -moz-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  width: 30px;
-  height: 30px;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 100000 !important;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 1025px) {
   .header .mobile-menu-toggle {
@@ -10147,6 +10165,7 @@ a:hover {
 @media (max-width: 1025px) {
   .header .mobile-menu-toggle {
     order: 3;
+    z-index: 100000 !important;
   }
 }
 .header .mobile-menu-toggle .hamburger-line {
@@ -13610,18 +13629,100 @@ html, body {
   z-index: 1000;
 }
 
-@media (max-width: 768px) {
+/* 2. Mobile Menu Solid Background & Ghosting Bleed-Through Fix */
+@media (max-width: 1025px) {
   .header .navbar {
-    background-color: rgba(245, 233, 215, 0.98) !important;
-    padding-top: calc(80px + env(safe-area-inset-top, 0px)) !important;
-    padding-bottom: env(safe-area-inset-bottom, 20px) !important;
+    background-color: #F7EEDB !important;
+    background-image: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    z-index: 99999 !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
   }
+
+  .header .navbar .nav-menu {
+    width: 100% !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
+    padding: 10px 24px 40px 24px !important;
+  }
+
   .header .navbar .nav-menu .nav-link {
-    font-size: 1.15rem !important;
-    font-weight: 600 !important;
-    padding: 1.1rem 0 !important;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    padding: 1.1rem 0.5rem !important;
     color: #2C2420 !important;
+    text-shadow: none !important;
+    border-bottom: 1px solid rgba(162, 106, 32, 0.15) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    transition: all 0.2s ease !important;
   }
+
+  .header .navbar .nav-menu .nav-link:active {
+    color: #C25920 !important;
+    transform: translateX(4px);
+  }
+
+  .header .navbar .nav-menu .nav-link.active {
+    color: #A26A20 !important;
+    font-weight: 800 !important;
+  }
+
+  .header .navbar .nav-menu .nav-link.active::after {
+    display: none !important;
+  }
+
+  .header .navbar .nav-menu .nav-link.active::before {
+    content: "✦";
+    margin-right: 8px;
+    font-size: 0.9rem;
+    color: #A26A20;
+  }
+
+  .header .navbar .nav-menu::after {
+    content: "✦ 泰谷 ThaiGu · 專精正宗泰式風味 ✦\A🏆 榮獲泰國 Thai SELECT 官方認證 · 澳門特色專精店";
+    white-space: pre-line;
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+    padding-top: 1.2rem;
+    border-top: 1px dashed rgba(162, 106, 32, 0.25);
+    font-size: 0.82rem;
+    color: #8C5E09;
+    line-height: 1.6;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+/* 徹底隔絕選單開啟時底層內容穿透與輪播疊加（雙重保險） */
+body.mobile-menu-active {
+  overflow: hidden !important;
+  touch-action: none !important;
+}
+
+body.mobile-menu-active .hero-meals,
+body.mobile-menu-active .hero-drinks,
+body.mobile-menu-active .hero-coffee,
+body.mobile-menu-active main,
+body.mobile-menu-active .awards-container,
+body.mobile-menu-active .about-wrapper,
+body.mobile-menu-active .contact-section,
+body.mobile-menu-active footer {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.header:has(.mobile-menu-open),
+body.mobile-menu-active .header {
+  z-index: 99999 !important;
 }
 
 /* 3. Meals Carousel Responsive Fix for iPhone */
