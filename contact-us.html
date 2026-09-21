@@ -235,7 +235,10 @@
 
                 <!-- Contact Form -->
                 <div class="contact-form">
-                    <h2 class="form-title">Send Us a Message</h2>
+                    <h2 class="form-title">線上預約訂座與查詢 · Reserve & Inquire</h2>
+                    <p style="font-size: 0.88rem; color: #777; margin-bottom: 20px;">
+                        歡迎填寫下方資訊預約訂座或商務包場，我們將有專人於 24 小時內與您聯繫確認。急單請直接致電門店。
+                    </p>
                     
                     <!-- Success Message (hidden by default) -->
                     <div class="success-message" style="display: none;" id="successMessage">
@@ -245,21 +248,21 @@
                             </svg>
                         </div>
                         <div class="success-content">
-                            <h3 class="success-title">Message sent!</h3>
-                            <p class="success-text">Thank you for contacting us. We'll get back to you soon.</p>
+                            <h3 class="success-title">預約需求已成功送出！</h3>
+                            <p class="success-text">感謝您的支持！泰谷 (ThaiGu) 門店服務團隊已收到您的資訊，我們將儘快致電或電郵與您確認訂座詳情。</p>
                         </div>
                     </div>
 
-                    <form id="contactForm" action="contact.php" method="POST">
+                    <form id="contactForm" onsubmit="return false;">
                         <!-- Message sending notification -->
                         <div class="form-status">
                             <div class="form-success" id="form-success" style="display: none;">
                                 <svg><use xlink:href="#lni-checkmark-circle"></use></svg>
-                                <span>Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.</span>
+                                <span>您的預約需求已成功傳遞！我們將於當日內致電與您確認。</span>
                             </div>
                             <div class="form-error-general" id="form-error" style="display: none;">
                                 <svg><use xlink:href="#lni-warning"></use></svg>
-                                <span>Something went wrong. Please try again or contact us directly.</span>
+                                <span>送出時發生小問題，請檢查欄位或直接致電門店：+853 2875 0222。</span>
                             </div>
                         </div>
 
@@ -267,13 +270,13 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">
-                                    Full Name<span class="required">*</span>
+                                    貴賓姓名 (Full Name)<span class="required">*</span>
                                 </label>
                                 <input 
                                     type="text" 
                                     id="name" 
                                     name="name" 
-                                    placeholder="Your name"
+                                    placeholder="例如：陳先生 / Ms. Wong" 
                                     required
                                 >
                                 <span class="error-message" id="nameError"></span>
@@ -281,14 +284,13 @@
 
                             <div class="form-group">
                                 <label for="email">
-                                    Email Address
-                                    <span class="required">*</span>
+                                    電子郵箱 (Email Address)<span class="required">*</span>
                                 </label>
                                 <input 
                                     type="email" 
                                     id="email" 
                                     name="email" 
-                                    placeholder="your@email.com"
+                                    placeholder="yourname@email.com" 
                                     required
                                 >
                                 <span class="error-message" id="emailError"></span>
@@ -299,27 +301,29 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="phone">
-                                    Phone
+                                    聯絡電話 (Phone / WhatsApp)<span class="required">*</span>
                                 </label>
                                 <input 
                                     type="tel" 
                                     id="phone" 
                                     name="phone" 
-                                    placeholder="+57 300 123 4567"
+                                    placeholder="+853 6865 8838 / +852 / +86" 
+                                    required
                                 >
+                                <span class="error-message" id="phoneError"></span>
                             </div>
 
                             <div class="form-group">
                                 <label for="subject">
-                                    Subject<span class="required">*</span>
+                                    查詢類型 (Inquiry Type)<span class="required">*</span>
                                 </label>
                                 <select id="subject" name="subject" required>
-                                    <option value="">Select a subject</option>
-                                    <option value="reserva">Reservation</option>
-                                    <option value="evento">Special Event</option>
-                                    <option value="menu">Menu Inquiry</option>
-                                    <option value="queja">Complaint or Suggestion</option>
-                                    <option value="otro">Other</option>
+                                    <option value="">請選擇預約或查詢類別</option>
+                                    <option value="reservation" selected>門店堂食訂座 (Table Reservation)</option>
+                                    <option value="party">宴會 / 包場慶祝 (Private Events)</option>
+                                    <option value="takeaway">外賣自取查詢 (Takeaway Inquiries)</option>
+                                    <option value="cooperation">商務合作 / Thai SELECT (Partnership)</option>
+                                    <option value="feedback">寶貴意見與建議 (Suggestions)</option>
                                 </select>
                                 <span class="error-message" id="subjectError"></span>
                             </div>
@@ -328,21 +332,24 @@
                         <!-- Message -->
                         <div class="form-group">
                             <label for="message">
-                                Message<span class="required">*</span>
+                                預約詳情 / 需求備註 (Details & Special Requests)<span class="required">*</span>
                             </label>
                             <textarea 
                                 id="message" 
                                 name="message" 
-                                placeholder="Write your message here..."
+                                placeholder="請提供預約日期、到店時段（午市 12:00-15:00 / 晚市 18:00-23:00）、用餐人數及特殊忌口需求..." 
                                 required
                             ></textarea>
                             <span class="error-message" id="messageError"></span>
                         </div>
 
                         <!-- Form Actions -->
-                        <div class="form-actions">
-                            <button type="reset" class="btn btn-secondary">Clear</button>
-                            <button type="submit" class="btn btn-primary" id="submitBtn">Send Message</button>
+                        <div class="form-actions" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+                            <button type="reset" class="btn btn-secondary" style="background: #e5e7eb; color: #374151; padding: 10px 20px; border-radius: 6px; font-weight: 600;">重新填寫</button>
+                            <button type="submit" class="btn btn-primary" id="submitBtn" style="background: #C25920; color: #fff; padding: 10px 28px; border-radius: 6px; font-weight: 700; border: none; cursor: pointer;">即刻送出預約需求 ➔</button>
+                            <a href="tel:+85328750222" style="font-size: 0.88rem; color: #C25920; font-weight: 600; text-decoration: none; margin-left: auto;">
+                                📞 亦可致電：+853 2875 0222
+                            </a>
                         </div>
                     </form>
                 </div>

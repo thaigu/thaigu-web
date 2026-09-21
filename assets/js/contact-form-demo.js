@@ -1,9 +1,10 @@
 // ==========================================================================
-// CONTACT FORM - booking version
-// Validates the booking form, shows real-time errors, success messages
+// CONTACT & RESERVATION FORM - 泰谷 ThaiGu 官方門店訂座驗證腳本
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', function () {
   const contactForm = document.getElementById('contactForm');
+  if (!contactForm) return;
+
   const submitBtn = document.getElementById('submitBtn');
   const formSuccess = document.getElementById('successMessage');
 
@@ -24,11 +25,14 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function showSuccessMessage(message) {
-    formSuccess.style.display = 'flex';
-    if (message) formSuccess.querySelector('.success-text').textContent = message;
-    setTimeout(() => {
-      formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 100);
+    if (formSuccess) {
+      formSuccess.style.display = 'flex';
+      const textElem = formSuccess.querySelector('.success-text');
+      if (textElem && message) textElem.textContent = message;
+      setTimeout(() => {
+        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
+    }
   }
 
   // --- Real-time validation ---
@@ -37,25 +41,26 @@ document.addEventListener('DOMContentLoaded', function () {
       name: {
         element: contactForm.querySelector('#name'),
         validate: (v) => {
-          if (!v.trim()) return 'Name is required';
-          if (v.trim().length < 2) return 'Name must be at least 2 characters';
+          if (!v || !v.trim()) return '請填寫貴賓姓名';
+          if (v.trim().length < 2) return '姓名長度至少需 2 個字元';
           return null;
         },
       },
       email: {
         element: contactForm.querySelector('#email'),
         validate: (v) => {
-          if (!v.trim()) return 'Email is required';
+          if (!v || !v.trim()) return '請填寫聯絡電子郵箱';
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!emailRegex.test(v)) return 'Please enter a valid email address';
+          if (!emailRegex.test(v)) return '請輸入有效的電子郵件地址';
           return null;
         },
       },
       phone: {
         element: contactForm.querySelector('#phone'),
         validate: (v) => {
-          if (v.trim() && !/^[\+]?[0-9][\d\s\-\(\)]{5,15}$/.test(v)) {
-            return 'Please enter a valid phone number';
+          if (!v || !v.trim()) return '請填寫聯絡電話（方便訂座確認）';
+          if (!/^[\+]?[0-9][\d\s\-\(\)]{5,18}$/.test(v.trim())) {
+            return '請輸入正確的聯絡電話號碼（如 +853 6865 8838）';
           }
           return null;
         },
@@ -63,16 +68,16 @@ document.addEventListener('DOMContentLoaded', function () {
       subject: {
         element: contactForm.querySelector('#subject'),
         validate: (v) => {
-          if (!v.trim()) return 'Subject is required';
+          if (!v || !v.trim()) return '請選擇查詢或預約類別';
           return null;
         },
       },
       message: {
         element: contactForm.querySelector('#message'),
         validate: (v) => {
-          if (!v.trim()) return 'Message is required';
-          if (v.trim().length < 10) return 'Message must be at least 10 characters';
-          if (v.trim().length > 2000) return 'Message must be less than 2000 characters';
+          if (!v || !v.trim()) return '請填寫預約詳情或需求備註';
+          if (v.trim().length < 5) return '備註內容至少需 5 個字元（例如：到店日期與人數）';
+          if (v.trim().length > 2000) return '內容字數不可超過 2000 字';
           return null;
         },
       },
@@ -80,7 +85,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     Object.keys(fields).forEach((fieldName) => {
       const field = fields[fieldName];
+      if (!field.element) return;
       const errorElement = document.getElementById(`${fieldName}Error`);
+
       field.element.addEventListener('blur', function () {
         const error = field.validate(this.value);
         if (error) showFieldError(fieldName, error);
@@ -102,54 +109,61 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  setupRealTimeValidation();
+
   // --- Submit handler ---
   contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
     clearFieldErrors();
-    formSuccess.style.display = 'none';
+    if (formSuccess) formSuccess.style.display = 'none';
 
     const data = new FormData(contactForm);
     let valid = true;
 
     // Name
-    if (!data.get('name').trim()) {
-      showFieldError('name', 'Name is required');
+    const nameVal = (data.get('name') || '').trim();
+    if (!nameVal) {
+      showFieldError('name', '請填寫貴賓姓名');
       valid = false;
     }
 
     // Email
-    const emailVal = data.get('email').trim();
+    const emailVal = (data.get('email') || '').trim();
     if (!emailVal) {
-      showFieldError('email', 'Email is required');
+      showFieldError('email', '請填寫聯絡電子郵箱');
       valid = false;
     } else {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(emailVal)) {
-        showFieldError('email', 'Please enter a valid email address');
+        showFieldError('email', '請輸入有效的電子郵件地址');
         valid = false;
       }
     }
 
-    // Phone (optional)
-    const phoneVal = data.get('phone').trim();
-    if (phoneVal && !/^[\+]?[0-9][\d\s\-\(\)]{5,15}$/.test(phoneVal)) {
-      showFieldError('phone', 'Please enter a valid phone number');
+    // Phone
+    const phoneVal = (data.get('phone') || '').trim();
+    if (!phoneVal) {
+      showFieldError('phone', '請填寫聯絡電話');
+      valid = false;
+    } else if (!/^[\+]?[0-9][\d\s\-\(\)]{5,18}$/.test(phoneVal)) {
+      showFieldError('phone', '請輸入正確的聯絡電話號碼');
       valid = false;
     }
 
     // Subject
-    if (!data.get('subject').trim()) {
-      showFieldError('subject', 'Subject is required');
+    const subjectVal = (data.get('subject') || '').trim();
+    if (!subjectVal) {
+      showFieldError('subject', '請選擇查詢或預約類別');
       valid = false;
     }
 
     // Message
-    const msg = data.get('message').trim();
+    const msg = (data.get('message') || '').trim();
     if (!msg) {
-      showFieldError('message', 'Message is required');
+      showFieldError('message', '請填寫預約詳情或需求備註');
       valid = false;
-    } else if (msg.length < 10) {
-      showFieldError('message', 'Message must be at least 10 characters');
+    } else if (msg.length < 5) {
+      showFieldError('message', '備註內容至少需 5 個字元');
       valid = false;
     }
 
@@ -161,64 +175,50 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    // Success simulation
-    const name = data.get('name').trim();
-    const msgs = [
-      `Thank you ${name}! Your message has been received. We'll get back to you within 24 hours.`,
-      `Hi ${name}! Thanks for your interest in our tours. We'll contact you soon!`,
-      `Great to hear from you, ${name}! We'll respond shortly.`,
-    ];
-    const randomMsg = msgs[Math.floor(Math.random() * msgs.length)];
-    showSuccessMessage(randomMsg);
+    // 成功提示
+    const name = nameVal;
+    const feedbackMsg = `感謝 ${name} 閣下！泰谷 (ThaiGu) 門店服務團隊已收到您的預約與查詢需求，我們將於 24 小時內致電與您確認。急單請直接撥打門店專線：+853 2875 0222。`;
+    showSuccessMessage(feedbackMsg);
 
     setTimeout(() => {
       contactForm.reset();
       updateCharCounter();
-    }, 1500);
+    }, 1200);
   });
 
   // --- Char counter ---
   const messageTextarea = contactForm.querySelector('#message');
-  const counter = document.createElement('div');
-  counter.className = 'char-counter';
-  counter.style.cssText = 'font-size:12px;color:#6b7280;margin-top:5px;text-align:right;';
-  messageTextarea.insertAdjacentElement('afterend', counter);
+  let counter = null;
+  if (messageTextarea) {
+    counter = document.createElement('div');
+    counter.className = 'char-counter';
+    counter.style.cssText = 'font-size:12px;color:#6b7280;margin-top:5px;text-align:right;';
+    messageTextarea.insertAdjacentElement('afterend', counter);
+
+    messageTextarea.addEventListener('input', updateCharCounter);
+    updateCharCounter();
+
+    // Auto-resize textarea
+    messageTextarea.addEventListener('input', function () {
+      this.style.height = 'auto';
+      this.style.height = Math.min(this.scrollHeight, 200) + 'px';
+    });
+  }
 
   function updateCharCounter() {
+    if (!messageTextarea || !counter) return;
     const len = messageTextarea.value.length;
     const max = 2000;
-    counter.textContent = `${len}/${max} characters`;
+    counter.textContent = `${len}/${max} 字元`;
     if (len > max * 0.9) counter.style.color = '#f59e0b';
     else if (len > max) counter.style.color = '#dc3545';
     else counter.style.color = '#6b7280';
   }
 
-  messageTextarea.addEventListener('input', updateCharCounter);
-  updateCharCounter();
-
-  // Auto-resize textarea
-  messageTextarea.addEventListener('input', function () {
-    this.style.height = 'auto';
-    this.style.height = Math.min(this.scrollHeight, 200) + 'px';
-  });
-
   // UX focus styling
   const inputs = contactForm.querySelectorAll('input, select, textarea');
-  inputs.forEach((inp, idx) => {
+  inputs.forEach((inp) => {
     inp.addEventListener('focus', () => inp.closest('.form-group')?.classList.add('focused'));
     inp.addEventListener('blur', () => inp.closest('.form-group')?.classList.remove('focused'));
-
-    if (inp.type !== 'textarea') {
-      inp.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter') {
-          e.preventDefault();
-          const next = inputs[idx + 1];
-          if (next) next.focus();
-          else submitBtn.click();
-        }
-      });
-    }
   });
-
-  setupRealTimeValidation();
 });

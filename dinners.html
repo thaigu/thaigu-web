@@ -1,159 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-HK">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gastronoir | Elegant Dinners & Fine Night Dining</title>
-    <meta name="description" content="Experience the art of fine dining at night with Gastronoir. Discover elegant dinners, signature dishes, and refined flavors designed to make every evening unforgettable.">
-    <meta name="keywords" content="dinner, fine dining, elegant meals, Gastronoir, gourmet dinner, night restaurant, signature dishes, evening dining, culinary art, romantic dinner, gourmet cuisine">
-
-    <meta name="robots" content="noindex, follow">    <!-- Favicon -->
+    <title>泰谷晚市名菜餐單 | 泰谷 ThaiGu (House of Thai)</title>
+    <meta name="description" content="泰谷 ThaiGu 呈獻晚市經典泰式名菜與主廚佳餚，炭烤豬頸肉、烤鱸魚、醃生蝦與冬陰功。榮獲 Thai SELECT 官方認證與澳門專精特色店。">
+    <link rel="canonical" href="https://thaikok.com/main-dishes.html">
+    <meta http-equiv="refresh" content="0; url=main-dishes.html">
     <link rel="icon" type="image/png" href="assets/images/ico-01.png">
-
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="assets/css/style.css?v=20260917d">
-    <link rel="stylesheet" href="assets/css/aos.css?v=20260917b">
+    <script>window.location.replace("main-dishes.html");</script>
 </head>
-<body class="body-bg-image">
-    <!-- Meats Page Loader -->
-    <div id="page-loader" class="page-loader">
-        <div class="cooking-scene">
-            <svg viewBox="0 0 120 120" class="loader-svg dinner-load">
-                <circle cx="60" cy="60" r="35" fill="#eee" stroke="#bbb" stroke-width="3"/>
-                <circle cx="60" cy="60" r="25" fill="#fff" />
-                <rect x="20" y="55" width="10" height="30" rx="2" fill="#999" />
-                <rect x="90" y="55" width="10" height="30" rx="2" fill="#999" />
-            </svg>
-        </div>
-    </div>
-
-    <!-- Cart Sidebar -->
-    <div class="cart-sidebar">
-        <div class="cart-sidebar-header">
-            <h2>Your Order</h2>
-            <button class="close-cart">&times;</button>
-        </div>
-        <div class="cart-sidebar-content"></div>
-        <div class="cart-sidebar-footer">
-            <button class="checkout-btn">Finalize Order</button>
-        </div>
-    </div>
-    <div class="cart-overlay"></div>
-
-    <!-- Header -->
-    <header class="header bg-header">
-        <div class="container d-flex-between">
-            <!-- Logo -->
-            <div class="logo position-relative">
-                <img class="image" src="assets/images/logo-transparent-01.png" alt="Logo">
-                <a class="overlay-link" href="index.html"></a>
-            </div>
-
-            <!-- Navigation -->
-            <nav class="navbar" id="navbar">
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Breakfasts</a></li>
-                    <li><a href="coffee.html" class="nav-link">Coffee</a></li>
-                    <li><a href="lunches.html" class="nav-link">Lunches</a></li>
-                    <li><a href="dinners.html" class="nav-link active">Dinners</a></li>
-                    <li><a href="awards.html" class="nav-link">獎項榮譽</a></li>
-                    <li><a href="drinks.html" class="nav-link">Drinks</a></li>
-                    <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
-                </ul>
-            </nav>
-
-            <!-- Shopping Cart -->
-            <div class="shopping-cart">
-                <img class="image" src="assets/images/icons/shopping-cart-black-noline.png" alt="Shopping Cart Icon">
-                <span class="counting">3</span>
-            </div>
-
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-        </div>
-    </header>
-
-    <div class="hero-meals dinners">
-        <h1 class="main-title">A Night of Flavors: Stunning Dinners to Remember</h1>
-        
-        <div class="hero-meals-box">
-            <div class="meal-item">
-                <div class="box-image">
-                    <img class="image" src="assets/images/dishes/photo_1789557000_AQADFhJrG1GrWVV-.png?v=20260917c" alt="泰式粉絲蝦煲">
-                </div>
-                <div class="info pt-4">
-                    <h2 class="title">泰式粉絲蝦煲</h2>
-                    <p class="description">爽滑彈牙的粉絲吸滿濃郁鮮香的蝦汁，配上新鮮大蝦、蒜蓉、薑片及洋蔥一同砂鍋焗煮。粉絲入口帶住蝦的鮮甜與醬汁的鹹香，香氣層層滲入每一口，越食越滋味。大蝦肉質鮮嫩爽口，粉絲更是吸汁精華，熱辣辣上桌時香氣撲鼻，令人忍不住一口接一口，是泰式海鮮愛好者不能錯過的經典。</p>
-                </div>
-            </div>
-
-            <div class="meal-item">
-                <div class="box-image">
-                    <img class="image" src="assets/images/dishes/photo_1789557001_AQADFxJrG1GrWVV-.png?v=20260917c" alt="紅咖喱牛肉">
-                </div>
-                <div class="info pt-4">
-                    <h2 class="title">紅咖喱牛肉</h2>
-                    <p class="description">香濃惹味的泰式紅咖喱，加入嫩滑牛肉慢慢燴煮，讓牛肉充分吸收咖喱的辛香與椰奶的醇厚。紅咖喱帶有溫和辣度，融合香茅、南薑及多種泰式香料，入口濃郁卻不膩。牛肉軟嫩入味，每一口都充滿香辣、鹹香與微甜的平衡滋味。配上一碗熱騰騰白飯，讓濃郁咖喱汁滲入飯粒，簡單卻非常滿足。</p>
-                </div>
-            </div>
-
-            <div class="meal-item">
-                <div class="box-image">
-                    <img class="image" src="assets/images/dishes/photo_1789557003_AQADGBJrG1GrWVV-.png?v=20260917c" alt="青咖喱雞肉">
-                </div>
-                <div class="info pt-4">
-                    <h2 class="title">青咖喱雞肉</h2>
-                    <p class="description">泰式經典青咖喱，以香濃椰奶配合新鮮青咖喱醬烹煮，加入嫩滑雞肉，散發獨特的香茅、青檸葉及香草香氣。青咖喱入口濃郁順滑，先是椰奶的醇香，隨後帶出清新的香料味與微辣刺激，層次十分豐富。雞肉嫩而入味，吸滿咖喱汁後更加滋味。拌飯食用尤其過癮，香濃醬汁配上熱飯，一口接一口停不下來。</p>
-                </div>
-            </div>
-
-            <div class="meal-item">
-                <div class="box-image">
-                    <img class="image" src="assets/images/dishes/photo_1789557446_AQADIhJrG1GrWVV-.png?v=20260917c" alt="冬陰功海鮮湯粉">
-                </div>
-                <div class="info pt-4">
-                    <h2 class="title">冬陰功海鮮湯粉</h2>
-                    <p class="description">酸辣開胃的冬陰功湯底，加入新鮮海鮮及爽滑湯粉，帶出濃郁又清新的泰式風味。香茅、南薑、檸檬葉與青檸的香氣交織，酸、辣、鮮、香在口中逐層展開。海鮮鮮嫩多汁，湯粉充分吸收酸辣湯汁，每一口都爽滑入味。熱辣辣的湯頭入口醒胃又暖身，特別適合喜歡重口味及酸辣滋味的朋友，一碗食完仍然令人回味。</p>
-                </div>
-            </div>
-
-            <div class="meal-item">
-                <div class="box-image">
-                    <img class="image" src="assets/images/dishes/photo_1789555313_AQAD_BFrG1GrWVV-.png?v=20260917c" alt="泰國無骨海南雞飯">
-                </div>
-                <div class="info pt-4">
-                    <h2 class="title">泰國無骨海南雞飯</h2>
-                    <p class="description">選用嫩滑雞肉製作，去骨後更加方便入口，搭配香噴噴的泰式雞油飯及特色醬汁。雞肉保持嫩滑多汁，肉質細緻，配上帶有雞香與薑香的米飯，每一口都充滿香氣。特色醬汁酸香微辣，恰好平衡雞肉的鮮嫩與雞油飯的豐腴，令味道更加豐富。簡單的一碟，卻有令人非常滿足的層次，是喜歡嫩雞與香飯人士的經典選擇。</p>
-                </div>
-            </div>
-
-            <div class="meal-item">
-                <div class="box-image">
-                    <img class="image" src="assets/images/dishes/photo_1789555494_AQADARJrG1GrWVV-.png?v=20260917c" alt="泰式烤豬頸肉">
-                </div>
-                <div class="info pt-4">
-                    <h2 class="title">泰式烤豬頸肉</h2>
-                    <p class="description">精選豬頸肉慢火醃製後烤至外層微焦香脆，內裡保持嫩滑多汁，入口帶有誘人的炭燒香氣。豬頸肉本身油脂分布均勻，烤過後香而不柴，微微焦脆的邊位更是整道菜的精華。配上泰式酸辣沾醬，酸香、微辣與肉香互相交織，瞬間提升食慾。每片切得厚薄適中，越咀嚼越香，非常適合配飯或與朋友一同分享。</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Scroll to Top Button -->
-    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
-        <svg viewBox="0 0 24 24">
-            <path d="M7 14l5-5 5 5z"/>
-        </svg>
-    </button>
-
-    <!-- JavaScript -->
-    <script src="assets/js/hero-meals.js?v=20260917b"></script>
-    <script src="assets/js/shopping-cart.js?v=20260917b"></script>
-
-    <script src="assets/js/main-01.js?v=20260917d"></script>
+<body style="background: #18130F; color: #FAF5EE; font-family: -apple-system, BlinkMacSystemFont, sans-serif; text-align: center; padding: 50px 20px;">
+    <h2>正在跳轉至泰谷主食餐單專頁...</h2>
+    <p>如未自動跳轉，請點擊下方連結：</p>
+    <a href="main-dishes.html" style="color: #C25920; font-weight: 700; font-size: 1.1rem; text-decoration: none;">前往 泰谷主食餐單 ➔</a>
 </body>
 </html>
