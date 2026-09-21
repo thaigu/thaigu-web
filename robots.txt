@@ -4,4 +4,14 @@ Disallow: /admin.html
 Disallow: /seo.html
 Disallow: /openseo/
 
+User-agent: Googlebot
+Allow: /
+Allow: /assets/
+Disallow: /admin.html
+Disallow: /seo.html
+Disallow: /openseo/
+
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
 Sitemap: https://thaikok.com/sitemap.xml
