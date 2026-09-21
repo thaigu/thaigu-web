@@ -1,6 +1,7 @@
-# Cloudflare Pages 301 Redirects for thaikok.com
-/coffee.html /drinks.html 301
-/lunches.html /main-dishes.html 301
-/dinners.html /main-dishes.html 301
-/admin /admin.html 301
-/seo /seo.html 301
+# Cloudflare Pages 301 Redirects for thaikok.com (Dead templates consolidation)
+/coffee.html /drinks 301
+/lunches.html /main-dishes 301
+/dinners.html /main-dishes 301
+/coffee /drinks 301
+/lunches /main-dishes 301
+/dinners /main-dishes 301
