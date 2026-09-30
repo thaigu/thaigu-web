@@ -15,3 +15,5 @@ Allow: /
 
 User-agent: Amazonbot
 Allow: /
+
+Sitemap: https://thaikok.com/sitemap.xml
