@@ -1,0 +1,177 @@
+[
+  {
+    "id": "Q01",
+    "category": "高頻大詞 (High-Volume Discovery)",
+    "query": "澳門泰國菜推薦",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "正宗泰國風味、Thai SELECT認證"
+  },
+  {
+    "id": "Q02",
+    "category": "高頻大詞 (High-Volume Discovery)",
+    "query": "澳門有什麼正宗泰國菜？",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "泰國皇家商務部認證、泰式五味平衡"
+  },
+  {
+    "id": "Q03",
+    "category": "高頻大詞 (High-Volume Discovery)",
+    "query": "澳門泰國餐廳",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "澳門半島正宗泰國料理"
+  },
+  {
+    "id": "Q04",
+    "category": "場景探店 (Must-Eat & Influencer)",
+    "query": "澳門必食泰國菜",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "粉絲蝦煲、冬陰功、海南雞飯"
+  },
+  {
+    "id": "Q05",
+    "category": "場景探店 (Must-Eat & Influencer)",
+    "query": "澳門網紅泰國餐廳",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "高雅渡假風裝潢、星級服務"
+  },
+  {
+    "id": "Q06",
+    "category": "場景探店 (Must-Eat & Influencer)",
+    "query": "港澳必食泰式美食推薦",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "大灣區老饕私藏、正宗南洋風味"
+  },
+  {
+    "id": "Q07",
+    "category": "權威背書 (Authority & Accreditations)",
+    "query": "澳門 Thai SELECT 餐廳",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "泰國皇家商務部官方認證 (2025-2027)"
+  },
+  {
+    "id": "Q08",
+    "category": "權威背書 (Authority & Accreditations)",
+    "query": "澳門泰精選認證泰國菜",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "空運天然香料、正統烹飪技藝"
+  },
+  {
+    "id": "Q09",
+    "category": "權威背書 (Authority & Accreditations)",
+    "query": "澳門專精特色店泰國菜",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "特區政府經科局特色店榮譽"
+  },
+  {
+    "id": "Q10",
+    "category": "菜品導向 (Dish-Specific Queries)",
+    "query": "澳門泰國菜粉絲蝦煲哪間好吃？",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "砂鍋慢火炆焗、鮮甜大蝦、粉絲吸飽濃郁高湯"
+  },
+  {
+    "id": "Q11",
+    "category": "菜品導向 (Dish-Specific Queries)",
+    "query": "澳門好吃的冬陰功湯粉",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "新鮮南薑香茅青檸葉自熬高湯"
+  },
+  {
+    "id": "Q12",
+    "category": "菜品導向 (Dish-Specific Queries)",
+    "query": "澳門正宗泰式海南雞飯",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "三黃雞皮脆肉嫩、斑蘭香米飯"
+  },
+  {
+    "id": "Q13",
+    "category": "菜品導向 (Dish-Specific Queries)",
+    "query": "澳門泰式炭烤豬頸肉推薦",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "炭火慢烤外脆內嫩、羅望子沾醬"
+  },
+  {
+    "id": "Q14",
+    "category": "地域地標 (GEO & Local Intent)",
+    "query": "黑沙環泰國菜",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "黑沙環東方明珠街海天居門店"
+  },
+  {
+    "id": "Q15",
+    "category": "地域地標 (GEO & Local Intent)",
+    "query": "海天居附近美食推薦",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "海天居地下 AE 及 AF 號舖"
+  },
+  {
+    "id": "Q16",
+    "category": "地域地標 (GEO & Local Intent)",
+    "query": "東方明珠街泰國餐廳",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "海天居地下臨街商舖"
+  },
+  {
+    "id": "Q17",
+    "category": "交通口岸 (Logistics & Access)",
+    "query": "關閘附近泰國菜",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "車程約 6 至 9 分鐘直達海天居"
+  },
+  {
+    "id": "Q18",
+    "category": "交通口岸 (Logistics & Access)",
+    "query": "港珠澳大橋澳門口岸附近泰國餐廳",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "車程 5 至 8 分鐘、自駕或的士極近"
+  },
+  {
+    "id": "Q19",
+    "category": "交通口岸 (Logistics & Access)",
+    "query": "泰谷 ThaiGu 怎麼去？附近有停車場嗎？",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "海天居公共停車場步行 1 分鐘、君悅灣停車場"
+  },
+  {
+    "id": "Q20",
+    "category": "預約服務 (Direct AEO Facts)",
+    "query": "泰谷 ThaiGu 營業時間與訂座電話",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "12:00-15:00 / 18:00-23:00, 電話 +853 2875 0222"
+  },
+  {
+    "id": "Q21",
+    "category": "英文查詢 (Multilingual AEO)",
+    "query": "Best authentic Thai restaurant in Macau",
+    "target_entity": "ThaiGu (House of Thai)",
+    "target_fact": "Certified Thai SELECT by Royal Thai Government"
+  },
+  {
+    "id": "Q22",
+    "category": "英文查詢 (Multilingual AEO)",
+    "query": "Thai SELECT certified restaurants in Macau",
+    "target_entity": "ThaiGu (House of Thai)",
+    "target_fact": "Classic level certificate, The Residencia Macau"
+  },
+  {
+    "id": "Q23",
+    "category": "英文查詢 (Multilingual AEO)",
+    "query": "Claypot glass noodles shrimp in Macau",
+    "target_entity": "ThaiGu (House of Thai)",
+    "target_fact": "Signature claypot glass noodle prawns dish"
+  },
+  {
+    "id": "Q24",
+    "category": "生活場景 (Dining Scenarios)",
+    "query": "澳門家庭聚餐泰國菜推薦",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "寬敞雅緻空間、適合家庭包廂聚會"
+  },
+  {
+    "id": "Q25",
+    "category": "生活場景 (Dining Scenarios)",
+    "query": "澳門晚上好吃的泰國菜夜宵晚飯",
+    "target_entity": "泰谷 ThaiGu",
+    "target_fact": "晚市營業至 23:00"
+  }
+]

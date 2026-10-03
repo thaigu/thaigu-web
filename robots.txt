@@ -1,7 +1,11 @@
 User-agent: *
 Allow: /
 
+# Main AI & LLM Search Crawlers
 User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot
@@ -16,4 +20,15 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
+User-agent: Applebot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+# Sitemap & LLMs Fact Indexes
 Sitemap: https://thaikok.com/sitemap.xml
+# LLMs.txt for AI Engine Optimization (AEO/GEO): https://thaikok.com/llms.txt
