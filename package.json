@@ -1,0 +1,24 @@
+{
+  "name": "thaigu-web",
+  "version": "2.0.0",
+  "description": "泰谷 ThaiGu (House of Thai) 官方網站，SEO/AEO/GEO 三軌系統",
+  "type": "module",
+  "scripts": {
+    "deploy": "node scripts/deploy-cloudflare.js",
+    "benchmark": "node scripts/benchmark-tracker.js",
+    "gsc:inspect": "node skills/thaigu-seo/scripts/gsc-inspect.js",
+    "gsc:sitemap": "node skills/thaigu-seo/scripts/submit-sitemap.js",
+    "indexnow": "node skills/thaigu-seo/scripts/push-indexnow.js"
+  },
+  "keywords": [
+    "thaigu",
+    "thaikok",
+    "macau-thai-food",
+    "thai-select",
+    "seo",
+    "aeo",
+    "geo"
+  ],
+  "author": "ThaiGu Team",
+  "license": "MIT"
+}
