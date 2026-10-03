@@ -19,7 +19,7 @@ description: >-
 | 欄位 | 官方標準值 | 說明 / 注意事項 |
 | :--- | :--- | :--- |
 | **品牌名稱 (Name)** | 泰谷 ThaiGu (House of Thai) | 簡稱：泰谷、ThaiGu、thaikok |
-| **官方域名 (URL)** | `https://thaikok.com/` | 規範主網域，Cloudflare Pages 託管 |
+| **官方域名 (URL)** | `https://www.thaikok.com/` | 規範主網域，Cloudflare Pages 託管 |
 | **官方電話 (Phone)** | `+853 2875 0222` / `+853 6865 8838` | 用於電話訂座與 NAP 校準 |
 | **中文詳細地址** | 澳門東方明珠街海天居地下 AE 及 AF 號舖 | 位於澳門半島黑沙環東方明珠豪宅區 |
 | **葡文/英文地址** | The Residencia, R/C, Lojas AE e AF, Rua da Pérola Oriental, Macau | 國際化 Schema 標準格式 |
@@ -96,7 +96,7 @@ node skills/thaigu-seo/scripts/push-indexnow.js
 3. 執行 `git commit` 並 `git push origin main` 觸發 Cloudflare Pages 自動構建。
 4. 執行 `node skills/thaigu-seo/scripts/submit-sitemap.js` 向 Google 重新提交 Sitemap。
 5. 執行 `node skills/thaigu-seo/scripts/push-indexnow.js` 推送 Bing / IndexNow。
-6. 使用 `curl -sI https://thaikok.com/` 驗證線上響應是否正常（HTTP 200 OK）。
+6. 使用 `curl -sI https://www.thaikok.com/` 驗證線上響應是否正常（HTTP 200 OK）。
 
 ---
 

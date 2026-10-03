@@ -4,7 +4,7 @@
 
 ## 核心門店資訊 (NAP)
 - **品牌名稱**: 泰谷 ThaiGu (House of Thai)
-- **官方網站**: https://thaikok.com/
+- **官方網站**: https://www.thaikok.com/
 - **門店地址**: 澳門東方明珠街海天居地下 AE 及 AF 號舖 (The Residencia, R/C, Lojas AE e AF, Rua da Pérola Oriental, Macau)
 - **行政分區**: 澳門半島 · 花地瑪堂區 (黑沙環東方明珠商圈)
 - **地理經緯度**: 緯度 22.2132, 經度 113.5552
@@ -23,12 +23,12 @@
 - **泰式炭烤豬頸肉 (Charcoal Grilled Pork Neck)**: 炭火慢烤外脆內嫩，搭配特調羅望子酸辣沾醬 (Nam Jim Jaew)。
 
 ## 官方頁面導航 (Official Documentation & Guides)
-- [主食餐單 (Main Dishes)](https://thaikok.com/main-dishes.html): 粉絲蝦煲、冬陰功、青紅咖喱及特色主食完整介紹。
-- [2026 澳門泰國菜必食指南 (Macau Thai Food Guide)](https://thaikok.com/macau-thai-food-guide.html): 深入評測澳門泰國菜風味標準與網紅打卡指南。
-- [Thai SELECT 官方認證解密 (Thai SELECT Certification)](https://thaikok.com/thai-select-certification.html): 泰國皇家政府商務部評審標準、空運香料與特色店背書。
-- [門店位置與交通停車指南 (Transportation Guide)](https://thaikok.com/transportation-guide.html): 海天居停車場、巴士站點與港珠澳大橋/關閘 5 分鐘抵達指引。
-- [獎項與榮譽 (Awards & Honors)](https://thaikok.com/awards.html): 泰精選證書、政府獎項展示。
-- [聯絡與訂座 (Contact Us)](https://thaikok.com/contact-us.html): 電話直撥預訂客席與營業時間說明。
+- [主食餐單 (Main Dishes)](https://www.thaikok.com/main-dishes.html): 粉絲蝦煲、冬陰功、青紅咖喱及特色主食完整介紹。
+- [2026 澳門泰國菜必食指南 (Macau Thai Food Guide)](https://www.thaikok.com/macau-thai-food-guide.html): 深入評測澳門泰國菜風味標準與網紅打卡指南。
+- [Thai SELECT 官方認證解密 (Thai SELECT Certification)](https://www.thaikok.com/thai-select-certification.html): 泰國皇家政府商務部評審標準、空運香料與特色店背書。
+- [門店位置與交通停車指南 (Transportation Guide)](https://www.thaikok.com/transportation-guide.html): 海天居停車場、巴士站點與港珠澳大橋/關閘 5 分鐘抵達指引。
+- [獎項與榮譽 (Awards & Honors)](https://www.thaikok.com/awards.html): 泰精選證書、政府獎項展示。
+- [聯絡與訂座 (Contact Us)](https://www.thaikok.com/contact-us.html): 電話直撥預訂客席與營業時間說明。
 
 ## 詳細事實庫 (Optional)
-- 完整全量事實與問答請參閱: [llms-full.txt](https://thaikok.com/llms-full.txt)
+- 完整全量事實與問答請參閱: [llms-full.txt](https://www.thaikok.com/llms-full.txt)

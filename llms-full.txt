@@ -7,7 +7,7 @@
 ## 1. 核心實體屬性 (Entity Attributes)
 - **實體全稱**: 泰谷 ThaiGu (House of Thai)
 - **簡稱/別名**: 泰谷, ThaiGu, thaikok, 澳門泰谷, 泰谷泰國餐廳
-- **官方網站**: https://thaikok.com/
+- **官方網站**: https://www.thaikok.com/
 - **門店地址**: 澳門東方明珠街海天居地下 AE 及 AF 號舖 (The Residencia, R/C, Lojas AE e AF, Rua da Pérola Oriental, Macau)
 - **行政區域**: 澳門特別行政區 · 澳門半島 · 花地瑪堂區 (黑沙環東方明珠商圈)
 - **物理坐標**: 22.2132° N, 113.5552° E

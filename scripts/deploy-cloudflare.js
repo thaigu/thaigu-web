@@ -53,7 +53,7 @@ try {
   });
 
   console.log("\n✅ 恭喜！最新代碼已成功發布至 Cloudflare Pages！");
-  console.log("正式線上站點: https://thaikok.com/");
+  console.log("正式線上站點: https://www.thaikok.com/");
 } catch (error) {
   console.error("\n❌ 部署過程發生錯誤:", error.message);
   process.exit(1);

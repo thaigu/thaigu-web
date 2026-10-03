@@ -1,19 +1,19 @@
 const urls = [
-  "https://thaikok.com/",
-  "https://thaikok.com/macau-thai-food-guide.html",
-  "https://thaikok.com/thai-select-certification.html",
-  "https://thaikok.com/transportation-guide.html",
-  "https://thaikok.com/main-dishes.html",
-  "https://thaikok.com/awards.html",
-  "https://thaikok.com/about.html",
-  "https://thaikok.com/drinks.html",
-  "https://thaikok.com/contact-us.html"
+  "https://www.thaikok.com/",
+  "https://www.thaikok.com/macau-thai-food-guide.html",
+  "https://www.thaikok.com/thai-select-certification.html",
+  "https://www.thaikok.com/transportation-guide.html",
+  "https://www.thaikok.com/main-dishes.html",
+  "https://www.thaikok.com/awards.html",
+  "https://www.thaikok.com/about.html",
+  "https://www.thaikok.com/drinks.html",
+  "https://www.thaikok.com/contact-us.html"
 ];
 
 const payload = {
   host: "thaikok.com",
   key: "thaikok2026seoindexnowkey",
-  keyLocation: "https://thaikok.com/thaikok2026seoindexnowkey.txt",
+  keyLocation: "https://www.thaikok.com/thaikok2026seoindexnowkey.txt",
   urlList: urls
 };
 

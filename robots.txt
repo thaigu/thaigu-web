@@ -30,5 +30,5 @@ User-agent: Cohere-ai
 Allow: /
 
 # Sitemap & LLMs Fact Indexes
-Sitemap: https://thaikok.com/sitemap.xml
-# LLMs.txt for AI Engine Optimization (AEO/GEO): https://thaikok.com/llms.txt
+Sitemap: https://www.thaikok.com/sitemap.xml
+# LLMs.txt for AI Engine Optimization (AEO/GEO): https://www.thaikok.com/llms.txt

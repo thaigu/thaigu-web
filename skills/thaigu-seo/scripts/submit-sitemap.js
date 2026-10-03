@@ -58,7 +58,7 @@ async function main() {
   }
   const token = tokenData.access_token;
   const siteUrl = encodeURIComponent("sc-domain:thaikok.com");
-  const feedpath = encodeURIComponent("https://thaikok.com/sitemap.xml");
+  const feedpath = encodeURIComponent("https://www.thaikok.com/sitemap.xml");
 
   const res = await fetch(`https://www.googleapis.com/webmasters/v3/sites/${siteUrl}/sitemaps/${feedpath}`, {
     method: "PUT",

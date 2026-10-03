@@ -1,0 +1,29 @@
+{
+  "routes": [
+    {
+      "routePath": "/api/seo/keywords/sync-gsc",
+      "mountPath": "/api/seo/keywords",
+      "method": "",
+      "module": [
+        "api/seo/keywords/sync-gsc.js:onRequest"
+      ]
+    },
+    {
+      "routePath": "/api/seo/indexnow",
+      "mountPath": "/api/seo",
+      "method": "",
+      "module": [
+        "api/seo/indexnow.js:onRequest"
+      ]
+    },
+    {
+      "routePath": "/api/seo/sync",
+      "mountPath": "/api/seo",
+      "method": "",
+      "module": [
+        "api/seo/sync.js:onRequest"
+      ]
+    }
+  ],
+  "baseURL": "/"
+}
