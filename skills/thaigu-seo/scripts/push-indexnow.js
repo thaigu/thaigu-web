@@ -1,13 +1,13 @@
 const urls = [
   "https://thaikok.com/",
+  "https://thaikok.com/macau-thai-food-guide.html",
+  "https://thaikok.com/thai-select-certification.html",
+  "https://thaikok.com/transportation-guide.html",
   "https://thaikok.com/main-dishes.html",
   "https://thaikok.com/awards.html",
   "https://thaikok.com/about.html",
   "https://thaikok.com/drinks.html",
-  "https://thaikok.com/contact-us.html",
-  "https://thaikok.com/lunches.html",
-  "https://thaikok.com/dinners.html",
-  "https://thaikok.com/coffee.html"
+  "https://thaikok.com/contact-us.html"
 ];
 
 const payload = {
