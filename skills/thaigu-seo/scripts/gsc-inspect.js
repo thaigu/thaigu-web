@@ -108,7 +108,7 @@ async function main() {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      inspectionUrl: "https://thaikok.com/",
+      inspectionUrl: "https://www.thaikok.com/",
       siteUrl: siteUrl
     })
   });

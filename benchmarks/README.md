@@ -28,7 +28,7 @@
 2. **Correct Entity Association % (實體關聯正確率)**：
    - 判斷標準：AI 是否正確將泰谷定位為「澳門泰國菜餐廳」且座落於「黑沙環 / 海天居」，絕不可出現路氹（Cotai）或氹仔等錯誤關聯。
 3. **Citation Rate % (官網引用率)**：
-   - 判斷標準：AI 給出的參考資料（Sources/References）中是否包含官方網址 `https://thaikok.com/`。
+   - 判斷標準：AI 給出的參考資料（Sources/References）中是否包含官方網址 `https://www.thaikok.com/`。
 4. **Citation Quality Avg (引用質量均分，0–3分)**：
    - `0 分`：無官網引用
    - `1 分`：僅引用非相關頁面或第三方平台

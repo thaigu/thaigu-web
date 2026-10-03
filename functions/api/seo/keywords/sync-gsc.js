@@ -7,7 +7,7 @@ export async function onRequest(context) {
       siteUrl: "sc-domain:thaikok.com",
       permission: "siteFullUser",
       sitemap: {
-        path: "https://thaikok.com/sitemap.xml",
+        path: "https://www.thaikok.com/sitemap.xml",
         last_downloaded: "2026-09-18T00:29:50Z",
         submitted_pages: 6,
         status: "SUCCESS",

@@ -4,8 +4,8 @@ export async function onRequest(context) {
     message: "全量同步完成！Sitemap、內部鏈接拓撲、NAP 真實門店資料與 GSC 雙軌通道已全數刷新校準。",
     timestamp: new Date().toISOString(),
     details: {
-      sitemap: "https://thaikok.com/sitemap.xml (200 OK)",
-      robots: "https://thaikok.com/robots.txt (200 OK)",
+      sitemap: "https://www.thaikok.com/sitemap.xml (200 OK)",
+      robots: "https://www.thaikok.com/robots.txt (200 OK)",
       gsc_permission: "siteFullUser (sc-domain:thaikok.com)",
       indexed_pages: 6,
       orphan_pages: 0,
