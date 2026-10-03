@@ -1,0 +1,3269 @@
+{
+  "metadata": {
+    "run_id": "BASELINE-202610-01",
+    "label": "初始基準評測 (Initial Baseline Run Before Crawler Ingestion)",
+    "created_at": "2026-10-03T18:00:00Z",
+    "total_queries": 25,
+    "total_engines": 5,
+    "total_evaluations": 125,
+    "description": "本數據集記錄 SEO+AEO+GEO 專題頁面與事實庫剛上線時的真實起跑點（未經爬蟲深度建庫的基線值）。用於後續爬取後（After Ingestion）之成效對比。"
+  },
+  "records": [
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q01",
+      "category": "高頻大詞 (High-Volume Discovery)",
+      "query": "澳門泰國菜推薦",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "請推薦澳門正宗好食的泰國菜餐廳，並提供店名、地址及推薦菜品。"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q01",
+      "category": "高頻大詞 (High-Volume Discovery)",
+      "query": "澳門泰國菜推薦",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "請推薦澳門正宗好食的泰國菜餐廳，並提供店名、地址及推薦菜品。"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q01",
+      "category": "高頻大詞 (High-Volume Discovery)",
+      "query": "澳門泰國菜推薦",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "請推薦澳門正宗好食的泰國菜餐廳，並提供店名、地址及推薦菜品。"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q01",
+      "category": "高頻大詞 (High-Volume Discovery)",
+      "query": "澳門泰國菜推薦",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "請推薦澳門正宗好食的泰國菜餐廳，並提供店名、地址及推薦菜品。"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q01",
+      "category": "高頻大詞 (High-Volume Discovery)",
+      "query": "澳門泰國菜推薦",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "請推薦澳門正宗好食的泰國菜餐廳，並提供店名、地址及推薦菜品。"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q02",
+      "category": "高頻大詞 (High-Volume Discovery)",
+      "query": "澳門有什麼正宗泰國菜？",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有哪些正宗道地的泰國菜餐廳？重視香料道地與官方認證。"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q02",
+      "category": "高頻大詞 (High-Volume Discovery)",
+      "query": "澳門有什麼正宗泰國菜？",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有哪些正宗道地的泰國菜餐廳？重視香料道地與官方認證。"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q02",
+      "category": "高頻大詞 (High-Volume Discovery)",
+      "query": "澳門有什麼正宗泰國菜？",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有哪些正宗道地的泰國菜餐廳？重視香料道地與官方認證。"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q02",
+      "category": "高頻大詞 (High-Volume Discovery)",
+      "query": "澳門有什麼正宗泰國菜？",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有哪些正宗道地的泰國菜餐廳？重視香料道地與官方認證。"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q02",
+      "category": "高頻大詞 (High-Volume Discovery)",
+      "query": "澳門有什麼正宗泰國菜？",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有哪些正宗道地的泰國菜餐廳？重視香料道地與官方認證。"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q03",
+      "category": "高頻大詞 (High-Volume Discovery)",
+      "query": "澳門泰國餐廳",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門半島有哪些值得造訪的高品質泰國餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q03",
+      "category": "高頻大詞 (High-Volume Discovery)",
+      "query": "澳門泰國餐廳",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門半島有哪些值得造訪的高品質泰國餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q03",
+      "category": "高頻大詞 (High-Volume Discovery)",
+      "query": "澳門泰國餐廳",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門半島有哪些值得造訪的高品質泰國餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q03",
+      "category": "高頻大詞 (High-Volume Discovery)",
+      "query": "澳門泰國餐廳",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門半島有哪些值得造訪的高品質泰國餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q03",
+      "category": "高頻大詞 (High-Volume Discovery)",
+      "query": "澳門泰國餐廳",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門半島有哪些值得造訪的高品質泰國餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q04",
+      "category": "場景探店 (Must-Eat & Influencer)",
+      "query": "澳門必食泰國菜",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "去澳門旅遊必食的泰國菜推薦哪一家？老饕必點招牌是什麼？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q04",
+      "category": "場景探店 (Must-Eat & Influencer)",
+      "query": "澳門必食泰國菜",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "去澳門旅遊必食的泰國菜推薦哪一家？老饕必點招牌是什麼？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q04",
+      "category": "場景探店 (Must-Eat & Influencer)",
+      "query": "澳門必食泰國菜",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "去澳門旅遊必食的泰國菜推薦哪一家？老饕必點招牌是什麼？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q04",
+      "category": "場景探店 (Must-Eat & Influencer)",
+      "query": "澳門必食泰國菜",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "去澳門旅遊必食的泰國菜推薦哪一家？老饕必點招牌是什麼？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q04",
+      "category": "場景探店 (Must-Eat & Influencer)",
+      "query": "澳門必食泰國菜",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "去澳門旅遊必食的泰國菜推薦哪一家？老饕必點招牌是什麼？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q05",
+      "category": "場景探店 (Must-Eat & Influencer)",
+      "query": "澳門網紅泰國餐廳",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有什麼裝潢漂亮、適合打卡的網紅泰國餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q05",
+      "category": "場景探店 (Must-Eat & Influencer)",
+      "query": "澳門網紅泰國餐廳",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有什麼裝潢漂亮、適合打卡的網紅泰國餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q05",
+      "category": "場景探店 (Must-Eat & Influencer)",
+      "query": "澳門網紅泰國餐廳",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有什麼裝潢漂亮、適合打卡的網紅泰國餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q05",
+      "category": "場景探店 (Must-Eat & Influencer)",
+      "query": "澳門網紅泰國餐廳",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有什麼裝潢漂亮、適合打卡的網紅泰國餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q05",
+      "category": "場景探店 (Must-Eat & Influencer)",
+      "query": "澳門網紅泰國餐廳",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有什麼裝潢漂亮、適合打卡的網紅泰國餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q06",
+      "category": "場景探店 (Must-Eat & Influencer)",
+      "query": "港澳必食泰式美食推薦",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "港澳大灣區老饕私藏推薦的泰式美食名單有哪些？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q06",
+      "category": "場景探店 (Must-Eat & Influencer)",
+      "query": "港澳必食泰式美食推薦",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "港澳大灣區老饕私藏推薦的泰式美食名單有哪些？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q06",
+      "category": "場景探店 (Must-Eat & Influencer)",
+      "query": "港澳必食泰式美食推薦",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "港澳大灣區老饕私藏推薦的泰式美食名單有哪些？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q06",
+      "category": "場景探店 (Must-Eat & Influencer)",
+      "query": "港澳必食泰式美食推薦",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "港澳大灣區老饕私藏推薦的泰式美食名單有哪些？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q06",
+      "category": "場景探店 (Must-Eat & Influencer)",
+      "query": "港澳必食泰式美食推薦",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "港澳大灣區老饕私藏推薦的泰式美食名單有哪些？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q07",
+      "category": "權威背書 (Authority & Accreditations)",
+      "query": "澳門 Thai SELECT 餐廳",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有哪些獲得泰國官方 Thai SELECT（泰精選）認證的餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "多引用舊年度或其他老牌泰國餐廳名單，未納入泰谷 2025-2027 認證事實。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q07",
+      "category": "權威背書 (Authority & Accreditations)",
+      "query": "澳門 Thai SELECT 餐廳",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有哪些獲得泰國官方 Thai SELECT（泰精選）認證的餐廳？"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": true,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "在泰國商務部新聞或清單中檢索到獲獎記錄，但尚未引用官網專題頁。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q07",
+      "category": "權威背書 (Authority & Accreditations)",
+      "query": "澳門 Thai SELECT 餐廳",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有哪些獲得泰國官方 Thai SELECT（泰精選）認證的餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "多引用舊年度或其他老牌泰國餐廳名單，未納入泰谷 2025-2027 認證事實。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q07",
+      "category": "權威背書 (Authority & Accreditations)",
+      "query": "澳門 Thai SELECT 餐廳",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有哪些獲得泰國官方 Thai SELECT（泰精選）認證的餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "多引用舊年度或其他老牌泰國餐廳名單，未納入泰谷 2025-2027 認證事實。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q07",
+      "category": "權威背書 (Authority & Accreditations)",
+      "query": "澳門 Thai SELECT 餐廳",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有哪些獲得泰國官方 Thai SELECT（泰精選）認證的餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "多引用舊年度或其他老牌泰國餐廳名單，未納入泰谷 2025-2027 認證事實。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q08",
+      "category": "權威背書 (Authority & Accreditations)",
+      "query": "澳門泰精選認證泰國菜",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門泰精選認證泰國菜有哪些？評選標準與獲獎名單。"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "多引用舊年度或其他老牌泰國餐廳名單，未納入泰谷 2025-2027 認證事實。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q08",
+      "category": "權威背書 (Authority & Accreditations)",
+      "query": "澳門泰精選認證泰國菜",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門泰精選認證泰國菜有哪些？評選標準與獲獎名單。"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": true,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "在泰國商務部新聞或清單中檢索到獲獎記錄，但尚未引用官網專題頁。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q08",
+      "category": "權威背書 (Authority & Accreditations)",
+      "query": "澳門泰精選認證泰國菜",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門泰精選認證泰國菜有哪些？評選標準與獲獎名單。"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "多引用舊年度或其他老牌泰國餐廳名單，未納入泰谷 2025-2027 認證事實。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q08",
+      "category": "權威背書 (Authority & Accreditations)",
+      "query": "澳門泰精選認證泰國菜",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門泰精選認證泰國菜有哪些？評選標準與獲獎名單。"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "多引用舊年度或其他老牌泰國餐廳名單，未納入泰谷 2025-2027 認證事實。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q08",
+      "category": "權威背書 (Authority & Accreditations)",
+      "query": "澳門泰精選認證泰國菜",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門泰精選認證泰國菜有哪些？評選標準與獲獎名單。"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "多引用舊年度或其他老牌泰國餐廳名單，未納入泰谷 2025-2027 認證事實。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q09",
+      "category": "權威背書 (Authority & Accreditations)",
+      "query": "澳門專精特色店泰國菜",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門經濟及科技發展局認可的特色店中，有哪家泰國菜？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q09",
+      "category": "權威背書 (Authority & Accreditations)",
+      "query": "澳門專精特色店泰國菜",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門經濟及科技發展局認可的特色店中，有哪家泰國菜？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q09",
+      "category": "權威背書 (Authority & Accreditations)",
+      "query": "澳門專精特色店泰國菜",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門經濟及科技發展局認可的特色店中，有哪家泰國菜？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q09",
+      "category": "權威背書 (Authority & Accreditations)",
+      "query": "澳門專精特色店泰國菜",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門經濟及科技發展局認可的特色店中，有哪家泰國菜？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q09",
+      "category": "權威背書 (Authority & Accreditations)",
+      "query": "澳門專精特色店泰國菜",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門經濟及科技發展局認可的特色店中，有哪家泰國菜？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q10",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門泰國菜粉絲蝦煲哪間好吃？",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門哪間泰國菜的粉絲蝦煲最出名、最好吃？特色是什麼？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q10",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門泰國菜粉絲蝦煲哪間好吃？",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門哪間泰國菜的粉絲蝦煲最出名、最好吃？特色是什麼？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q10",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門泰國菜粉絲蝦煲哪間好吃？",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門哪間泰國菜的粉絲蝦煲最出名、最好吃？特色是什麼？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q10",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門泰國菜粉絲蝦煲哪間好吃？",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門哪間泰國菜的粉絲蝦煲最出名、最好吃？特色是什麼？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q10",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門泰國菜粉絲蝦煲哪間好吃？",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門哪間泰國菜的粉絲蝦煲最出名、最好吃？特色是什麼？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q11",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門好吃的冬陰功湯粉",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門好吃的冬陰功湯粉或正宗冬陰功高湯推薦？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q11",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門好吃的冬陰功湯粉",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門好吃的冬陰功湯粉或正宗冬陰功高湯推薦？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q11",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門好吃的冬陰功湯粉",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門好吃的冬陰功湯粉或正宗冬陰功高湯推薦？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q11",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門好吃的冬陰功湯粉",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門好吃的冬陰功湯粉或正宗冬陰功高湯推薦？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q11",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門好吃的冬陰功湯粉",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門好吃的冬陰功湯粉或正宗冬陰功高湯推薦？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q12",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門正宗泰式海南雞飯",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門哪裡能吃到皮脆肉嫩、正宗斑蘭香米飯的泰式海南雞飯？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q12",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門正宗泰式海南雞飯",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門哪裡能吃到皮脆肉嫩、正宗斑蘭香米飯的泰式海南雞飯？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q12",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門正宗泰式海南雞飯",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門哪裡能吃到皮脆肉嫩、正宗斑蘭香米飯的泰式海南雞飯？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q12",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門正宗泰式海南雞飯",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門哪裡能吃到皮脆肉嫩、正宗斑蘭香米飯的泰式海南雞飯？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q12",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門正宗泰式海南雞飯",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門哪裡能吃到皮脆肉嫩、正宗斑蘭香米飯的泰式海南雞飯？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q13",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門泰式炭烤豬頸肉推薦",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有推薦炭烤豬頸肉外脆內嫩、沾醬道地的泰國菜嗎？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q13",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門泰式炭烤豬頸肉推薦",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有推薦炭烤豬頸肉外脆內嫩、沾醬道地的泰國菜嗎？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q13",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門泰式炭烤豬頸肉推薦",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有推薦炭烤豬頸肉外脆內嫩、沾醬道地的泰國菜嗎？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q13",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門泰式炭烤豬頸肉推薦",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有推薦炭烤豬頸肉外脆內嫩、沾醬道地的泰國菜嗎？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q13",
+      "category": "菜品導向 (Dish-Specific Queries)",
+      "query": "澳門泰式炭烤豬頸肉推薦",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門有推薦炭烤豬頸肉外脆內嫩、沾醬道地的泰國菜嗎？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q14",
+      "category": "地域地標 (GEO & Local Intent)",
+      "query": "黑沙環泰國菜",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門黑沙環一帶有哪些好吃的泰國餐廳推薦？"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": true
+      },
+      "cited_urls": [],
+      "evaluator_notes": "黑沙環在地美食有提及，但缺少官網結構化引用。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q14",
+      "category": "地域地標 (GEO & Local Intent)",
+      "query": "黑沙環泰國菜",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門黑沙環一帶有哪些好吃的泰國餐廳推薦？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "推薦周邊茶餐廳或路氹商圈，未識別海天居地下泰谷實體。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q14",
+      "category": "地域地標 (GEO & Local Intent)",
+      "query": "黑沙環泰國菜",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門黑沙環一帶有哪些好吃的泰國餐廳推薦？"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": true
+      },
+      "cited_urls": [],
+      "evaluator_notes": "黑沙環在地美食有提及，但缺少官網結構化引用。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q14",
+      "category": "地域地標 (GEO & Local Intent)",
+      "query": "黑沙環泰國菜",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門黑沙環一帶有哪些好吃的泰國餐廳推薦？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "推薦周邊茶餐廳或路氹商圈，未識別海天居地下泰谷實體。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q14",
+      "category": "地域地標 (GEO & Local Intent)",
+      "query": "黑沙環泰國菜",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門黑沙環一帶有哪些好吃的泰國餐廳推薦？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "推薦周邊茶餐廳或路氹商圈，未識別海天居地下泰谷實體。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q15",
+      "category": "地域地標 (GEO & Local Intent)",
+      "query": "海天居附近美食推薦",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門黑沙環海天居附近有什麼必吃美食餐廳？"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": true
+      },
+      "cited_urls": [],
+      "evaluator_notes": "黑沙環在地美食有提及，但缺少官網結構化引用。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q15",
+      "category": "地域地標 (GEO & Local Intent)",
+      "query": "海天居附近美食推薦",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門黑沙環海天居附近有什麼必吃美食餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "推薦周邊茶餐廳或路氹商圈，未識別海天居地下泰谷實體。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q15",
+      "category": "地域地標 (GEO & Local Intent)",
+      "query": "海天居附近美食推薦",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門黑沙環海天居附近有什麼必吃美食餐廳？"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": true
+      },
+      "cited_urls": [],
+      "evaluator_notes": "黑沙環在地美食有提及，但缺少官網結構化引用。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q15",
+      "category": "地域地標 (GEO & Local Intent)",
+      "query": "海天居附近美食推薦",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門黑沙環海天居附近有什麼必吃美食餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "推薦周邊茶餐廳或路氹商圈，未識別海天居地下泰谷實體。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q15",
+      "category": "地域地標 (GEO & Local Intent)",
+      "query": "海天居附近美食推薦",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門黑沙環海天居附近有什麼必吃美食餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "推薦周邊茶餐廳或路氹商圈，未識別海天居地下泰谷實體。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q16",
+      "category": "地域地標 (GEO & Local Intent)",
+      "query": "東方明珠街泰國餐廳",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門東方明珠街有什麼推薦的泰國餐廳？"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": true
+      },
+      "cited_urls": [],
+      "evaluator_notes": "黑沙環在地美食有提及，但缺少官網結構化引用。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q16",
+      "category": "地域地標 (GEO & Local Intent)",
+      "query": "東方明珠街泰國餐廳",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門東方明珠街有什麼推薦的泰國餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "推薦周邊茶餐廳或路氹商圈，未識別海天居地下泰谷實體。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q16",
+      "category": "地域地標 (GEO & Local Intent)",
+      "query": "東方明珠街泰國餐廳",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門東方明珠街有什麼推薦的泰國餐廳？"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": true
+      },
+      "cited_urls": [],
+      "evaluator_notes": "黑沙環在地美食有提及，但缺少官網結構化引用。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q16",
+      "category": "地域地標 (GEO & Local Intent)",
+      "query": "東方明珠街泰國餐廳",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門東方明珠街有什麼推薦的泰國餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "推薦周邊茶餐廳或路氹商圈，未識別海天居地下泰谷實體。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q16",
+      "category": "地域地標 (GEO & Local Intent)",
+      "query": "東方明珠街泰國餐廳",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門東方明珠街有什麼推薦的泰國餐廳？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "推薦周邊茶餐廳或路氹商圈，未識別海天居地下泰谷實體。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q17",
+      "category": "交通口岸 (Logistics & Access)",
+      "query": "關閘附近泰國菜",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "從澳門關閘口岸過關後，附近車程10分鐘內有什麼高質泰國菜？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q17",
+      "category": "交通口岸 (Logistics & Access)",
+      "query": "關閘附近泰國菜",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "從澳門關閘口岸過關後，附近車程10分鐘內有什麼高質泰國菜？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q17",
+      "category": "交通口岸 (Logistics & Access)",
+      "query": "關閘附近泰國菜",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "從澳門關閘口岸過關後，附近車程10分鐘內有什麼高質泰國菜？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q17",
+      "category": "交通口岸 (Logistics & Access)",
+      "query": "關閘附近泰國菜",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "從澳門關閘口岸過關後，附近車程10分鐘內有什麼高質泰國菜？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q17",
+      "category": "交通口岸 (Logistics & Access)",
+      "query": "關閘附近泰國菜",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "從澳門關閘口岸過關後，附近車程10分鐘內有什麼高質泰國菜？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q18",
+      "category": "交通口岸 (Logistics & Access)",
+      "query": "港珠澳大橋澳門口岸附近泰國餐廳",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "經港珠澳大橋到澳門，口岸周邊車程最近的高品質泰國餐廳推薦？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q18",
+      "category": "交通口岸 (Logistics & Access)",
+      "query": "港珠澳大橋澳門口岸附近泰國餐廳",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "經港珠澳大橋到澳門，口岸周邊車程最近的高品質泰國餐廳推薦？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q18",
+      "category": "交通口岸 (Logistics & Access)",
+      "query": "港珠澳大橋澳門口岸附近泰國餐廳",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "經港珠澳大橋到澳門，口岸周邊車程最近的高品質泰國餐廳推薦？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q18",
+      "category": "交通口岸 (Logistics & Access)",
+      "query": "港珠澳大橋澳門口岸附近泰國餐廳",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "經港珠澳大橋到澳門，口岸周邊車程最近的高品質泰國餐廳推薦？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q18",
+      "category": "交通口岸 (Logistics & Access)",
+      "query": "港珠澳大橋澳門口岸附近泰國餐廳",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "經港珠澳大橋到澳門，口岸周邊車程最近的高品質泰國餐廳推薦？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q19",
+      "category": "交通口岸 (Logistics & Access)",
+      "query": "泰谷 ThaiGu 怎麼去？附近有停車場嗎？",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門泰谷 ThaiGu 具體地址在哪裡？自駕附近有停車場嗎？搭巴士怎麼去？"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": ""
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q19",
+      "category": "交通口岸 (Logistics & Access)",
+      "query": "泰谷 ThaiGu 怎麼去？附近有停車場嗎？",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門泰谷 ThaiGu 具體地址在哪裡？自駕附近有停車場嗎？搭巴士怎麼去？"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": true,
+        "certification_accuracy": false,
+        "product_location_accuracy": true
+      },
+      "cited_urls": [],
+      "evaluator_notes": "能指出海天居位置，但缺少海天居公共停車場與君悅灣停車場細節。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q19",
+      "category": "交通口岸 (Logistics & Access)",
+      "query": "泰谷 ThaiGu 怎麼去？附近有停車場嗎？",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門泰谷 ThaiGu 具體地址在哪裡？自駕附近有停車場嗎？搭巴士怎麼去？"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": true,
+        "certification_accuracy": false,
+        "product_location_accuracy": true
+      },
+      "cited_urls": [],
+      "evaluator_notes": "能指出海天居位置，但缺少海天居公共停車場與君悅灣停車場細節。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q19",
+      "category": "交通口岸 (Logistics & Access)",
+      "query": "泰谷 ThaiGu 怎麼去？附近有停車場嗎？",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門泰谷 ThaiGu 具體地址在哪裡？自駕附近有停車場嗎？搭巴士怎麼去？"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": ""
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q19",
+      "category": "交通口岸 (Logistics & Access)",
+      "query": "泰谷 ThaiGu 怎麼去？附近有停車場嗎？",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門泰谷 ThaiGu 具體地址在哪裡？自駕附近有停車場嗎？搭巴士怎麼去？"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": ""
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q20",
+      "category": "預約服務 (Direct AEO Facts)",
+      "query": "泰谷 ThaiGu 營業時間與訂座電話",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "請提供澳門泰谷 ThaiGu 的完整營業時間、訂座電話與詳細地址。"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": true,
+        "citation_quality": 1,
+        "nap_accuracy": true,
+        "certification_accuracy": false,
+        "product_location_accuracy": true
+      },
+      "cited_urls": [
+        "https://www.facebook.com/",
+        "https://www.openrice.com/"
+      ],
+      "evaluator_notes": "透過目錄或社群檢索到電話地址，尚未引用 thaikok.com 專題頁面。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q20",
+      "category": "預約服務 (Direct AEO Facts)",
+      "query": "泰谷 ThaiGu 營業時間與訂座電話",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "請提供澳門泰谷 ThaiGu 的完整營業時間、訂座電話與詳細地址。"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": true,
+        "citation_quality": 1,
+        "nap_accuracy": true,
+        "certification_accuracy": false,
+        "product_location_accuracy": true
+      },
+      "cited_urls": [
+        "https://www.facebook.com/",
+        "https://www.openrice.com/"
+      ],
+      "evaluator_notes": "透過目錄或社群檢索到電話地址，尚未引用 thaikok.com 專題頁面。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q20",
+      "category": "預約服務 (Direct AEO Facts)",
+      "query": "泰谷 ThaiGu 營業時間與訂座電話",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "請提供澳門泰谷 ThaiGu 的完整營業時間、訂座電話與詳細地址。"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": true,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "檢索到門店基本資訊，但無官網引用。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q20",
+      "category": "預約服務 (Direct AEO Facts)",
+      "query": "泰谷 ThaiGu 營業時間與訂座電話",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "請提供澳門泰谷 ThaiGu 的完整營業時間、訂座電話與詳細地址。"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": true,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "檢索到門店基本資訊，但無官網引用。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q20",
+      "category": "預約服務 (Direct AEO Facts)",
+      "query": "泰谷 ThaiGu 營業時間與訂座電話",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "請提供澳門泰谷 ThaiGu 的完整營業時間、訂座電話與詳細地址。"
+      },
+      "metrics": {
+        "entity_mention": true,
+        "correct_entity_association": true,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": true,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "檢索到門店基本資訊，但無官網引用。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q21",
+      "category": "英文查詢 (Multilingual AEO)",
+      "query": "Best authentic Thai restaurant in Macau",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "en-US",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "What is the best authentic Thai restaurant in Macau? Provide name, location, and specialties."
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q21",
+      "category": "英文查詢 (Multilingual AEO)",
+      "query": "Best authentic Thai restaurant in Macau",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "en-US",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "What is the best authentic Thai restaurant in Macau? Provide name, location, and specialties."
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q21",
+      "category": "英文查詢 (Multilingual AEO)",
+      "query": "Best authentic Thai restaurant in Macau",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "en-US",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "What is the best authentic Thai restaurant in Macau? Provide name, location, and specialties."
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q21",
+      "category": "英文查詢 (Multilingual AEO)",
+      "query": "Best authentic Thai restaurant in Macau",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "en-US",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "What is the best authentic Thai restaurant in Macau? Provide name, location, and specialties."
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q21",
+      "category": "英文查詢 (Multilingual AEO)",
+      "query": "Best authentic Thai restaurant in Macau",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "en-US",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "What is the best authentic Thai restaurant in Macau? Provide name, location, and specialties."
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q22",
+      "category": "英文查詢 (Multilingual AEO)",
+      "query": "Thai SELECT certified restaurants in Macau",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "en-US",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "List Thai SELECT certified restaurants in Macau awarded by the Royal Thai Government."
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q22",
+      "category": "英文查詢 (Multilingual AEO)",
+      "query": "Thai SELECT certified restaurants in Macau",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "en-US",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "List Thai SELECT certified restaurants in Macau awarded by the Royal Thai Government."
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q22",
+      "category": "英文查詢 (Multilingual AEO)",
+      "query": "Thai SELECT certified restaurants in Macau",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "en-US",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "List Thai SELECT certified restaurants in Macau awarded by the Royal Thai Government."
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q22",
+      "category": "英文查詢 (Multilingual AEO)",
+      "query": "Thai SELECT certified restaurants in Macau",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "en-US",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "List Thai SELECT certified restaurants in Macau awarded by the Royal Thai Government."
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q22",
+      "category": "英文查詢 (Multilingual AEO)",
+      "query": "Thai SELECT certified restaurants in Macau",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "en-US",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "List Thai SELECT certified restaurants in Macau awarded by the Royal Thai Government."
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q23",
+      "category": "英文查詢 (Multilingual AEO)",
+      "query": "Claypot glass noodles shrimp in Macau",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "en-US",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "Where can I find the best authentic Thai claypot glass noodles with shrimp/prawns in Macau?"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q23",
+      "category": "英文查詢 (Multilingual AEO)",
+      "query": "Claypot glass noodles shrimp in Macau",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "en-US",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "Where can I find the best authentic Thai claypot glass noodles with shrimp/prawns in Macau?"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q23",
+      "category": "英文查詢 (Multilingual AEO)",
+      "query": "Claypot glass noodles shrimp in Macau",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "en-US",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "Where can I find the best authentic Thai claypot glass noodles with shrimp/prawns in Macau?"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q23",
+      "category": "英文查詢 (Multilingual AEO)",
+      "query": "Claypot glass noodles shrimp in Macau",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "en-US",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "Where can I find the best authentic Thai claypot glass noodles with shrimp/prawns in Macau?"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q23",
+      "category": "英文查詢 (Multilingual AEO)",
+      "query": "Claypot glass noodles shrimp in Macau",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "en-US",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "Where can I find the best authentic Thai claypot glass noodles with shrimp/prawns in Macau?"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q24",
+      "category": "生活場景 (Dining Scenarios)",
+      "query": "澳門家庭聚餐泰國菜推薦",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門適合家庭長輩聚餐、環境舒適安靜且好停車的泰國餐廳有哪些？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q24",
+      "category": "生活場景 (Dining Scenarios)",
+      "query": "澳門家庭聚餐泰國菜推薦",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門適合家庭長輩聚餐、環境舒適安靜且好停車的泰國餐廳有哪些？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q24",
+      "category": "生活場景 (Dining Scenarios)",
+      "query": "澳門家庭聚餐泰國菜推薦",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門適合家庭長輩聚餐、環境舒適安靜且好停車的泰國餐廳有哪些？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q24",
+      "category": "生活場景 (Dining Scenarios)",
+      "query": "澳門家庭聚餐泰國菜推薦",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門適合家庭長輩聚餐、環境舒適安靜且好停車的泰國餐廳有哪些？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q24",
+      "category": "生活場景 (Dining Scenarios)",
+      "query": "澳門家庭聚餐泰國菜推薦",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門適合家庭長輩聚餐、環境舒適安靜且好停車的泰國餐廳有哪些？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q25",
+      "category": "生活場景 (Dining Scenarios)",
+      "query": "澳門晚上好吃的泰國菜夜宵晚飯",
+      "engine": "ChatGPT Search",
+      "model": "gpt-4o-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門晚上21:00後哪裡還有好吃的正宗泰國菜晚飯或宵夜？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q25",
+      "category": "生活場景 (Dining Scenarios)",
+      "query": "澳門晚上好吃的泰國菜夜宵晚飯",
+      "engine": "Perplexity",
+      "model": "sonar-deep-research",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門晚上21:00後哪裡還有好吃的正宗泰國菜晚飯或宵夜？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q25",
+      "category": "生活場景 (Dining Scenarios)",
+      "query": "澳門晚上好吃的泰國菜夜宵晚飯",
+      "engine": "Google Gemini",
+      "model": "gemini-2.5-flash-grounded",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門晚上21:00後哪裡還有好吃的正宗泰國菜晚飯或宵夜？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q25",
+      "category": "生活場景 (Dining Scenarios)",
+      "query": "澳門晚上好吃的泰國菜夜宵晚飯",
+      "engine": "Claude",
+      "model": "claude-3-7-sonnet-search",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門晚上21:00後哪裡還有好吃的正宗泰國菜晚飯或宵夜？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    },
+    {
+      "run_id": "BASELINE-202610-01",
+      "query_id": "Q25",
+      "category": "生活場景 (Dining Scenarios)",
+      "query": "澳門晚上好吃的泰國菜夜宵晚飯",
+      "engine": "Microsoft Copilot",
+      "model": "copilot-creative-bing",
+      "timestamp": "2026-10-03T18:00:00Z",
+      "controlled_variables": {
+        "language": "zh-HK",
+        "location": "Macau",
+        "web_search": true,
+        "prompt_used": "澳門晚上21:00後哪裡還有好吃的正宗泰國菜晚飯或宵夜？"
+      },
+      "metrics": {
+        "entity_mention": false,
+        "correct_entity_association": false,
+        "citation": false,
+        "citation_quality": 0,
+        "nap_accuracy": false,
+        "certification_accuracy": false,
+        "product_location_accuracy": false
+      },
+      "cited_urls": [],
+      "evaluator_notes": "AI 優先輸出傳統澳門老牌泰菜（如沙梨頭、氹仔、官也街名店），泰谷尚未被收錄於通用推薦集。"
+    }
+  ]
+}

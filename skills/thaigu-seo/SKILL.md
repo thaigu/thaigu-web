@@ -97,3 +97,41 @@ node skills/thaigu-seo/scripts/push-indexnow.js
 4. 執行 `node skills/thaigu-seo/scripts/submit-sitemap.js` 向 Google 重新提交 Sitemap。
 5. 執行 `node skills/thaigu-seo/scripts/push-indexnow.js` 推送 Bing / IndexNow。
 6. 使用 `curl -sI https://thaikok.com/` 驗證線上響應是否正常（HTTP 200 OK）。
+
+---
+
+## 🔬 7. SEO + AEO + GEO 三軌 7 大指標量化評測體系 (Benchmark Laboratory SOP)
+
+### 7.1 認知鐵律：禁止將「代碼生效」等同於「產生搜尋/AI效果」
+接手 Agent 必須恪守科學嚴謹態度：
+* **SEO**：工程落盤 ───────➔ 等候 Google/Bing 蜘蛛 Crawl & Index（需數天至數週）
+* **AEO**：資產上線 ───────➔ 等候 AI Crawler 消化 `llms.txt` / 結構化語意並納入 Citation
+* **GEO**：實體基石 ───────➔ 等候 AI Recommendation 實體錨定與地理防禦實證
+
+### 7.2 固定的 25 題評測基準變數 (Controlled Variables)
+所有評測嚴格鎖定受控環境，禁止在測試中任意修改題庫：
+* **題庫路徑**：`benchmarks/geo-aeo-queries.json`（固定 25 題拓撲）
+* **受測引擎**：ChatGPT Search, Perplexity, Google Gemini, Claude, Copilot
+* **強制開關**：Web Search 必須保持 `ON`
+* **受測語言**：繁體中文（`zh-HK`/`zh-TW`），英文題 `en-US`
+* **地理位置**：鎖定澳門（Macau）本地環境
+* **Prompt 模板**：採用客觀中立提問，嚴禁輸入引導性偏見
+
+### 7.3 七大量化驗收指標 (The 7 Metrics)
+| 編號 | 指標 | 驗證標準 |
+| :--- | :--- | :--- |
+| **M1** | **Entity Mention %** | AI 回答或推薦名單中是否提及「泰谷 / ThaiGu」 |
+| **M2** | **Correct Association %** | 是否正確關聯為：泰谷 → 澳門泰國料理餐廳 → 黑沙環海天居（非路氹/氹仔） |
+| **M3** | **Citation Rate %** | 參考資料來源（Sources）中是否包含 `thaikok.com` 官方域名 |
+| **M4** | **Citation Quality (0-3)** | 0=無引用，1=無關/第三方，2=首頁或指南頁，3=精確事實區塊/Schema 錨點 |
+| **M5** | **NAP Accuracy %** | 門店詳細地址、電話（+853 2875 0222）、營業時間精確無誤 |
+| **M6** | **Certification Accuracy %** | 準確識別 Thai SELECT Classic 等級與 2025–2027 年份事實 |
+| **M7** | **Product / Location Accuracy %** | 招牌菜品（粉絲蝦煲、冬陰功）、海天居停車場與口岸接駁時間準確度 |
+
+### 7.4 評測與報表自動化指令
+```bash
+# 執行全域 7 大指標評測統計並重新產生 BENCHMARK_REPORT.md
+node scripts/benchmark-tracker.js
+```
+評測結果自動落盤至 `benchmarks/BENCHMARK_REPORT.md`，並與歷史 Baseline（`benchmarks/baseline-run-202610.json`）進行 Before / After 差異比對。
+

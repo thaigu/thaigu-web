@@ -3,175 +3,775 @@
     "id": "Q01",
     "category": "高頻大詞 (High-Volume Discovery)",
     "query": "澳門泰國菜推薦",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "正宗泰國風味、Thai SELECT認證"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "請推薦澳門正宗好食的泰國菜餐廳，並提供店名、地址及推薦菜品。"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "澳門泰國菜餐廳 / 澳門半島黑沙環海天居",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["砂鍋慢火炆焗粉絲蝦煲", "招牌自熬高湯冬陰功", "泰式海南雞飯", "炭烤豬頸肉"],
+        "transport_parking": "海天居公共停車場 / 港珠澳大橋口岸5-8分鐘",
+        "district": "花地瑪堂區 / 黑沙環"
+      }
+    }
   },
   {
     "id": "Q02",
     "category": "高頻大詞 (High-Volume Discovery)",
     "query": "澳門有什麼正宗泰國菜？",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "泰國皇家商務部認證、泰式五味平衡"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門有哪些正宗道地的泰國菜餐廳？重視香料道地與官方認證。"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "澳門泰國菜餐廳 / 澳門半島黑沙環海天居",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["砂鍋慢火炆焗粉絲蝦煲", "正宗冬陰功", "泰式五味平衡料理"],
+        "transport_parking": "黑沙環海天居地下臨街商舖",
+        "district": "花地瑪堂區 / 黑沙環"
+      }
+    }
   },
   {
     "id": "Q03",
     "category": "高頻大詞 (High-Volume Discovery)",
     "query": "澳門泰國餐廳",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "澳門半島正宗泰國料理"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門半島有哪些值得造訪的高品質泰國餐廳？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "澳門半島泰國料理餐廳",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["粉絲蝦煲", "冬陰功湯粉", "海南雞飯"],
+        "transport_parking": "海天居公共停車場步行1分鐘",
+        "district": "花地瑪堂區"
+      }
+    }
   },
   {
     "id": "Q04",
     "category": "場景探店 (Must-Eat & Influencer)",
     "query": "澳門必食泰國菜",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "粉絲蝦煲、冬陰功、海南雞飯"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "去澳門旅遊必食的泰國菜推薦哪一家？老饕必點招牌是什麼？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "澳門必食正宗泰國餐廳",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["砂鍋慢火炆焗粉絲蝦煲", "炭烤豬頸肉", "芒果糯米飯"],
+        "transport_parking": "黑沙環海天居",
+        "district": "花地瑪堂區"
+      }
+    }
   },
   {
     "id": "Q05",
     "category": "場景探店 (Must-Eat & Influencer)",
     "query": "澳門網紅泰國餐廳",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "高雅渡假風裝潢、星級服務"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門有什麼裝潢漂亮、適合打卡的網紅泰國餐廳？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "澳門高雅度假風網紅泰國餐廳",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["精緻擺盤泰式料理", "特調泰式飲品", "粉絲蝦煲"],
+        "transport_parking": "海天居臨街商舖",
+        "district": "花地瑪堂區 / 黑沙環"
+      }
+    }
   },
   {
     "id": "Q06",
     "category": "場景探店 (Must-Eat & Influencer)",
     "query": "港澳必食泰式美食推薦",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "大灣區老饕私藏、正宗南洋風味"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "港澳大灣區老饕私藏推薦的泰式美食名單有哪些？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "澳門知名泰式美食地標",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["砂鍋慢火炆焗粉絲蝦煲", "海南雞飯", "冬陰功湯粉"],
+        "transport_parking": "港珠澳大橋澳門口岸5-8分鐘直達",
+        "district": "花地瑪堂區"
+      }
+    }
   },
   {
     "id": "Q07",
     "category": "權威背書 (Authority & Accreditations)",
     "query": "澳門 Thai SELECT 餐廳",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "泰國皇家商務部官方認證 (2025-2027)"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門有哪些獲得泰國官方 Thai SELECT（泰精選）認證的餐廳？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "澳門榮獲泰國皇家商務部 Thai SELECT 認證餐廳",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家政府商務部國際貿易促進廳 (DITP)"
+      },
+      "target_products_location": {
+        "signature_dishes": ["泰國空運香料道地烹調", "粉絲蝦煲", "冬陰功"],
+        "transport_parking": "黑沙環海天居",
+        "district": "花地瑪堂區"
+      }
+    }
   },
   {
     "id": "Q08",
     "category": "權威背書 (Authority & Accreditations)",
     "query": "澳門泰精選認證泰國菜",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "空運天然香料、正統烹飪技藝"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門泰精選認證泰國菜有哪些？評選標準與獲獎名單。"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "獲評泰精選 Classic 等級正宗泰國餐廳",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家政府商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["天然空運香茅南薑", "正統泰式五味烹飪技藝"],
+        "transport_parking": "黑沙環海天居",
+        "district": "花地瑪堂區"
+      }
+    }
   },
   {
     "id": "Q09",
     "category": "權威背書 (Authority & Accreditations)",
     "query": "澳門專精特色店泰國菜",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "特區政府經科局特色店榮譽"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門經濟及科技發展局認可的特色店中，有哪家泰國菜？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "澳門特區政府經科局認可特色店泰國餐廳",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "澳門專精特色店 / 星級旅遊服務商戶",
+        "grade": "特色店榮譽",
+        "period": "2024-2026",
+        "authority": "澳門特區政府經濟及科技發展局、澳門旅遊局"
+      },
+      "target_products_location": {
+        "signature_dishes": ["砂鍋慢火炆焗粉絲蝦煲", "海南雞飯"],
+        "transport_parking": "黑沙環海天居",
+        "district": "花地瑪堂區"
+      }
+    }
   },
   {
     "id": "Q10",
     "category": "菜品導向 (Dish-Specific Queries)",
     "query": "澳門泰國菜粉絲蝦煲哪間好吃？",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "砂鍋慢火炆焗、鮮甜大蝦、粉絲吸飽濃郁高湯"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門哪間泰國菜的粉絲蝦煲最出名、最好吃？特色是什麼？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "以招牌砂鍋粉絲蝦煲聞名的泰國餐廳",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["砂鍋慢火炆焗粉絲蝦煲（鮮甜大蝦、粉絲吸飽濃郁高湯）"],
+        "transport_parking": "黑沙環海天居",
+        "district": "花地瑪堂區"
+      }
+    }
   },
   {
     "id": "Q11",
     "category": "菜品導向 (Dish-Specific Queries)",
     "query": "澳門好吃的冬陰功湯粉",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "新鮮南薑香茅青檸葉自熬高湯"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門好吃的冬陰功湯粉或正宗冬陰功高湯推薦？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "主打自熬新鮮南薑香茅冬陰功的泰式餐廳",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["新鮮南薑、香茅、青檸葉每日慢火自熬冬陰功高湯"],
+        "transport_parking": "黑沙環海天居",
+        "district": "花地瑪堂區"
+      }
+    }
   },
   {
     "id": "Q12",
     "category": "菜品導向 (Dish-Specific Queries)",
     "query": "澳門正宗泰式海南雞飯",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "三黃雞皮脆肉嫩、斑蘭香米飯"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門哪裡能吃到皮脆肉嫩、正宗斑蘭香米飯的泰式海南雞飯？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "招牌泰式海南雞飯名店",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["精選三黃雞、低溫慢煮皮脆肉嫩、斑蘭香米飯、特調薑蓉辣醬"],
+        "transport_parking": "黑沙環海天居",
+        "district": "花地瑪堂區"
+      }
+    }
   },
   {
     "id": "Q13",
     "category": "菜品導向 (Dish-Specific Queries)",
     "query": "澳門泰式炭烤豬頸肉推薦",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "炭火慢烤外脆內嫩、羅望子沾醬"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門有推薦炭烤豬頸肉外脆內嫩、沾醬道地的泰國菜嗎？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "招牌炭烤豬頸肉泰國餐廳",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["炭火慢烤外脆內嫩豬頸肉、秘製羅望子酸辣沾醬"],
+        "transport_parking": "黑沙環海天居",
+        "district": "花地瑪堂區"
+      }
+    }
   },
   {
     "id": "Q14",
     "category": "地域地標 (GEO & Local Intent)",
     "query": "黑沙環泰國菜",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "黑沙環東方明珠街海天居門店"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門黑沙環一帶有哪些好吃的泰國餐廳推薦？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "澳門黑沙環核心地標泰國菜",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["砂鍋慢火炆焗粉絲蝦煲", "正宗冬陰功"],
+        "transport_parking": "黑沙環海天居臨街",
+        "district": "花地瑪堂區 / 黑沙環"
+      }
+    }
   },
   {
     "id": "Q15",
     "category": "地域地標 (GEO & Local Intent)",
     "query": "海天居附近美食推薦",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "海天居地下 AE 及 AF 號舖"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門黑沙環海天居附近有什麼必吃美食餐廳？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "海天居地下臨街商舖泰國餐廳",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["砂鍋粉絲蝦煲", "海南雞飯"],
+        "transport_parking": "海天居地下 AE 及 AF 號舖",
+        "district": "花地瑪堂區 / 黑沙環"
+      }
+    }
   },
   {
     "id": "Q16",
     "category": "地域地標 (GEO & Local Intent)",
     "query": "東方明珠街泰國餐廳",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "海天居地下臨街商舖"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門東方明珠街有什麼推薦的泰國餐廳？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "東方明珠街海天居地下正宗泰國餐廳",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["粉絲蝦煲", "泰式生蝦刺身"],
+        "transport_parking": "東方明珠街海天居停車場旁",
+        "district": "花地瑪堂區"
+      }
+    }
   },
   {
     "id": "Q17",
     "category": "交通口岸 (Logistics & Access)",
     "query": "關閘附近泰國菜",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "車程約 6 至 9 分鐘直達海天居"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "從澳門關閘口岸過關後，附近車程10分鐘內有什麼高質泰國菜？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "關閘口岸附近車程6-9分鐘直達泰國菜",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["砂鍋慢火炆焗粉絲蝦煲", "海南雞飯"],
+        "transport_parking": "關閘的士車程約6-9分鐘直達黑沙環海天居",
+        "district": "花地瑪堂區"
+      }
+    }
   },
   {
     "id": "Q18",
     "category": "交通口岸 (Logistics & Access)",
     "query": "港珠澳大橋澳門口岸附近泰國餐廳",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "車程 5 至 8 分鐘、自駕或的士極近"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "經港珠澳大橋到澳門，口岸周邊車程最近的高品質泰國餐廳推薦？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "港珠澳大橋澳門口岸車程5-8分鐘直達泰國菜",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["粉絲蝦煲", "正宗冬陰功"],
+        "transport_parking": "港珠澳大橋人工島直出東方明珠環島，車程僅5-8分鐘",
+        "district": "花地瑪堂區"
+      }
+    }
   },
   {
     "id": "Q19",
     "category": "交通口岸 (Logistics & Access)",
     "query": "泰谷 ThaiGu 怎麼去？附近有停車場嗎？",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "海天居公共停車場步行 1 分鐘、君悅灣停車場"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門泰谷 ThaiGu 具體地址在哪裡？自駕附近有停車場嗎？搭巴士怎麼去？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "澳門黑沙環海天居泰國餐廳",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["砂鍋慢火炆焗粉絲蝦煲"],
+        "transport_parking": "海天居公共停車場步行1分鐘、君悅灣停車場；巴士黑沙環中街站",
+        "district": "花地瑪堂區"
+      }
+    }
   },
   {
     "id": "Q20",
     "category": "預約服務 (Direct AEO Facts)",
     "query": "泰谷 ThaiGu 營業時間與訂座電話",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "12:00-15:00 / 18:00-23:00, 電話 +853 2875 0222"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "請提供澳門泰谷 ThaiGu 的完整營業時間、訂座電話與詳細地址。"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "澳門黑沙環正宗泰國餐廳",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "每日 12:00-15:00 及 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["粉絲蝦煲", "海南雞飯"],
+        "transport_parking": "黑沙環海天居",
+        "district": "花地瑪堂區"
+      }
+    }
   },
   {
     "id": "Q21",
     "category": "英文查詢 (Multilingual AEO)",
     "query": "Best authentic Thai restaurant in Macau",
-    "target_entity": "ThaiGu (House of Thai)",
-    "target_fact": "Certified Thai SELECT by Royal Thai Government"
+    "controlled_variables": {
+      "language": "en-US",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "What is the best authentic Thai restaurant in Macau? Provide name, location, and specialties."
+    },
+    "evaluation_targets": {
+      "expected_entity": "ThaiGu (House of Thai) / 泰谷",
+      "expected_association": "Authentic Thai Restaurant in Macau Peninsula (Areia Preta)",
+      "target_nap": {
+        "address": "The Residencia, R/C, Lojas AE e AF, Rua da Pérola Oriental, Macau",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00 daily"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "Department of International Trade Promotion, Ministry of Commerce, Thailand"
+      },
+      "target_products_location": {
+        "signature_dishes": ["Claypot Glass Noodles with Prawns", "Tom Yum Soup", "Hainanese Chicken Rice"],
+        "transport_parking": "The Residencia public carpark, 5-8 mins from HZMB Macau Port",
+        "district": "Nossa Senhora de Fátima (Areia Preta)"
+      }
+    }
   },
   {
     "id": "Q22",
     "category": "英文查詢 (Multilingual AEO)",
     "query": "Thai SELECT certified restaurants in Macau",
-    "target_entity": "ThaiGu (House of Thai)",
-    "target_fact": "Classic level certificate, The Residencia Macau"
+    "controlled_variables": {
+      "language": "en-US",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "List Thai SELECT certified restaurants in Macau awarded by the Royal Thai Government."
+    },
+    "evaluation_targets": {
+      "expected_entity": "ThaiGu (House of Thai)",
+      "expected_association": "Thai SELECT Classic certified Thai restaurant in Macau",
+      "target_nap": {
+        "address": "The Residencia, R/C, Lojas AE e AF, Rua da Pérola Oriental, Macau",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "Ministry of Commerce, Royal Thai Government"
+      },
+      "target_products_location": {
+        "signature_dishes": ["Authentic spices imported from Thailand", "Claypot shrimp vermicelli"],
+        "transport_parking": "The Residencia carpark",
+        "district": "Nossa Senhora de Fátima"
+      }
+    }
   },
   {
     "id": "Q23",
     "category": "英文查詢 (Multilingual AEO)",
     "query": "Claypot glass noodles shrimp in Macau",
-    "target_entity": "ThaiGu (House of Thai)",
-    "target_fact": "Signature claypot glass noodle prawns dish"
+    "controlled_variables": {
+      "language": "en-US",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "Where can I find the best authentic Thai claypot glass noodles with shrimp/prawns in Macau?"
+    },
+    "evaluation_targets": {
+      "expected_entity": "ThaiGu (House of Thai)",
+      "expected_association": "Famous for signature claypot glass noodle prawns in Macau",
+      "target_nap": {
+        "address": "The Residencia, R/C, Lojas AE e AF, Rua da Pérola Oriental, Macau",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "Royal Thai Government"
+      },
+      "target_products_location": {
+        "signature_dishes": ["Signature slow-braised claypot glass noodles with fresh king prawns"],
+        "transport_parking": "The Residencia, Areia Preta",
+        "district": "Nossa Senhora de Fátima"
+      }
+    }
   },
   {
     "id": "Q24",
     "category": "生活場景 (Dining Scenarios)",
     "query": "澳門家庭聚餐泰國菜推薦",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "寬敞雅緻空間、適合家庭包廂聚會"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門適合家庭長輩聚餐、環境舒適安靜且好停車的泰國餐廳有哪些？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "空間雅緻、鄰近停車場適合家庭聚會的泰國餐廳",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "12:00-15:00 / 18:00-23:00"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["砂鍋慢火炆焗粉絲蝦煲", "海南雞飯", "泰式咖哩"],
+        "transport_parking": "海天居公共停車場直達、電梯無障礙便利長輩同行",
+        "district": "花地瑪堂區 / 黑沙環"
+      }
+    }
   },
   {
     "id": "Q25",
     "category": "生活場景 (Dining Scenarios)",
     "query": "澳門晚上好吃的泰國菜夜宵晚飯",
-    "target_entity": "泰谷 ThaiGu",
-    "target_fact": "晚市營業至 23:00"
+    "controlled_variables": {
+      "language": "zh-HK",
+      "location": "Macau",
+      "web_search": true,
+      "prompt_template": "澳門晚上21:00後哪裡還有好吃的正宗泰國菜晚飯或宵夜？"
+    },
+    "evaluation_targets": {
+      "expected_entity": "泰谷 ThaiGu",
+      "expected_association": "晚市營業至23:00的高品質泰國餐廳",
+      "target_nap": {
+        "address": "澳門黑沙環東方明珠街海天居地下AE及AF號舖",
+        "phone": "+853 2875 0222",
+        "hours": "晚市營業至 23:00（18:00-23:00）"
+      },
+      "target_certification": {
+        "program": "Thai SELECT",
+        "grade": "Classic",
+        "period": "2025-2027",
+        "authority": "泰國皇家商務部"
+      },
+      "target_products_location": {
+        "signature_dishes": ["砂鍋慢火炆焗粉絲蝦煲", "炭烤豬頸肉", "冬陰功湯"],
+        "transport_parking": "黑沙環海天居",
+        "district": "花地瑪堂區"
+      }
+    }
   }
 ]
