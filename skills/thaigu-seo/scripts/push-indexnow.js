@@ -7,7 +7,9 @@ const urls = [
   "https://www.thaikok.com/awards.html",
   "https://www.thaikok.com/about.html",
   "https://www.thaikok.com/drinks.html",
-  "https://www.thaikok.com/contact-us.html"
+  "https://www.thaikok.com/contact-us.html",
+  "https://www.thaikok.com/menu/tom-yum-goong.html",
+  "https://www.thaikok.com/menu/thai-shrimp.html"
 ];
 
 const payload = {
