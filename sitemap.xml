@@ -4,7 +4,7 @@
   <!-- 1. 首頁 -->
   <url>
     <loc>https://www.thaikok.com/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -14,10 +14,10 @@
     </image:image>
   </url>
 
-  <!-- 2. 澳門泰國菜美食必食指南 (高權重內容頁) -->
+  <!-- 2. 澳門泰國菜美食必食指南 (核心 Topical Cluster Hub 樞紐頁) -->
   <url>
     <loc>https://www.thaikok.com/macau-thai-food-guide.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -27,10 +27,36 @@
     </image:image>
   </url>
 
-  <!-- 3. Thai SELECT 泰精選官方認證深度解密 -->
+  <!-- 3. Tier 1 招牌菜：招牌冬陰功海鮮湯粉 -->
+  <url>
+    <loc>https://www.thaikok.com/menu/tom-yum-goong.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.thaikok.com/assets/images/dishes/tom-yum-seafood-noodle-soup.webp</image:loc>
+      <image:title>澳門冬陰功推薦 - 泰谷招牌冬陰功海鮮湯粉</image:title>
+      <image:caption>泰國新鮮南薑香茅青檸葉熬製正宗泰式酸辣冬陰功</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 4. Tier 1 招牌菜：泰式醃生蝦刺身 -->
+  <url>
+    <loc>https://www.thaikok.com/menu/thai-shrimp.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.thaikok.com/assets/images/dishes/thai-raw-shrimp-sashimi.webp</image:loc>
+      <image:title>澳門泰式生蝦推薦 - 泰谷泰式醃生蝦</image:title>
+      <image:caption>新鮮生蝦搭配泰式酸辣醬汁，肉質爽嫩彈牙冰爽醒胃</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 5. Thai SELECT 泰精選官方認證深度解密 -->
   <url>
     <loc>https://www.thaikok.com/thai-select-certification.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -39,18 +65,18 @@
     </image:image>
   </url>
 
-  <!-- 4. 門店交通與停車指南 -->
+  <!-- 6. 門店交通與停車指南 -->
   <url>
     <loc>https://www.thaikok.com/transportation-guide.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- 5. 主食餐單 -->
+  <!-- 7. 主食餐單 -->
   <url>
     <loc>https://www.thaikok.com/main-dishes.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -63,10 +89,10 @@
     </image:image>
   </url>
 
-  <!-- 6. 獎項與榮譽 -->
+  <!-- 8. 獎項與榮譽 -->
   <url>
     <loc>https://www.thaikok.com/awards.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -79,10 +105,10 @@
     </image:image>
   </url>
 
-  <!-- 7. 關於泰谷 -->
+  <!-- 9. 關於泰谷 -->
   <url>
     <loc>https://www.thaikok.com/about.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -91,10 +117,10 @@
     </image:image>
   </url>
 
-  <!-- 8. 飲料與甜品 -->
+  <!-- 10. 飲料與甜品 -->
   <url>
     <loc>https://www.thaikok.com/drinks.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -103,10 +129,10 @@
     </image:image>
   </url>
 
-  <!-- 9. 聯絡我們 -->
+  <!-- 11. 聯絡我們 -->
   <url>
     <loc>https://www.thaikok.com/contact-us.html</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
